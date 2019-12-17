@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "noEmit": true,
     "outDir": "lib",
     "target": "esnext",
     "module": "esnext",
