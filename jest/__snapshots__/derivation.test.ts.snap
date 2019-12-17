@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getAddresses yields all addresses for a wallet 1`] = `
+Object {
+  "address": "0xc6D5a3c98EC9073B54FA0969957Bd582e8D874bf",
+  "derivationPath": "m/44'/60'/0'/0/0",
+}
+`;
+
+exports[`getAddresses yields all addresses for a wallet 2`] = `
+Object {
+  "address": "0x59A897A2dbd55D20bCC9B52d5eaA14E2859Dc467",
+  "derivationPath": "m/44'/60'/0'/0/1",
+}
+`;
+
+exports[`getAddresses yields all addresses for a wallet 3`] = `
+Object {
+  "address": "0x7D5e716Bbc8771af9c5ec3b0555B48a4a84d4ba7",
+  "derivationPath": "m/44'/60'/0'/0/2",
+}
+`;

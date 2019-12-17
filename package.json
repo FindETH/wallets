@@ -1,0 +1,82 @@
+{
+  "name": "@findeth/wallets",
+  "version": "0.1.0",
+  "description": "Library used by FindETH, which provides wallet and address derivation functionality",
+  "main": "lib/index.js",
+  "repository": "https://github.com/FindETH/wallets.git",
+  "author": "Maarten Zuidhoorn <maarten@zuidhoorn.com>",
+  "license": "MIT",
+  "typings": "lib/index.d.ts",
+  "engines": {
+    "node": "12"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "clean": "rimraf lib",
+    "build": "yarn run clean && tsc -p tsconfig.build.json",
+    "test": "jest",
+    "lint": "yarn run lint:tsc && yarn run lint:tslint && yarn run lint:prettier",
+    "lint:tsc": "tsc --noEmit",
+    "lint:tslint": "tslint --project .",
+    "lint:prettier": "prettier --check 'src/**/*.{ts,tsx}'",
+    "prettier": "prettier --write 'src/**/*.{ts,tsx}'",
+    "prepare": "yarn run build"
+  },
+  "dependencies": {
+    "@ethersproject/hdnode": "^5.0.0-beta.135",
+    "@ethersproject/transactions": "^5.0.0-beta.133",
+    "@ledgerhq/hw-app-eth": "^4.78.0",
+    "@ledgerhq/hw-transport": "^4.78.0",
+    "@ledgerhq/hw-transport-u2f": "^4.78.0",
+    "@ledgerhq/hw-transport-web-ble": "^4.78.0",
+    "@ledgerhq/hw-transport-webusb": "^4.78.0",
+    "hdkey": "^1.1.1",
+    "trezor-connect": "^8.0.12"
+  },
+  "peerDependencies": {
+    "bignumber.js": "^9.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.7.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.7.5",
+    "@babel/plugin-transform-runtime": "^7.7.6",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-typescript": "^7.7.4",
+    "@babel/runtime": "^7.7.6",
+    "@ledgerhq/hw-transport-mocker": "^4.78.0",
+    "@types/hdkey": "^0.7.1",
+    "@types/jest": "^24.0.23",
+    "@types/w3c-web-usb": "^1.0.3",
+    "@types/web-bluetooth": "^0.0.4",
+    "babel-jest": "^24.9.0",
+    "codecov": "^3.6.1",
+    "core-js": "3",
+    "husky": "^3.1.0",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.0",
+    "ts-jest": "^24.2.0",
+    "ts-node": "^8.5.4",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-origin-ordered-imports-rule": "^1.2.2",
+    "typescript": "^3.7.3"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --write",
+      "tslint --project . --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && yarn run lint && yarn run test"
+    }
+  }
+}

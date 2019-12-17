@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MnemonicPhrase getAddress derives addresses from a mnemonic phrase 1`] = `"0xc6D5a3c98EC9073B54FA0969957Bd582e8D874bf"`;
+
+exports[`MnemonicPhrase getAddress derives addresses from a mnemonic phrase 2`] = `"0x59A897A2dbd55D20bCC9B52d5eaA14E2859Dc467"`;
+
+exports[`MnemonicPhrase getAddress derives addresses from a mnemonic phrase 3`] = `"0xc6D5a3c98EC9073B54FA0969957Bd582e8D874bf"`;
+
+exports[`MnemonicPhrase getAddress derives addresses from a mnemonic phrase 4`] = `"0x3FE703a2035CB3590C865a09F556eDda02b2Cf12"`;
