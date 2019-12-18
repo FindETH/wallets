@@ -1,5 +1,6 @@
 import { HDNode } from '@ethersproject/hdnode';
-import { ALL_DERIVATION_PATHS, DerivationPath, getFullPath } from '../derivation-paths';
+import { ALL_DERIVATION_PATHS, DerivationPath } from '../derivation-paths';
+import { getFullPath } from '../utils';
 import { Wallet } from '../wallet';
 
 export class MnemonicPhrase implements Wallet {

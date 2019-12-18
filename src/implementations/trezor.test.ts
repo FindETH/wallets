@@ -15,7 +15,7 @@ describe('Trezor', () => {
     await expect(wallet.getAddress(DEFAULT_ETH, 15)).resolves.toMatchSnapshot();
   });
 
-  it('generates an address from a hardened derivation path', async () => {
+  it('derives an address from a hardened derivation path', async () => {
     const wallet = new Trezor();
     await wallet.connect();
 

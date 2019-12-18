@@ -1,4 +1,5 @@
-import { DerivationPath, getFullPath } from './derivation-paths';
+import { DerivationPath } from './derivation-paths';
+import { getFullPath } from './utils';
 import { Wallet } from './wallet';
 
 export interface DerivationResult {

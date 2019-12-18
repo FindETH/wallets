@@ -62,7 +62,7 @@ declare module '@ledgerhq/hw-transport' {
      * @return {Promise<Transport<Descriptor>>} A Promise with the Transport instance.
      * @template Descriptor
      */
-    static open(descriptor: Descriptor, timeout?: number): Promise<Transport<Descriptor>>;
+    static open(descriptor?: Descriptor, timeout?: number): Promise<Transport<Descriptor>>;
 
     /**
      * Open the first descriptor available or throw if there is none, or if the timeout is reached.

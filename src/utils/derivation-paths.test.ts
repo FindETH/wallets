@@ -1,4 +1,5 @@
-import { DEFAULT_ETC, DEFAULT_ETH, getFullPath, LEDGER_LIVE_ETH, TREZOR_DERIVATION_PATHS } from './derivation-paths';
+import { DEFAULT_ETC, DEFAULT_ETH, LEDGER_LIVE_ETH } from '../derivation-paths';
+import { getFullPath, getPathPrefix } from './derivation-paths';
 
 describe('getFullPath', () => {
   it('returns the full derivation path for non-hardened paths', () => {
@@ -14,10 +15,9 @@ describe('getFullPath', () => {
   });
 });
 
-describe('TREZOR_DERIVATION_PATHS', () => {
-  it('does not include hardened derivation paths', () => {
-    TREZOR_DERIVATION_PATHS.forEach(derivationPath => {
-      expect(derivationPath.isHardened).toBeFalsy();
-    });
+describe('getPathPrefix', () => {
+  it('returns the prefix segments of a derivation path', () => {
+    expect(getPathPrefix(DEFAULT_ETH.path)).toBe(`m/44'/60'/0'/0`);
+    expect(getPathPrefix(DEFAULT_ETC.path)).toBe(`m/44'/61'/0'/0`);
   });
 });
