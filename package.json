@@ -49,6 +49,7 @@
     "@babel/plugin-transform-runtime": "^7.7.6",
     "@babel/preset-env": "^7.7.6",
     "@babel/preset-typescript": "^7.7.4",
+    "@babel/runtime": "^7.7.6",
     "@ledgerhq/hw-transport-mocker": "^5.0.0",
     "@ledgerhq/hw-transport-node-hid": "^5.0.0",
     "@types/bs58": "^4.0.1",
