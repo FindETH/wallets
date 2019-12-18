@@ -28,7 +28,6 @@
     "prepare": "yarn run build"
   },
   "dependencies": {
-    "@babel/runtime": "^7.7.6",
     "@ethersproject/hdnode": "^5.0.0-beta.135",
     "@ledgerhq/hw-app-eth": "^5.0.0",
     "@ledgerhq/hw-transport": "^5.0.0",
@@ -38,7 +37,9 @@
     "bs58": "^4.0.1",
     "trezor-connect": "^8.0.12"
   },
-  "peerDependencies": {},
+  "peerDependencies": {
+    "@babel/runtime": "^7.0.0"
+  },
   "devDependencies": {
     "@babel/cli": "^7.7.5",
     "@babel/core": "^7.7.5",
@@ -60,6 +61,7 @@
     "codecov": "^3.6.1",
     "cross-env": "^6.0.3",
     "husky": "^3.1.0",
+    "install-peers": "^1.0.3",
     "jest": "^24.9.0",
     "lint-staged": "^9.5.0",
     "prettier": "^1.19.1",
