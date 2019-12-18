@@ -11,12 +11,12 @@ describe('Ledger', () => {
     await wallet.connect();
   });
 
-  it('generates an address from a derivation path', async () => {
+  it('derives an address from a derivation path', async () => {
     await expect(wallet.getAddress(DEFAULT_ETH, 10)).resolves.toMatchSnapshot();
     await expect(wallet.getAddress(DEFAULT_ETH, 15)).resolves.toMatchSnapshot();
   });
 
-  it('generates an address from a hardened derivation path', async () => {
+  it('derives an address from a hardened derivation path', async () => {
     await expect(wallet.getAddress(LEDGER_LIVE_ETH, 10)).resolves.toMatchSnapshot();
     await expect(wallet.getAddress(LEDGER_LIVE_ETH, 15)).resolves.toMatchSnapshot();
   });

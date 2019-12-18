@@ -1,3 +1,4 @@
+export * from './node-hid';
 export * from './transport-wrapper';
 export * from './u2f';
 export * from './web-ble';

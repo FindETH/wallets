@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Ledger generates an address from a derivation path 1`] = `"0x55A64976d11064d0a5049Ec14ec632B921e1dBB4"`;
+exports[`Ledger derives an address from a derivation path 1`] = `"0x84F118A55152D152831a80C252b9F62e79a03e2f"`;
 
-exports[`Ledger generates an address from a derivation path 2`] = `"0xb1B46Cfcc7c7e72B6981e8aF8EB8CceB6d76E26e"`;
+exports[`Ledger derives an address from a derivation path 2`] = `"0xfc8C1B620c5bbee37Cd3F11b746FFCF475E30ddF"`;
 
-exports[`Ledger generates an address from a hardened derivation path 1`] = `"0x1bD7f8d135C7565f63e6eB24E9A8704d2eB90f69"`;
+exports[`Ledger derives an address from a hardened derivation path 1`] = `"0xFa592Eaa1915001148fcd047d144fb915a89F538"`;
 
-exports[`Ledger generates an address from a hardened derivation path 2`] = `"0xba4Ad981A41390f56cAB43549CC15050BD0418E8"`;
+exports[`Ledger derives an address from a hardened derivation path 2`] = `"0x3B98ce1174985557D360C173862bdb993F206d6C"`;

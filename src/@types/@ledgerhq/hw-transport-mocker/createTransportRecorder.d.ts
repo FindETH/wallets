@@ -10,7 +10,7 @@ declare module '@ledgerhq/hw-transport-mocker/createTransportRecorder' {
     static list: typeof Transport.list;
   }
 
-  type TransportConstructor<Descriptor> = new (...args: unknown[]) => Transport<Descriptor>;
+  type TransportConstructor<Descriptor, Args extends []> = new (...args: Args) => Transport<Descriptor>;
 
   type TransportRecorderConstructor<Descriptor> = typeof TransportRecorder &
     (new (...args: unknown[]) => TransportRecorder<Descriptor>);

@@ -1,6 +1,7 @@
-import { computeAddress } from '@ethersproject/transactions';
-import HDKey from 'hdkey';
+import { HDNode } from '@ethersproject/hdnode';
 import { DerivationPath } from './derivation-paths';
+import { createExtendedPublicKey, getPathPrefix } from './utils';
+import { memoize } from './utils/memoize';
 import { Wallet } from './wallet';
 
 export interface KeyInfo {
@@ -9,8 +10,9 @@ export interface KeyInfo {
 }
 
 export abstract class HardwareWallet implements Wallet {
-  private cachedDerivationPath?: DerivationPath;
-  private cachedKeyInfo?: KeyInfo;
+  constructor() {
+    this.getHDNode = memoize(this.getHDNode.bind(this));
+  }
 
   /**
    * Get an address from the device.
@@ -24,10 +26,8 @@ export abstract class HardwareWallet implements Wallet {
       return this.getHardenedAddress(derivationPath, index);
     }
 
-    const hdKey = await this.getHDKey(derivationPath);
-    const publicKey = hdKey.derive(`m/${index}`).publicKey;
-
-    return computeAddress(publicKey);
+    const hdNode = await this.getHDNode(derivationPath);
+    return hdNode.derivePath(`${index}`).address;
   }
 
   /**
@@ -50,7 +50,7 @@ export abstract class HardwareWallet implements Wallet {
    * @param {DerivationPath} derivationPath
    * @return {Promise<KeyInfo>}
    */
-  protected abstract getKeyInfo(derivationPath: DerivationPath): Promise<KeyInfo>;
+  protected abstract getKeyInfo(derivationPath: string): Promise<KeyInfo>;
 
   /**
    * Get an address from the device, using hardened derivation.
@@ -62,22 +62,19 @@ export abstract class HardwareWallet implements Wallet {
   protected abstract getHardenedAddress(derivationPath: DerivationPath, index: number): Promise<string>;
 
   /**
-   * Get an instance of the HDKey class, based on the derivation path.
+   * Get an instance of the HDNode class, based on the derivation path.
    *
    * @param {DerivationPath} derivationPath
-   * @return {Promise<any>}
+   * @return {Promise<HDNode>}
    */
-  private async getHDKey(derivationPath: DerivationPath): Promise<HDKey> {
-    if (derivationPath !== this.cachedDerivationPath || !this.cachedKeyInfo) {
-      this.cachedKeyInfo = await this.getKeyInfo(derivationPath);
-    }
-    this.cachedDerivationPath = derivationPath;
+  private async getHDNode(derivationPath: DerivationPath): Promise<HDNode> {
+    const childPath = getPathPrefix(derivationPath.path);
+    const childInfo = await this.getKeyInfo(childPath);
 
-    const keyInfo = this.cachedKeyInfo;
-    const hdKey = new HDKey();
-    hdKey.publicKey = Buffer.from(keyInfo.publicKey, 'hex');
-    hdKey.chainCode = Buffer.from(keyInfo.chainCode, 'hex');
+    const parentPath = getPathPrefix(childPath);
+    const parentInfo = await this.getKeyInfo(parentPath);
 
-    return hdKey;
+    const extendedKey = createExtendedPublicKey(childPath, parentInfo, childInfo);
+    return HDNode.fromExtendedKey(extendedKey);
   }
 }

@@ -1,7 +1,8 @@
 import { ethereumGetAddress, getPublicKey, manifest } from 'trezor-connect';
 import { TREZOR_MANIFEST_EMAIL, TREZOR_MANIFEST_URL } from '../constants';
-import { DEFAULT_ETH, DerivationPath, getFullPath, TREZOR_DERIVATION_PATHS } from '../derivation-paths';
+import { DEFAULT_ETH, DerivationPath, TREZOR_DERIVATION_PATHS } from '../derivation-paths';
 import { HardwareWallet, KeyInfo } from '../hardware-wallet';
+import { getFullPath } from '../utils';
 
 export class Trezor extends HardwareWallet {
   private cache: Record<string, KeyInfo> = {};
@@ -19,7 +20,7 @@ export class Trezor extends HardwareWallet {
   }
 
   async prefetch(derivationPaths: DerivationPath[]): Promise<Record<string, KeyInfo>> {
-    const bundle = derivationPaths.filter(path => !path.isHardened).map(path => ({ path: path.prefix }));
+    const bundle = derivationPaths.filter(path => !path.isHardened).map(path => ({ path: path.path }));
 
     const response = await getPublicKey({ bundle });
     for (const { serializedPath, chainCode, publicKey } of response.payload) {
@@ -33,12 +34,12 @@ export class Trezor extends HardwareWallet {
     return TREZOR_DERIVATION_PATHS;
   }
 
-  protected async getKeyInfo(derivationPath: DerivationPath): Promise<KeyInfo> {
-    if (this.cache[derivationPath.prefix]) {
-      return this.cache[derivationPath.prefix];
+  protected async getKeyInfo(derivationPath: string): Promise<KeyInfo> {
+    if (this.cache[derivationPath]) {
+      return this.cache[derivationPath];
     }
 
-    const response = await getPublicKey({ path: derivationPath.prefix });
+    const response = await getPublicKey({ path: derivationPath });
 
     return {
       publicKey: response.payload.publicKey,
