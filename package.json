@@ -17,7 +17,7 @@
   "scripts": {
     "clean": "rimraf lib",
     "build": "yarn run clean && yarn run build:source && yarn run build:declarations",
-    "build:source": "babel src --extensions '.ts' --ignore '**/*.d.ts' --ignore '**/__mocks__/**/*' --source-maps --out-dir lib",
+    "build:source": "cross-env NODE_ENV=production babel src --extensions '.ts' --source-maps --out-dir lib",
     "build:declarations": "tsc -p tsconfig.build.json",
     "test": "jest",
     "lint": "yarn run lint:tsc && yarn run lint:tslint && yarn run lint:prettier",
@@ -58,6 +58,7 @@
     "@types/web-bluetooth": "^0.0.4",
     "babel-jest": "^24.9.0",
     "codecov": "^3.6.1",
+    "cross-env": "^6.0.3",
     "husky": "^3.1.0",
     "jest": "^24.9.0",
     "lint-staged": "^9.5.0",

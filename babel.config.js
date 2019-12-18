@@ -23,6 +23,13 @@ module.exports = {
     ]
   ],
   "env": {
+    "production": {
+      "ignore": [
+        "**/*.d.ts",
+        "**/__mocks__/**/*",
+        "**/*.test.ts"
+      ]
+    },
     "test": {
       "presets": [
         [
