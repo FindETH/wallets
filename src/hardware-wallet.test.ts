@@ -1,4 +1,4 @@
-import { getPublicKey } from 'trezor-connect';
+import TrezorConnect from 'trezor-connect';
 import { DEFAULT_ETH } from './derivation-paths';
 import { Trezor } from './implementations';
 
@@ -12,6 +12,6 @@ describe('HardwareWallet', () => {
     await expect(implementation.getAddress(DEFAULT_ETH, 15)).resolves.toBeTruthy();
     await expect(implementation.getAddress(DEFAULT_ETH, 20)).resolves.toBeTruthy();
 
-    expect(getPublicKey).toHaveBeenCalledTimes(2); //
+    expect(TrezorConnect.getPublicKey).toHaveBeenCalledTimes(2);
   });
 });

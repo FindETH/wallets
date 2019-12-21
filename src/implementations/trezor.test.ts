@@ -1,4 +1,4 @@
-import { manifest } from 'trezor-connect';
+import TrezorConnect from 'trezor-connect';
 import { DEFAULT_ETH, LEDGER_LIVE_ETH, TESTNET_ETH, TREZOR_DERIVATION_PATHS } from '../derivation-paths';
 import { Trezor } from './trezor';
 
@@ -9,7 +9,7 @@ describe('Trezor', () => {
     const wallet = new Trezor();
     await wallet.connect();
 
-    expect(manifest).toHaveBeenCalledTimes(1);
+    expect(TrezorConnect.init).toHaveBeenCalledTimes(1);
 
     await expect(wallet.getAddress(DEFAULT_ETH, 10)).resolves.toMatchSnapshot();
     await expect(wallet.getAddress(DEFAULT_ETH, 15)).resolves.toMatchSnapshot();
@@ -19,7 +19,7 @@ describe('Trezor', () => {
     const wallet = new Trezor();
     await wallet.connect();
 
-    expect(manifest).toHaveBeenCalledTimes(1);
+    expect(TrezorConnect.init).toHaveBeenCalledTimes(1);
 
     await expect(wallet.getAddress(LEDGER_LIVE_ETH, 10)).resolves.toMatchSnapshot();
     await expect(wallet.getAddress(LEDGER_LIVE_ETH, 15)).resolves.toMatchSnapshot();
