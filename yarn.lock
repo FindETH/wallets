@@ -1189,6 +1189,16 @@
     "@ledgerhq/logs" "^5.0.0"
     rxjs "^6.5.3"
 
+"@ledgerhq/hw-transport-webhid@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport-webhid/-/hw-transport-webhid-5.0.0.tgz#2c747566030e6c8e7a16b91e50d8e8ac6e22300c"
+  integrity sha512-Nz1L/wJB/cMsznIYpfMYKMCMVlHUdz4j8De1lNopSYoxa3ze7kdBC0lMb9nlObOdnB46SgSzyPC1xtBtxfDekw==
+  dependencies:
+    "@ledgerhq/devices" "^5.0.0"
+    "@ledgerhq/errors" "^5.0.0"
+    "@ledgerhq/hw-transport" "^5.0.0"
+    "@ledgerhq/logs" "^5.0.0"
+
 "@ledgerhq/hw-transport-webusb@^5.0.0":
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport-webusb/-/hw-transport-webusb-5.0.0.tgz#b7c6e466c3405c3fe0714be9801078a14b6ffe92"
