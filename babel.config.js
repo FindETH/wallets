@@ -1,52 +1,31 @@
+const BUILD_OPTIONS = {
+  comments: false,
+  ignore: ['**/*.d.ts', '**/__mocks__/**/*', '**/*.test.ts']
+};
+
 module.exports = {
-  "presets": [
-    "@babel/preset-typescript",
-    [
-      "@babel/preset-env",
-      {
-        "modules": false,
-        "targets": {
-          "node": "current"
-        }
-      }
-    ]
+  presets: ['@babel/preset-typescript'],
+  plugins: [
+    '@babel/plugin-proposal-class-properties',
+    '@babel/plugin-proposal-nullish-coalescing-operator',
+    '@babel/plugin-proposal-optional-chaining'
   ],
-  "plugins": [
-    "@babel/plugin-proposal-class-properties",
-    "@babel/plugin-proposal-nullish-coalescing-operator",
-    "@babel/plugin-proposal-optional-chaining",
-    [
-      "@babel/plugin-transform-runtime",
-      {
-        "useESModules": true
-      }
-    ]
-  ],
-  "env": {
-    "production": {
-      "ignore": [
-        "**/*.d.ts",
-        "**/__mocks__/**/*",
-        "**/*.test.ts"
-      ]
+  env: {
+    cjs: {
+      ...BUILD_OPTIONS,
+      plugins: ['@babel/plugin-transform-modules-commonjs']
     },
-    "test": {
-      "presets": [
+    es: {
+      ...BUILD_OPTIONS
+    },
+    test: {
+      presets: [
         [
-          "@babel/preset-env",
+          '@babel/preset-env',
           {
-            "modules": "commonjs",
-            "targets": {
-              "node": "current"
+            targets: {
+              node: 'current'
             }
-          }
-        ]
-      ],
-      "plugins": [
-        [
-          "@babel/plugin-transform-runtime",
-          {
-            "useESModules": false
           }
         ]
       ]
