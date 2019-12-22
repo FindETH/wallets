@@ -5,7 +5,7 @@ import { TransportWrapper } from './transports';
 
 export class Ledger<Descriptor> extends HardwareWallet {
   /**
-   * Initialise the Ledger wallet with a specific Transport (e.g. U2F, WebUSB or WebBluetooth).
+   * Initialise the Ledger wallet with a specific Transport (e.g. U2F, WebUSB, WebHID or WebBluetooth).
    *
    * @param {TransportWrapper<Descriptor>} transport
    * @template Descriptor

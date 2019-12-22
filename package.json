@@ -40,6 +40,7 @@
     "@ledgerhq/hw-transport-node-hid": "^5.0.0",
     "@ledgerhq/hw-transport-u2f": "^5.0.0",
     "@ledgerhq/hw-transport-web-ble": "^5.0.0",
+    "@ledgerhq/hw-transport-webhid": "^5.0.0",
     "@ledgerhq/hw-transport-webusb": "^5.0.0",
     "bs58": "^4.0.1",
     "trezor-connect": "^8.0.12"
