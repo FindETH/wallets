@@ -1,9 +1,25 @@
 {
   "name": "@findeth/wallets",
   "version": "0.1.0",
-  "description": "Library used by FindETH, which provides wallet and address derivation functionality",
-  "repository": "https://github.com/FindETH/wallets.git",
+  "description": "Library used by FindETH for wallets and derivation",
   "author": "Maarten Zuidhoorn <maarten@zuidhoorn.com>",
+  "homepage": "https://github.com/FindETH/wallets",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FindETH/wallets.git"
+  },
+  "bugs": {
+    "url": "https://github.com/FindETH/wallets/issues",
+    "email": "info@findeth.io"
+  },
+  "keywords": [
+    "ethereum",
+    "derivation",
+    "ledger",
+    "trezor",
+    "mnemonic-phrase",
+    "findeth"
+  ],
   "license": "MIT",
   "main": "lib/cjs/index.js",
   "module": "lib/es/index.js",
@@ -91,5 +107,8 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
