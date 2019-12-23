@@ -16,3 +16,11 @@ script:
   - yarn run test
   - yarn run codecov -f coverage/*.json
   - yarn run lint
+
+deploy:
+  provider: npm
+  email: $NPM_EMAIL
+  api_key: $NPM_API_KEY
+  skip_cleanup: true
+  on:
+    tags: true
