@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LedgerU2F serializes to a string 1`] = `"{\\"type\\":\\"U2F\\"}"`;

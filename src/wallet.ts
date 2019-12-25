@@ -42,6 +42,16 @@ const SUPPORTED_WALLETS = {
 };
 
 /**
+ * Checks if a string is a valid type of WalletType.
+ *
+ * @param {string} type
+ * @return {boolean}
+ */
+export const isWalletType = (type: string): type is WalletType => {
+  return Object.values(WalletType).includes(type as WalletType);
+};
+
+/**
  * Get the wallet implemention class for a specific wallet type.
  *
  * @param {Type} type
@@ -50,4 +60,25 @@ const SUPPORTED_WALLETS = {
  */
 export const getWalletImplementation = <Type extends WalletType>(type: Type): typeof SUPPORTED_WALLETS[Type] => {
   return SUPPORTED_WALLETS[type];
+};
+
+/**
+ * Deserialize a wallet implementation from a string.
+ *
+ * @param {string} serializedData
+ * @return {Ledger<*> | Trezor | MnemonicPhrase>}
+ */
+export const deserialize = (serializedData: string): Ledger<unknown> | Trezor | MnemonicPhrase => {
+  const json = JSON.parse(serializedData);
+  if (!json.type) {
+    throw new Error('Serialized data is invalid: missing `type` key');
+  }
+
+  const type = json.type;
+  if (!isWalletType(type)) {
+    throw new Error('Serialized data is invalid: `type` is not a valid type of WalletType');
+  }
+
+  const implementation = getWalletImplementation(type);
+  return implementation.deserialize(serializedData);
 };

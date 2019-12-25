@@ -1,7 +1,15 @@
 import EthereumApp from '@ledgerhq/hw-app-eth';
 import Transport from '@ledgerhq/hw-transport';
 
-export abstract class TransportWrapper<Descriptor> {
+export enum TransportType {
+  U2F = 'U2F',
+  WebBLE = 'WebBLE',
+  WebHID = 'WebHID',
+  WebUSB = 'WebUSB'
+}
+
+export abstract class TransportWrapper<Descriptor, TransportImplementation extends Transport<Descriptor>> {
+  protected transport?: TransportImplementation;
   private app?: EthereumApp<Descriptor>;
 
   /**
@@ -13,7 +21,7 @@ export abstract class TransportWrapper<Descriptor> {
    */
   async getApplication(): Promise<EthereumApp<Descriptor>> {
     if (!this.app) {
-      const transport = await this.getTransport();
+      const transport = (this.transport = await this.getTransport());
       transport.on('disconnect', () => {
         this.app = undefined;
       });
@@ -25,11 +33,18 @@ export abstract class TransportWrapper<Descriptor> {
   }
 
   /**
+   * Returns a string representation of the current transport.
+   *
+   * @return {string}
+   */
+  abstract toString(): string;
+
+  /**
    * Get an instance of the Transport method to use. This does not cache the Transport, but returns a new instance of
    * the Transport every time this function is called.
    *
    * @return {Promise<Transport<Descriptor>>}
    * @template Descriptor
    */
-  protected abstract async getTransport(): Promise<Transport<Descriptor>>;
+  protected abstract async getTransport(): Promise<TransportImplementation>;
 }

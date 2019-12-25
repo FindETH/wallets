@@ -18,4 +18,16 @@ describe('MnemonicPhrase', () => {
   it('supports all derivation paths', () => {
     expect(wallet.getDerivationPaths()).toStrictEqual(ALL_DERIVATION_PATHS);
   });
+
+  it('serializes to a string', () => {
+    expect(wallet.serialize()).toMatchSnapshot();
+  });
+
+  it('deserializes from a string', () => {
+    expect(
+      MnemonicPhrase.deserialize(
+        '{"type": "MnemonicPhrase", "mnemonicPhrase": "test test test test test test test test test test test ball"}'
+      )
+    ).toMatchSnapshot();
+  });
 });

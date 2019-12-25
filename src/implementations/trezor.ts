@@ -3,8 +3,28 @@ import { TREZOR_MANIFEST_EMAIL, TREZOR_MANIFEST_URL } from '../constants';
 import { DEFAULT_ETH, DerivationPath, TREZOR_DERIVATION_PATHS } from '../derivation-paths';
 import { HardwareWallet, KeyInfo } from '../hardware-wallet';
 import { getFullPath } from '../utils';
+import { WalletType } from '../wallet';
+
+interface SerializedData {
+  type?: string;
+}
 
 export class Trezor extends HardwareWallet {
+  /**
+   * Get a class instance from serialized data. Useful for using the class in a web worker.
+   *
+   * @param {string} serializedData
+   * @return {Trezor}
+   */
+  static deserialize(serializedData: string): Trezor {
+    const json = JSON.parse(serializedData) as SerializedData;
+    if (json?.type !== WalletType.Trezor) {
+      throw new Error('Invalid serialized data');
+    }
+
+    return new Trezor();
+  }
+
   private cache: Record<string, KeyInfo> = {};
 
   async connect(): Promise<void> {
@@ -37,6 +57,12 @@ export class Trezor extends HardwareWallet {
 
   getDerivationPaths(): DerivationPath[] {
     return TREZOR_DERIVATION_PATHS;
+  }
+
+  serialize(): string {
+    return JSON.stringify({
+      type: WalletType.Trezor
+    });
   }
 
   protected async getKeyInfo(derivationPath: string): Promise<KeyInfo> {

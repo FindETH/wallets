@@ -7,3 +7,16 @@ exports[`Ledger derives an address from a derivation path 2`] = `"0xfc8C1B620c5b
 exports[`Ledger derives an address from a hardened derivation path 1`] = `"0xFa592Eaa1915001148fcd047d144fb915a89F538"`;
 
 exports[`Ledger derives an address from a hardened derivation path 2`] = `"0x3B98ce1174985557D360C173862bdb993F206d6C"`;
+
+exports[`Ledger deserializes from a string 1`] = `
+Ledger {
+  "getHDNode": [Function],
+  "transport": LedgerWebUSB {
+    "app": undefined,
+    "descriptor": "foobar",
+    "transport": undefined,
+  },
+}
+`;
+
+exports[`Ledger serializes to a string 1`] = `"{\\"type\\":\\"Ledger\\",\\"transport\\":\\"{\\\\\\"type\\\\\\":\\\\\\"WebUSB\\\\\\"}\\"}"`;

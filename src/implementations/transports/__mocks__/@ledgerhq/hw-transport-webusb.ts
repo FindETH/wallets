@@ -21,6 +21,12 @@ const Replayer = createTransportReplayer(store);
 export default {
   isSupported: jest.fn(async (): Promise<boolean> => true),
 
+  open: jest.fn(
+    async (): Promise<Transport<USBDevice>> => {
+      return new Replayer();
+    }
+  ),
+
   request: jest.fn(
     async (): Promise<Transport<USBDevice>> => {
       return new Replayer();

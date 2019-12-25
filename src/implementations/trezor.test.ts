@@ -39,4 +39,10 @@ describe('Trezor', () => {
 
     expect(wallet.getDerivationPaths()).toStrictEqual(TREZOR_DERIVATION_PATHS);
   });
+
+  it('serializes to a string', () => {
+    const wallet = new Trezor();
+
+    expect(wallet.serialize()).toMatchSnapshot();
+  });
 });

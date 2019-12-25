@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LedgerWebBLE serializes to a string 1`] = `"{\\"type\\":\\"WebBLE\\"}"`;

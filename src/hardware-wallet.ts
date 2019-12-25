@@ -1,7 +1,6 @@
 import { HDNode } from '@ethersproject/hdnode';
 import { DerivationPath } from './derivation-paths';
-import { createExtendedPublicKey, getPathPrefix } from './utils';
-import { memoize } from './utils/memoize';
+import { createExtendedPublicKey, getPathPrefix, memoize } from './utils';
 import { Wallet } from './wallet';
 
 export interface KeyInfo {
