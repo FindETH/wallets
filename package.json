@@ -97,6 +97,7 @@
     "*.{ts,tsx}": [
       "prettier --write",
       "tslint --project . --fix",
+      "tsc --noEmit",
       "git add"
     ],
     "*.js": [
