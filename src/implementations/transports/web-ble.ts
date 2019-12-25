@@ -1,13 +1,39 @@
 import { DescriptorEvent } from '@ledgerhq/hw-transport';
 import TransportWebBLE from '@ledgerhq/hw-transport-web-ble';
-import { TransportWrapper } from './transport-wrapper';
+import { TransportType, TransportWrapper } from './transport-wrapper';
 
-export class LedgerWebBLE extends TransportWrapper<BluetoothDevice> {
+export class LedgerWebBLE extends TransportWrapper<BluetoothDevice, TransportWebBLE> {
   static async isSupported(): Promise<boolean> {
     return TransportWebBLE.isSupported();
   }
 
+  constructor(private readonly descriptor?: string) {
+    super();
+  }
+
+  toString(): string {
+    return JSON.stringify({
+      type: TransportType.WebBLE,
+      descriptor: this.descriptor ?? this.transport?.device?.name
+    });
+  }
+
   protected async getTransport(): Promise<TransportWebBLE> {
+    if (this.descriptor) {
+      // TODO: This probably does not work
+      const descriptorDevice = await navigator.bluetooth.requestDevice({
+        filters: [
+          {
+            name: this.descriptor
+          }
+        ]
+      });
+
+      if (descriptorDevice) {
+        return TransportWebBLE.open(descriptorDevice);
+      }
+    }
+
     const device = await this.getDevice();
     return TransportWebBLE.open(device);
   }

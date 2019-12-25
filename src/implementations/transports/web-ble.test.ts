@@ -20,4 +20,14 @@ describe('LedgerWebBLE', () => {
     await wrapper.getApplication();
     expect(TransportWebBLE.open).toHaveBeenCalledTimes(1);
   });
+
+  it('uses a descriptor if provided', async () => {
+    // TODO
+  });
+
+  it('serializes to a string', () => {
+    const wrapper = new LedgerWebBLE();
+
+    expect(wrapper.toString()).toMatchSnapshot();
+  });
 });

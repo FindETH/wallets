@@ -1,9 +1,32 @@
 import { HDNode } from '@ethersproject/hdnode';
 import { ALL_DERIVATION_PATHS, DerivationPath } from '../derivation-paths';
 import { getFullPath } from '../utils';
-import { Wallet } from '../wallet';
+import { Wallet, WalletType } from '../wallet';
+
+interface SerializedData {
+  type?: string;
+  mnemonicPhrase?: string;
+  passphrase?: string;
+}
 
 export class MnemonicPhrase implements Wallet {
+  /**
+   * Get a class instance from serialized data. Useful for using the class in a web worker.
+   *
+   * @param {string} serializedData
+   * @return {MnemonicPhrase}
+   */
+  static deserialize(serializedData: string): MnemonicPhrase {
+    const json = JSON.parse(serializedData) as SerializedData;
+    if (json?.type !== WalletType.MnemonicPhrase || !json.mnemonicPhrase) {
+      throw new Error('Invalid serialized data');
+    }
+
+    return new MnemonicPhrase(json.mnemonicPhrase, json.passphrase);
+  }
+
+  private readonly mnemonicPhrase: string;
+  private readonly passphrase?: string;
   private readonly hdNode: HDNode;
 
   /**
@@ -13,6 +36,8 @@ export class MnemonicPhrase implements Wallet {
    * @param passphrase
    */
   constructor(mnemonicPhrase: string, passphrase?: string) {
+    this.mnemonicPhrase = mnemonicPhrase;
+    this.passphrase = passphrase;
     this.hdNode = HDNode.fromMnemonic(mnemonicPhrase, passphrase);
   }
 
@@ -35,5 +60,13 @@ export class MnemonicPhrase implements Wallet {
   async getAddress(derivationPath: DerivationPath, index: number): Promise<string> {
     const fullPath = getFullPath(derivationPath, index);
     return this.hdNode.derivePath(fullPath).address;
+  }
+
+  serialize(): string {
+    return JSON.stringify({
+      type: WalletType.MnemonicPhrase,
+      mnemonicPhrase: this.mnemonicPhrase,
+      passphrase: this.passphrase
+    });
   }
 }

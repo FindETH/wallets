@@ -25,4 +25,17 @@ describe('LedgerNodeHid', () => {
     await expect(LedgerNodeHid.isSupported()).resolves.toBeTruthy();
     expect(TransportNodeHid.isSupported).toHaveBeenCalledTimes(1);
   });
+
+  it('uses a descriptor if provided', async () => {
+    const wrapper = new LedgerNodeHid('foo bar');
+
+    await wrapper.getApplication();
+    expect(TransportNodeHid.open).toHaveBeenCalledWith('foo bar');
+  });
+
+  it('serializes to a string', () => {
+    const wrapper = new LedgerNodeHid();
+
+    expect(wrapper.toString()).toMatchSnapshot();
+  });
 });

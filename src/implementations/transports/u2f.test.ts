@@ -20,4 +20,10 @@ describe('LedgerU2F', () => {
     await wrapper.getApplication();
     expect(TransportU2F.open).toHaveBeenCalledTimes(1);
   });
+
+  it('serializes to a string', () => {
+    const wrapper = new LedgerU2F();
+
+    expect(wrapper.toString()).toMatchSnapshot();
+  });
 });
