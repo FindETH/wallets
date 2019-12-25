@@ -40,6 +40,7 @@
     "build:source:cjs": "cross-env NODE_ENV=production BABEL_ENV=cjs babel src --extensions '.ts' --source-maps --out-dir lib/cjs",
     "build:source:es": "cross-env NODE_ENV=production BABEL_ENV=es babel src --extensions '.ts' --source-maps --out-dir lib/es",
     "build:declarations": "tsc -p tsconfig.build.json",
+    "build:docs": "typedoc src",
     "test": "jest",
     "lint": "yarn run lint:tsc && yarn run lint:tslint && yarn run lint:prettier && yarn run lint:lockfile",
     "lint:tsc": "tsc --noEmit",
@@ -60,7 +61,8 @@
     "@ledgerhq/hw-transport-webhid": "^5.2.0",
     "@ledgerhq/hw-transport-webusb": "^5.2.0",
     "bs58": "^4.0.1",
-    "trezor-connect": "^8.0.12"
+    "trezor-connect": "^8.0.12",
+    "typedoc": "^0.15.5"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.5",

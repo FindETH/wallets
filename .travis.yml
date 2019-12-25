@@ -17,11 +17,21 @@ script:
   - yarn run codecov -f coverage/*.json
   - yarn run lint
 
+before_deploy:
+  - yarn run build:docs
+
 deploy:
-  provider: npm
-  email: $NPM_EMAIL
-  api_key: $NPM_API_KEY
-  cleanup: true
-  edge: true
-  on:
-    tags: true
+  - provider: pages:git
+    cleanup: false
+    token: $GITHUB_TOKEN
+    local_dir: docs
+    on:
+      tags: true
+
+  - provider: npm
+    email: $NPM_EMAIL
+    api_key: $NPM_API_KEY
+    cleanup: true
+    edge: true
+    on:
+      tags: true
