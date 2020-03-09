@@ -1,5 +1,5 @@
-import { HDNode } from '@ethersproject/hdnode';
 import { ALL_DERIVATION_PATHS, DerivationPath } from '../derivation-paths';
+import { HDNode } from '../hdnode';
 import { getFullPath } from '../utils';
 import { Wallet, WalletType } from '../wallet';
 
@@ -38,7 +38,7 @@ export class MnemonicPhrase implements Wallet {
   constructor(mnemonicPhrase: string, passphrase?: string) {
     this.mnemonicPhrase = mnemonicPhrase;
     this.passphrase = passphrase;
-    this.hdNode = HDNode.fromMnemonic(mnemonicPhrase, passphrase);
+    this.hdNode = HDNode.fromMnemonicPhrase(mnemonicPhrase, passphrase);
   }
 
   /**
@@ -59,7 +59,7 @@ export class MnemonicPhrase implements Wallet {
    */
   async getAddress(derivationPath: DerivationPath, index: number): Promise<string> {
     const fullPath = getFullPath(derivationPath, index);
-    return this.hdNode.derivePath(fullPath).address;
+    return this.hdNode.derive(fullPath).address;
   }
 
   serialize(): string {

@@ -1,4 +1,4 @@
-import { getAddresses } from './derivation';
+import { getAddresses } from './addresses';
 import { DEFAULT_ETH } from './derivation-paths';
 import { MnemonicPhrase } from './implementations';
 

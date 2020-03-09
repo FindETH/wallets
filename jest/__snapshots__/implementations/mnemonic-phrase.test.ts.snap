@@ -1,30 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MnemonicPhrase deserializes from a string 1`] = `
-MnemonicPhrase {
-  "hdNode": HDNode {
-    "address": "0x0068D351c60f6326fd8a9508A6Fb17cF64461728",
-    "chainCode": "0xef75bfcd4f1023a1301b3c114246e42260c969dfd5601065d26711ae0d62f55b",
-    "depth": 0,
-    "fingerprint": "0x53b9676f",
-    "index": 0,
-    "mnemonic": "test test test test test test test test test test test ball",
-    "parentFingerprint": "0x00000000",
-    "path": "m",
-    "privateKey": "0x044ce8e536ea4e4c61b42862bc98f8c574942fb77121e27f316cb15a96d9c99a",
-    "publicKey": "0x03e6159bb12479339ce9be03fa724f53692893e7c91de9be2c00ca8d554fca8f51",
-  },
-  "mnemonicPhrase": "test test test test test test test test test test test ball",
-  "passphrase": undefined,
-}
-`;
-
-exports[`MnemonicPhrase getAddress derives addresses from a mnemonic phrase 1`] = `"0xc6D5a3c98EC9073B54FA0969957Bd582e8D874bf"`;
-
-exports[`MnemonicPhrase getAddress derives addresses from a mnemonic phrase 2`] = `"0x59A897A2dbd55D20bCC9B52d5eaA14E2859Dc467"`;
-
-exports[`MnemonicPhrase getAddress derives addresses from a mnemonic phrase 3`] = `"0xc6D5a3c98EC9073B54FA0969957Bd582e8D874bf"`;
-
-exports[`MnemonicPhrase getAddress derives addresses from a mnemonic phrase 4`] = `"0x3FE703a2035CB3590C865a09F556eDda02b2Cf12"`;
-
 exports[`MnemonicPhrase serializes to a string 1`] = `"{\\"type\\":\\"MnemonicPhrase\\",\\"mnemonicPhrase\\":\\"test test test test test test test test test test test ball\\"}"`;
