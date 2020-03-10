@@ -189,19 +189,7 @@ export class HDNode {
    * @return {HDNode}
    */
   private deriveChild(index: number): HDNode {
-    const indexBuffer = Buffer.alloc(4);
-    indexBuffer.writeUIntBE(index, 0, 4);
-
-    let data: Buffer;
-    if (index >= HARDENED_OFFSET) {
-      if (!this.privateKey) {
-        throw new Error('Cannot derive a hardened child key without a private key');
-      }
-
-      data = Buffer.concat([Buffer.alloc(1, 0x0), this.privateKey, indexBuffer]);
-    } else {
-      data = Buffer.concat([this.publicKey, indexBuffer]);
-    }
+    const data = this.getChildData(index);
 
     const I = hmacSHA512(this.chainCode, data);
     const IL = I.slice(0, 32);
@@ -225,6 +213,26 @@ export class HDNode {
       // If `publicAdd` throws, derive next index instead
       return this.deriveChild(index + 1);
     }
+  }
+
+  /**
+   * Get child data used for derivation of child keys.
+   *
+   * @param {number} index
+   * @return {Buffer}
+   */
+  private getChildData(index: number): Buffer {
+    const indexBuffer = toBuffer(index, 4);
+
+    if (index >= HARDENED_OFFSET) {
+      if (!this.privateKey) {
+        throw new Error('Cannot derive a hardened child key without a private key');
+      }
+
+      return Buffer.concat([Buffer.alloc(1, 0x0), this.privateKey, indexBuffer]);
+    }
+
+    return Buffer.concat([this.publicKey, indexBuffer]);
   }
 
   /**
