@@ -213,7 +213,7 @@ export class HDNode {
         const publicKey = getPublicKey(privateKey);
         return new HDNode(this.depth + 1, index, IR, publicKey, privateKey, this.fingerprint);
       } catch {
-        // Throws if parse256(IL) ≥ n or ki = 0
+        // If `privateAdd` throws, derive next index instead
         return this.deriveChild(index + 1);
       }
     }
@@ -222,7 +222,7 @@ export class HDNode {
       const publicKey = publicAdd(this.publicKey, IL);
       return new HDNode(this.depth + 1, index, IR, publicKey, undefined, this.fingerprint);
     } catch {
-      // Throws if parse256(IL) ≥ n or ki = 0
+      // If `publicAdd` throws, derive next index instead
       return this.deriveChild(index + 1);
     }
   }

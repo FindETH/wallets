@@ -31,7 +31,8 @@ export const getPublicKey = (privateKey: Buffer): Buffer => {
 };
 
 /**
- * Add a tweak to the private key.
+ * Add a tweak to the private key. Will throw an error if the resulting key is invalid, e.g. when the tweak is larger
+ * than n, or if Ki = 0.
  *
  * @param {Buffer} privateKey
  * @param {Buffer} tweakBuffer
@@ -41,16 +42,22 @@ export const privateAdd = (privateKey: Buffer, tweakBuffer: Buffer): Buffer => {
   const key = new BN(privateKey);
   const tweak = new BN(tweakBuffer);
 
-  return Buffer.from(
-    key
-      .add(tweak)
-      .umod(secp256k1.n as BN)
-      .toArrayLike(Buffer, 'be', 32)
-  );
+  if (tweak.gte(secp256k1.n!)) {
+    throw new Error('Resulting key is invalid: tweak is larger than n');
+  }
+
+  const newKey = key.add(tweak).umod(secp256k1.n as BN);
+
+  if (newKey.eq(new BN(0))) {
+    throw new Error('Resulting key is invalid: new key is 0');
+  }
+
+  return newKey.toArrayLike(Buffer, 'be', 32);
 };
 
 /**
- * Add a tweak to the public key.
+ * Add a tweak to the public key. Will throw an error if the resulting key is invalid, e.g. when the tweak is larger
+ * than n, or if Ki is the point at infinity.
  *
  * @param {Buffer} publicKey
  * @param {Buffer} tweakBuffer
@@ -59,11 +66,16 @@ export const privateAdd = (privateKey: Buffer, tweakBuffer: Buffer): Buffer => {
 export const publicAdd = (publicKey: Buffer, tweakBuffer: Buffer): Buffer => {
   const key = decodePoint(publicKey);
   const tweak = new BN(tweakBuffer);
+
+  if (tweak.gte(secp256k1.n!)) {
+    throw new Error('Resulting key is invalid: tweak is larger than n');
+  }
+
   const q = (secp256k1.g as eddsa.Point).mul(tweak);
   const point = key.add(q);
 
   if (point.isInfinity()) {
-    throw new Error('Point is infinity');
+    throw new Error('Resulting key is invalid: point is at infinity');
   }
 
   return Buffer.from(point.encode('array', true));
