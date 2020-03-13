@@ -12,9 +12,10 @@ const curve = new Curve();
 export const getPublicKey = (privateKey: Buffer): Buffer => {
   const point = curve.g.multiply(privateKey);
 
-  if (point.infinite) {
+  // TODO
+  /*if (point.infinite) {
     throw new Error('Point is infinite');
-  }
+  }*/
 
   return point.toBuffer(true);
 };
@@ -62,9 +63,10 @@ export const publicAdd = (publicKey: Buffer, tweakBuffer: Buffer): Buffer => {
   const q = curve.g.multiply(tweak);
   const point = key.add(q);
 
-  if (point.infinite) {
+  // TODO
+  /*if (point.infinite) {
     throw new Error('Resulting key is invalid: point is at infinity');
-  }
+  }*/
 
   return point.toBuffer(true);
 };

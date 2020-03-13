@@ -3,14 +3,7 @@ import { Curve } from './curve';
 import { divide, mod, multiply, subtract } from './mod';
 
 export class Point {
-  readonly x: bigint;
-  readonly y: bigint;
-  readonly infinite: boolean = false;
-
-  constructor(readonly curve: Curve, x: bigint, y: bigint) {
-    this.x = x;
-    this.y = y;
-  }
+  constructor(readonly curve: Curve, readonly x: bigint, readonly y: bigint) {}
 
   /**
    * Add another point to this point.
