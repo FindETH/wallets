@@ -25,6 +25,7 @@ deploy:
     cleanup: false
     token: $GITHUB_TOKEN
     local_dir: docs
+    edge: true
     on:
       tags: true
 
