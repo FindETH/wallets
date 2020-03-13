@@ -3,7 +3,7 @@ import TrezorConnect from 'trezor-connect';
 import { TREZOR_MANIFEST_EMAIL, TREZOR_MANIFEST_URL } from '../constants';
 import { DEFAULT_ETH, DerivationPath, TREZOR_DERIVATION_PATHS } from '../derivation-paths';
 import { HardwareWallet } from '../hardware-wallet';
-import { getFullPath } from '../utils';
+import { getFullPath, getPathPrefix } from '../utils';
 import { WalletType } from '../wallet';
 
 interface SerializedData {
@@ -20,21 +20,18 @@ export class Trezor extends HardwareWallet {
   static deserialize(serializedData: string): Trezor {
     const json = JSON.parse(serializedData) as SerializedData;
     if (json?.type !== WalletType.Trezor) {
-      throw new Error('Invalid serialized data');
+      throw new Error('Serialized data is invalid: `type` key is not valid for this class');
     }
 
     return new Trezor();
   }
 
-  private cache: Record<string, ExtendedPublicKey> = {};
+  cache: Record<string, ExtendedPublicKey> = {};
 
   async connect(): Promise<void> {
     this.cache = {};
 
     await TrezorConnect.init({
-      // TODO: Figure out how to get WebUSB to work
-      // webusb: true,
-      // popup: false,
       manifest: {
         email: TREZOR_MANIFEST_EMAIL,
         appUrl: TREZOR_MANIFEST_URL
@@ -46,7 +43,15 @@ export class Trezor extends HardwareWallet {
   }
 
   async prefetch(derivationPaths: DerivationPath[]): Promise<Record<string, ExtendedPublicKey>> {
-    const bundle = derivationPaths.filter(path => !path.isHardened).map(path => ({ path: path.path }));
+    const bundle = derivationPaths
+      .filter(path => !path.isHardened)
+      .reduce<string[]>((paths, { path }) => {
+        const childPath = getPathPrefix(path);
+        const parentPath = getPathPrefix(childPath);
+
+        return [...paths, childPath, parentPath];
+      }, [])
+      .map(path => ({ path }));
 
     const response = await TrezorConnect.getPublicKey({ bundle });
     for (const { serializedPath, chainCode, publicKey } of response.payload) {

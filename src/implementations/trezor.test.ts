@@ -34,6 +34,19 @@ describe('Trezor', () => {
     await expect(wallet.prefetch(paths)).resolves.toMatchSnapshot();
   });
 
+  it('uses pre-fetched addresses when available', async () => {
+    const wallet = new Trezor();
+    await wallet.connect();
+
+    const paths = [DEFAULT_ETH, TESTNET_ETH];
+    await wallet.prefetch(paths);
+
+    await expect(wallet.getAddress(DEFAULT_ETH, 10)).resolves.toMatchSnapshot();
+    await expect(wallet.getAddress(TESTNET_ETH, 10)).resolves.toMatchSnapshot();
+
+    expect(TrezorConnect.getPublicKey).toHaveBeenCalledTimes(3);
+  });
+
   it(`doesn't support all derivation paths'`, () => {
     const wallet = new Trezor();
 
@@ -44,5 +57,11 @@ describe('Trezor', () => {
     const wallet = new Trezor();
 
     expect(wallet.serialize()).toMatchSnapshot();
+  });
+
+  it('deserializes from a string', () => {
+    expect(Trezor.deserialize('{"type": "Trezor"}')).toMatchSnapshot();
+
+    expect(() => Trezor.deserialize('{"type": "Ledger"}')).toThrow();
   });
 });
