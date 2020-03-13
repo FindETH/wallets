@@ -19,12 +19,14 @@ script:
 
 before_deploy:
   - yarn run build:docs
+  - touch docs/.nojekyll
 
 deploy:
   - provider: pages:git
     cleanup: false
     token: $GITHUB_TOKEN
     local_dir: docs
+    edge: true
     on:
       tags: true
 
