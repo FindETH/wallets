@@ -23,9 +23,9 @@ before_deploy:
 
 deploy:
   - provider: pages:git
-    cleanup: false
     token: $GITHUB_TOKEN
     local_dir: docs
+    cleanup: false
     edge: true
     on:
       tags: true
@@ -33,7 +33,7 @@ deploy:
   - provider: npm
     email: $NPM_EMAIL
     api_key: $NPM_API_KEY
-    cleanup: true
+    cleanup: false
     edge: true
     on:
       tags: true
