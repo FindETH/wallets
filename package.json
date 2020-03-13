@@ -60,8 +60,7 @@
     "@ledgerhq/hw-transport-web-ble": "^5.2.0",
     "@ledgerhq/hw-transport-webhid": "^5.2.0",
     "@ledgerhq/hw-transport-webusb": "^5.2.0",
-    "trezor-connect": "^8.0.12",
-    "typedoc": "^0.15.5"
+    "trezor-connect": "^8.0.12"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.5",
@@ -91,6 +90,7 @@
     "tslint": "^5.20.1",
     "tslint-config-prettier": "^1.18.0",
     "tslint-origin-ordered-imports-rule": "^1.2.2",
+    "typedoc": "^0.15.5",
     "typescript": "^3.7.3"
   },
   "lint-staged": {
