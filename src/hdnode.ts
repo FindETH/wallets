@@ -1,18 +1,14 @@
 import { DERIVATION_PATH, HARDENED_OFFSET } from './constants';
 import { ExtendedKey } from './hardware-wallet';
 import { isValidMnemonic, mnemonicToSeed } from './mnemonics';
+import { compressPublicKey, decompressPublicKey, getPublicKey, privateAdd, publicAdd } from './secp256k1';
 import {
-  compressPublicKey,
   decodeBase58,
-  decompressPublicKey,
   dehexify,
   encodeBase58,
   getIndex,
-  getPublicKey,
   hmacSHA512,
   keccak256,
-  privateAdd,
-  publicAdd,
   ripemd160,
   toBuffer,
   toChecksumAddress
@@ -199,6 +195,7 @@ export class HDNode {
       try {
         const privateKey = privateAdd(this.privateKey, IL);
         const publicKey = getPublicKey(privateKey);
+
         return new HDNode(this.depth + 1, index, IR, publicKey, privateKey, this.fingerprint);
       } catch {
         // If `privateAdd` throws, derive next index instead
