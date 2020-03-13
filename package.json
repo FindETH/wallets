@@ -51,6 +51,7 @@
     "prepare": "yarn run build"
   },
   "dependencies": {
+    "@findeth/hdnode": "^0.1.0",
     "@ledgerhq/hw-app-eth": "^5.2.0",
     "@ledgerhq/hw-transport": "^5.2.0",
     "@ledgerhq/hw-transport-mocker": "^5.2.0",
@@ -59,8 +60,6 @@
     "@ledgerhq/hw-transport-web-ble": "^5.2.0",
     "@ledgerhq/hw-transport-webhid": "^5.2.0",
     "@ledgerhq/hw-transport-webusb": "^5.2.0",
-    "base-x": "^3.0.8",
-    "keccak": "^3.0.0",
     "trezor-connect": "^8.0.12",
     "typedoc": "^0.15.5"
   },
@@ -74,8 +73,6 @@
     "@babel/plugin-transform-modules-commonjs": "^7.7.5",
     "@babel/preset-env": "^7.7.7",
     "@babel/preset-typescript": "^7.7.4",
-    "@types/base-x": "^3.0.6",
-    "@types/elliptic": "^6.4.12",
     "@types/jest": "^24.0.23",
     "@types/node": "^12.12.19",
     "@types/w3c-web-usb": "^1.0.3",

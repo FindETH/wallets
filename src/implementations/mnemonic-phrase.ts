@@ -1,5 +1,5 @@
+import { HDNode } from '@findeth/hdnode';
 import { ALL_DERIVATION_PATHS, DerivationPath } from '../derivation-paths';
-import { HDNode } from '../hdnode';
 import { getFullPath } from '../utils';
 import { Wallet, WalletType } from '../wallet';
 

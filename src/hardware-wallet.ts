@@ -1,12 +1,7 @@
+import { ExtendedPublicKey, HDNode } from '@findeth/hdnode';
 import { DerivationPath } from './derivation-paths';
-import { HDNode } from './hdnode';
 import { getPathPrefix, memoize } from './utils';
 import { Wallet } from './wallet';
-
-export interface ExtendedKey {
-  publicKey: string;
-  chainCode: string;
-}
 
 export abstract class HardwareWallet implements Wallet {
   constructor() {
@@ -47,9 +42,9 @@ export abstract class HardwareWallet implements Wallet {
    * Get the chain code and public key from the device, based on the derivation path.
    *
    * @param {DerivationPath} derivationPath
-   * @return {Promise<ExtendedKey>}
+   * @return {Promise<ExtendedPublicKey>}
    */
-  protected abstract getExtendedKey(derivationPath: string): Promise<ExtendedKey>;
+  protected abstract getExtendedKey(derivationPath: string): Promise<ExtendedPublicKey>;
 
   /**
    * Get an address from the device, using derivation at a hardened level.

@@ -1,7 +1,8 @@
+import { ExtendedPublicKey } from '@findeth/hdnode';
 import TrezorConnect from 'trezor-connect';
 import { TREZOR_MANIFEST_EMAIL, TREZOR_MANIFEST_URL } from '../constants';
 import { DEFAULT_ETH, DerivationPath, TREZOR_DERIVATION_PATHS } from '../derivation-paths';
-import { ExtendedKey, HardwareWallet } from '../hardware-wallet';
+import { HardwareWallet } from '../hardware-wallet';
 import { getFullPath } from '../utils';
 import { WalletType } from '../wallet';
 
@@ -25,7 +26,7 @@ export class Trezor extends HardwareWallet {
     return new Trezor();
   }
 
-  private cache: Record<string, ExtendedKey> = {};
+  private cache: Record<string, ExtendedPublicKey> = {};
 
   async connect(): Promise<void> {
     this.cache = {};
@@ -44,7 +45,7 @@ export class Trezor extends HardwareWallet {
     await this.getAddress(DEFAULT_ETH, 50);
   }
 
-  async prefetch(derivationPaths: DerivationPath[]): Promise<Record<string, ExtendedKey>> {
+  async prefetch(derivationPaths: DerivationPath[]): Promise<Record<string, ExtendedPublicKey>> {
     const bundle = derivationPaths.filter(path => !path.isHardened).map(path => ({ path: path.path }));
 
     const response = await TrezorConnect.getPublicKey({ bundle });
@@ -65,7 +66,7 @@ export class Trezor extends HardwareWallet {
     });
   }
 
-  protected async getExtendedKey(derivationPath: string): Promise<ExtendedKey> {
+  protected async getExtendedKey(derivationPath: string): Promise<ExtendedPublicKey> {
     if (this.cache[derivationPath]) {
       return this.cache[derivationPath];
     }
