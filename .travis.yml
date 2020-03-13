@@ -19,6 +19,7 @@ script:
 
 before_deploy:
   - yarn run build:docs
+  - touch docs/.nojekyll
 
 deploy:
   - provider: pages:git
