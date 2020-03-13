@@ -1,6 +1,7 @@
+import { ExtendedPublicKey } from '@findeth/hdnode';
 import Transport from '@ledgerhq/hw-transport';
 import { DerivationPath, LEDGER_DERIVATION_PATHS, LEDGER_ETH } from '../derivation-paths';
-import { HardwareWallet, KeyInfo } from '../hardware-wallet';
+import { HardwareWallet } from '../hardware-wallet';
 import { getFullPath, getTransportImplementation, isTransportType } from '../utils';
 import { WalletType } from '../wallet';
 import { TransportWrapper } from './transports';
@@ -58,7 +59,7 @@ export class Ledger<Descriptor> extends HardwareWallet {
     });
   }
 
-  protected async getKeyInfo(derivationPath: string): Promise<KeyInfo> {
+  protected async getExtendedKey(derivationPath: string): Promise<ExtendedPublicKey> {
     const app = await this.transport.getApplication();
 
     const { publicKey, chainCode } = await app.getAddress(derivationPath, false, true);

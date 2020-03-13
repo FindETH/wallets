@@ -1,12 +1,7 @@
-import { HDNode } from '@ethersproject/hdnode';
+import { ExtendedPublicKey, HDNode } from '@findeth/hdnode';
 import { DerivationPath } from './derivation-paths';
-import { createExtendedPublicKey, getPathPrefix, memoize } from './utils';
+import { getPathPrefix, memoize } from './utils';
 import { Wallet } from './wallet';
-
-export interface KeyInfo {
-  publicKey: string;
-  chainCode: string;
-}
 
 export abstract class HardwareWallet implements Wallet {
   constructor() {
@@ -26,7 +21,7 @@ export abstract class HardwareWallet implements Wallet {
     }
 
     const hdNode = await this.getHDNode(derivationPath);
-    return hdNode.derivePath(`${index}`).address;
+    return hdNode.derive(`m/${index}`).address;
   }
 
   /**
@@ -47,12 +42,12 @@ export abstract class HardwareWallet implements Wallet {
    * Get the chain code and public key from the device, based on the derivation path.
    *
    * @param {DerivationPath} derivationPath
-   * @return {Promise<KeyInfo>}
+   * @return {Promise<ExtendedPublicKey>}
    */
-  protected abstract getKeyInfo(derivationPath: string): Promise<KeyInfo>;
+  protected abstract getExtendedKey(derivationPath: string): Promise<ExtendedPublicKey>;
 
   /**
-   * Get an address from the device, using hardened derivation.
+   * Get an address from the device, using derivation at a hardened level.
    *
    * @param {DerivationPath} derivationPath
    * @param {number} index
@@ -68,12 +63,11 @@ export abstract class HardwareWallet implements Wallet {
    */
   private async getHDNode(derivationPath: DerivationPath): Promise<HDNode> {
     const childPath = getPathPrefix(derivationPath.path);
-    const childInfo = await this.getKeyInfo(childPath);
+    const childKey = await this.getExtendedKey(childPath);
 
     const parentPath = getPathPrefix(childPath);
-    const parentInfo = await this.getKeyInfo(parentPath);
+    const parentKey = await this.getExtendedKey(parentPath);
 
-    const extendedKey = createExtendedPublicKey(childPath, parentInfo, childInfo);
-    return HDNode.fromExtendedKey(extendedKey);
+    return HDNode.fromParentChildKey(childPath, parentKey, childKey);
   }
 }

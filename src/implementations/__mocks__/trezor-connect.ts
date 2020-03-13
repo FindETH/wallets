@@ -13,13 +13,23 @@ export default class TrezorConnect {
         payload = [
           {
             serializedPath: `m/44'/60'/0'/0`,
-            chainCode: '51f696d1838ec2986b979577cc43c1098e26fe34d9abaf319df00a7eb20e0311',
-            publicKey: '021c3e866ccb8f158431f5036319dc16f0409bd385d796fbc122a22819f0ec9017'
+            chainCode: '7968ee36e0b6d94da4551bac811e7816115d4ebb9e15a6f4068bbc29736d4576',
+            publicKey: '034d7509b2ddb7179364109b16ea95c8282ff05c6866ae760b22eca20b8e66dc9a'
+          },
+          {
+            serializedPath: `m/44'/60'/0'`,
+            chainCode: 'f34046e410a060091825436065aa12e074c6c8f348e3528578e902777789d0b5',
+            publicKey: '02d54226ceac221f494aa1888252f47220e9d4cf0ddc11a651433bcad6364ee2af'
           },
           {
             serializedPath: `m/44'/1'/0'/0`,
-            chainCode: '9d73a228d784f361eed3910b1d49750b33bc8aea09180b78abb71a09a17ae689',
-            publicKey: '02bc7ab0a01997363ba548279abf8302ecc50ed376fe74ba3133f1678346ce0c5d'
+            chainCode: '11b7f3ec2cd7738edb803a21c2d5df3ed21902dc1f072325634d7fe9b8a6d61e',
+            publicKey: '02f5ff7dd9ee74985c7018bfa3aac65f3892a2ca47d002d3bccb8a6e5ed80008db'
+          },
+          {
+            serializedPath: `m/44'/1'/0'`,
+            chainCode: 'ca2f3de968b1832ab13039cd1fabcdd10274723b51d9ce1ac47561b09d4f7984',
+            publicKey: '0339ab36253d28dcfdb7f55bb2cf7628374fba6738f80500e4f3f5a83a14769ba6'
           }
         ];
       } else {
