@@ -53,13 +53,16 @@ export const toArray = (derivationPath: string): number[] => {
  * @return {string}
  */
 export const fromArray = (derivationPath: number[]): string => {
-  return ['m', ...derivationPath.map(index => {
-    const isHardened = index >= HARDENED_OFFSET;
+  return [
+    'm',
+    ...derivationPath.map(index => {
+      const isHardened = index >= HARDENED_OFFSET;
 
-    if (isHardened) {
-      return `${index - HARDENED_OFFSET}'`;
-    }
+      if (isHardened) {
+        return `${index - HARDENED_OFFSET}'`;
+      }
 
-    return index;
-  })].join('/');
+      return index;
+    })
+  ].join('/');
 };

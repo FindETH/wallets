@@ -70,7 +70,7 @@ export abstract class HardwareWallet implements Wallet {
     }
 
     const parentPath = getPathPrefix(childPath);
-    const parentKey = await this.getExtendedKey(parentPath) as ExtendedPublicKey;
+    const parentKey = (await this.getExtendedKey(parentPath)) as ExtendedPublicKey;
 
     return HDNode.fromParentChildKey(childPath, parentKey, childKey);
   }

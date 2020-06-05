@@ -1,5 +1,6 @@
 import { DerivationPath } from './derivation-paths';
 import { Ledger, MnemonicPhrase, Trezor } from './implementations';
+import { KeepKey } from './implementations/keepkey';
 
 export interface Wallet {
   /**
@@ -37,6 +38,7 @@ export enum WalletType {
 }
 
 const SUPPORTED_WALLETS = {
+  [WalletType.KeepKey]: KeepKey,
   [WalletType.Ledger]: Ledger,
   [WalletType.MnemonicPhrase]: MnemonicPhrase,
   [WalletType.Trezor]: Trezor
@@ -69,7 +71,7 @@ export const getWalletImplementation = <Type extends WalletType>(type: Type): ty
  * @param {string} serializedData
  * @return {Ledger<*> | Trezor | MnemonicPhrase>}
  */
-export const deserialize = (serializedData: string): Ledger<unknown> | Trezor | MnemonicPhrase => {
+export const deserialize = (serializedData: string): KeepKey | Ledger<unknown> | Trezor | MnemonicPhrase => {
   const json = JSON.parse(serializedData);
   if (!json.type) {
     throw new Error('Serialized data is invalid: missing `type` key');

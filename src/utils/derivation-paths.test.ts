@@ -24,7 +24,7 @@ describe('getPathPrefix', () => {
 
 describe('toArray', () => {
   it('returns a number array representation of a derivation path', () => {
-    expect(toArray(DEFAULT_ETH, 0)).toStrictEqual([
+    expect(toArray(getFullPath(DEFAULT_ETH, 0))).toStrictEqual([
       HARDENED_OFFSET + 44,
       HARDENED_OFFSET + 60,
       HARDENED_OFFSET + 0,
@@ -32,7 +32,7 @@ describe('toArray', () => {
       0
     ]);
 
-    expect(toArray(DEFAULT_ETC, 1)).toStrictEqual([
+    expect(toArray(getFullPath(DEFAULT_ETC, 0))).toStrictEqual([
       HARDENED_OFFSET + 44,
       HARDENED_OFFSET + 61,
       HARDENED_OFFSET + 0,
@@ -44,20 +44,12 @@ describe('toArray', () => {
 
 describe('fromArray', () => {
   it('returns a derivation path string from a number array', () => {
-    expect(fromArray([
-      HARDENED_OFFSET + 44,
-      HARDENED_OFFSET + 60,
-      HARDENED_OFFSET + 0,
-      0,
-      0
-    ])).toBe(getFullPath(DEFAULT_ETH, 0));
+    expect(fromArray([HARDENED_OFFSET + 44, HARDENED_OFFSET + 60, HARDENED_OFFSET + 0, 0, 0])).toBe(
+      getFullPath(DEFAULT_ETH, 0)
+    );
 
-    expect(fromArray([
-      HARDENED_OFFSET + 44,
-      HARDENED_OFFSET + 61,
-      HARDENED_OFFSET + 0,
-      0,
-      1
-    ])).toBe(getFullPath(DEFAULT_ETC, 1));
+    expect(fromArray([HARDENED_OFFSET + 44, HARDENED_OFFSET + 61, HARDENED_OFFSET + 0, 0, 1])).toBe(
+      getFullPath(DEFAULT_ETC, 1)
+    );
   });
 });
