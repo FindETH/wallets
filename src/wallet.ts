@@ -30,6 +30,7 @@ export interface Wallet {
 }
 
 export enum WalletType {
+  KeepKey = 'KeepKey',
   Ledger = 'Ledger',
   MnemonicPhrase = 'MnemonicPhrase',
   Trezor = 'Trezor'
