@@ -32,7 +32,7 @@ describe('toArray', () => {
       0
     ]);
 
-    expect(toArray(getFullPath(DEFAULT_ETC, 0))).toStrictEqual([
+    expect(toArray(getFullPath(DEFAULT_ETC, 1))).toStrictEqual([
       HARDENED_OFFSET + 44,
       HARDENED_OFFSET + 61,
       HARDENED_OFFSET + 0,
