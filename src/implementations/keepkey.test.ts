@@ -1,7 +1,8 @@
-import { ALL_DERIVATION_PATHS, DEFAULT_ETH, LEDGER_DERIVATION_PATHS, LEDGER_LIVE_ETH } from '../derivation-paths';
+import { ALL_DERIVATION_PATHS, DEFAULT_ETH, LEDGER_LIVE_ETH } from '../derivation-paths';
 import { KeepKey } from './keepkey';
 
-jest.mock('@ledgerhq/hw-transport-webusb');
+jest.mock('@shapeshiftoss/hdwallet-keepkey-webusb');
+jest.mock('@shapeshiftoss/hdwallet-core');
 
 navigator.usb.requestDevice = jest.fn();
 
@@ -22,9 +23,8 @@ describe('KeepKey', () => {
     await expect(wallet.getAddress(LEDGER_LIVE_ETH, 15)).resolves.toMatchSnapshot();
   });
 
-  it(`doesn't support all derivation paths'`, () => {
-    expect(wallet.getDerivationPaths()).not.toStrictEqual(ALL_DERIVATION_PATHS);
-    expect(wallet.getDerivationPaths()).toStrictEqual(LEDGER_DERIVATION_PATHS);
+  it(`supports all derivation paths'`, () => {
+    expect(wallet.getDerivationPaths()).toStrictEqual(ALL_DERIVATION_PATHS);
   });
 
   it('serializes to a string', () => {
@@ -32,10 +32,6 @@ describe('KeepKey', () => {
   });
 
   it('deserializes from a string', () => {
-    expect(
-      KeepKey.deserialize(
-        '{"type": "KeepKey"}'
-      )
-    ).toMatchSnapshot();
+    expect(KeepKey.deserialize('{"type": "KeepKey"}')).toMatchSnapshot();
   });
 });

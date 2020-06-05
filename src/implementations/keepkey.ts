@@ -1,19 +1,15 @@
+import { HDWallet, Keyring, supportsETH } from '@shapeshiftoss/hdwallet-core';
+import { WebUSBKeepKeyAdapter } from '@shapeshiftoss/hdwallet-keepkey-webusb';
 import { ALL_DERIVATION_PATHS, DEFAULT_ETH, DerivationPath } from '../derivation-paths';
 import { HardwareWallet } from '../hardware-wallet';
-import { WalletType } from '../wallet';
-import { WebUSBKeepKeyAdapter } from '@shapeshiftoss/hdwallet-keepkey-webusb';
-import { HDWallet, Keyring, supportsETH } from '@shapeshiftoss/hdwallet-core';
 import { getFullPath, toArray } from '../utils';
+import { WalletType } from '../wallet';
 
 interface SerializedData {
   type?: string;
 }
 
 export class KeepKey extends HardwareWallet {
-  private readonly keyring: Keyring = new Keyring();
-  private readonly adapter: WebUSBKeepKeyAdapter = WebUSBKeepKeyAdapter.useKeyring(this.keyring);
-  private wallet: HDWallet | null = null;
-
   /**
    * Get a class instance from serialized data. Useful for using the class in a web worker.
    *
@@ -28,6 +24,9 @@ export class KeepKey extends HardwareWallet {
 
     return new KeepKey();
   }
+  private readonly keyring: Keyring = new Keyring();
+  private readonly adapter: WebUSBKeepKeyAdapter = WebUSBKeepKeyAdapter.useKeyring(this.keyring);
+  private wallet: HDWallet | null = null;
 
   async connect(): Promise<void> {
     this.wallet = await this.adapter.pairDevice();
@@ -43,7 +42,7 @@ export class KeepKey extends HardwareWallet {
 
   serialize(): string {
     return JSON.stringify({
-      type: WalletType.Trezor
+      type: WalletType.KeepKey
     });
   }
 
