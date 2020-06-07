@@ -27,9 +27,10 @@ export abstract class HardwareWallet implements Wallet {
   /**
    * Connect to the device.
    *
+   * @param {() => Promise<string>} [handleUnlock]
    * @return {Promise<void>}
    */
-  abstract connect(): Promise<void>;
+  abstract connect(handleUnlock?: () => Promise<string>): Promise<void>;
 
   /**
    * Get all derivation paths supported by the device.

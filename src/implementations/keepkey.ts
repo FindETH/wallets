@@ -1,4 +1,5 @@
-import { HDWallet, Keyring, supportsETH } from '@shapeshiftoss/hdwallet-core';
+import { Keyring, supportsETH } from '@shapeshiftoss/hdwallet-core';
+import { isKeepKey, KeepKeyHDWallet } from '@shapeshiftoss/hdwallet-keepkey';
 import { WebUSBKeepKeyAdapter } from '@shapeshiftoss/hdwallet-keepkey-webusb';
 import { ALL_DERIVATION_PATHS, DEFAULT_ETH, DerivationPath } from '../derivation-paths';
 import { HardwareWallet } from '../hardware-wallet';
@@ -24,12 +25,33 @@ export class KeepKey extends HardwareWallet {
 
     return new KeepKey();
   }
+
   private readonly keyring: Keyring = new Keyring();
   private readonly adapter: WebUSBKeepKeyAdapter = WebUSBKeepKeyAdapter.useKeyring(this.keyring);
-  private wallet: HDWallet | null = null;
+  private wallet: KeepKeyHDWallet | null = null;
 
-  async connect(): Promise<void> {
-    this.wallet = await this.adapter.pairDevice();
+  async connect(handleUnlock?: () => Promise<string>): Promise<void> {
+    const wallet = await this.adapter.pairDevice();
+
+    // This should never be the case, but is required to get the right wallet type without having to cast it manually
+    if (!isKeepKey(wallet)) {
+      throw new Error('Invalid device connected');
+    }
+
+    this.wallet = wallet;
+
+    if (!(await this.wallet.isInitialized())) {
+      await this.wallet.initialize();
+    }
+
+    if (await this.isLocked()) {
+      if (!handleUnlock) {
+        throw new Error('Device is locked, but no callback for `handleUnlock` was passed');
+      }
+
+      const pin = await handleUnlock();
+      await this.wallet.sendPin(pin);
+    }
 
     // Fetch a random address to ensure the connection works
     await this.getAddress(DEFAULT_ETH, 50);
@@ -71,5 +93,19 @@ export class KeepKey extends HardwareWallet {
     }
 
     throw new Error('ETH not supported');
+  }
+
+  /**
+   * Check if the device is locked with a PIN. Does not support passphrases currently.
+   *
+   * @return {Promise<boolean>}
+   */
+  private async isLocked(): Promise<boolean> {
+    if (!this.wallet) {
+      throw new Error('Not connected');
+    }
+
+    const features = await this.wallet.getFeatures();
+    return (features?.pinProtection && !features.pinCached) ?? false;
   }
 }
