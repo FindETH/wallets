@@ -24,12 +24,17 @@ export abstract class HardwareWallet implements Wallet {
     return hdNode.derive(`m/${index}`).address;
   }
 
+  isHardwareWallet(): this is HardwareWallet {
+    return true;
+  }
+
   /**
    * Connect to the device.
    *
+   * @param {() => Promise<string>} [handleUnlock]
    * @return {Promise<void>}
    */
-  abstract connect(): Promise<void>;
+  abstract connect(handleUnlock?: () => Promise<string>): Promise<void>;
 
   /**
    * Get all derivation paths supported by the device.
@@ -42,9 +47,9 @@ export abstract class HardwareWallet implements Wallet {
    * Get the chain code and public key from the device, based on the derivation path.
    *
    * @param {DerivationPath} derivationPath
-   * @return {Promise<ExtendedPublicKey>}
+   * @return {Promise<ExtendedPublicKey | string>}
    */
-  protected abstract getExtendedKey(derivationPath: string): Promise<ExtendedPublicKey>;
+  protected abstract getExtendedKey(derivationPath: string): Promise<ExtendedPublicKey | string>;
 
   /**
    * Get an address from the device, using derivation at a hardened level.
@@ -65,8 +70,12 @@ export abstract class HardwareWallet implements Wallet {
     const childPath = getPathPrefix(derivationPath.path);
     const childKey = await this.getExtendedKey(childPath);
 
+    if (typeof childKey === 'string') {
+      return HDNode.fromExtendedKey(childKey);
+    }
+
     const parentPath = getPathPrefix(childPath);
-    const parentKey = await this.getExtendedKey(parentPath);
+    const parentKey = (await this.getExtendedKey(parentPath)) as ExtendedPublicKey;
 
     return HDNode.fromParentChildKey(childPath, parentKey, childKey);
   }
