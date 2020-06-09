@@ -767,10 +767,10 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@findeth/hdnode@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@findeth/hdnode/-/hdnode-0.1.0.tgz#ae579614e1739fbff1255b1d69fc591951631b3e"
-  integrity sha512-lpDF4wa5dkgXXJxKUsKSwb9LVazMvMQbgfnSAwvMZID0jcbPrx+KtNy3DFN9drTRZk++CJd17f9UfUBzIVdtIA==
+"@findeth/hdnode@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@findeth/hdnode/-/hdnode-0.2.0.tgz#8a50ab290a61ccd3a81d6be421e26f9d555c4bd5"
+  integrity sha512-C/YR+6j40O0b5fuSqaPY37siPBOPjYq+e1G9CDxY0vAzbOr0IIlz/uhAD52lErOaBDAPoGs72RvaQgeQupbekQ==
   dependencies:
     base-x "^3.0.8"
     keccak "^3.0.0"
@@ -1527,7 +1527,7 @@ balanced-match@^1.0.0:
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
   integrity sha1-ibTRmasr7kneFk6gK4nORi1xt2c=
 
-base-x@^3.0.8:
+base-x@^3.0.2, base-x@^3.0.8:
   version "3.0.8"
   resolved "https://registry.yarnpkg.com/base-x/-/base-x-3.0.8.tgz#1e1106c2537f0162e8b52474a557ebb09000018d"
   integrity sha512-Rl/1AWP4J/zRrk54hhlxH4drNxPJXYUaKffODVI53/dAsV4t9fBxyxYKAVPU1XBHxYwOWP9h9H0hM2MVw4YfJA==
@@ -1660,6 +1660,13 @@ bs-logger@0.x:
   integrity sha512-pd8DCoxmbgc7hyPKOvxtqNcjYoOsABPQdcCUjGp3d42VR2CX1ORhk2A87oqqu5R1kk+76nsxZupkmyd+MVtCog==
   dependencies:
     fast-json-stable-stringify "2.x"
+
+bs58@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/bs58/-/bs58-4.0.1.tgz#be161e76c354f6f788ae4071f63f34e8c4f0a42a"
+  integrity sha1-vhYedsNU9veIrkBx9j806MTwpCo=
+  dependencies:
+    base-x "^3.0.2"
 
 bser@2.1.1:
   version "2.1.1"

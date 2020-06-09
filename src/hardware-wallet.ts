@@ -24,6 +24,10 @@ export abstract class HardwareWallet implements Wallet {
     return hdNode.derive(`m/${index}`).address;
   }
 
+  isHardwareWallet(): this is HardwareWallet {
+    return true;
+  }
+
   /**
    * Connect to the device.
    *

@@ -2,6 +2,7 @@ import { ALL_DERIVATION_PATHS, DEFAULT_ETH, LEDGER_LIVE_ETH } from '../derivatio
 import { KeepKey } from './keepkey';
 
 jest.mock('@shapeshiftoss/hdwallet-keepkey-webusb');
+jest.mock('@shapeshiftoss/hdwallet-keepkey');
 jest.mock('@shapeshiftoss/hdwallet-core');
 
 navigator.usb.requestDevice = jest.fn();
@@ -10,7 +11,7 @@ describe('KeepKey', () => {
   const wallet = new KeepKey();
 
   it('initializes the connection', async () => {
-    await wallet.connect();
+    await wallet.connect(async () => '12345');
   });
 
   it('derives an address from a derivation path', async () => {

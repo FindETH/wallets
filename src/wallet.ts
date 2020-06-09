@@ -1,6 +1,6 @@
 import { DerivationPath } from './derivation-paths';
-import { Ledger, MnemonicPhrase, Trezor } from './implementations';
-import { KeepKey } from './implementations/keepkey';
+import { HardwareWallet } from './hardware-wallet';
+import { KeepKey, Ledger, MnemonicPhrase, Trezor } from './implementations';
 
 export interface Wallet {
   /**
@@ -28,6 +28,13 @@ export interface Wallet {
    * @template T
    */
   prefetch?(derivationPaths: DerivationPath[]): Promise<unknown>;
+
+  /**
+   * Check if the instance of wallet is a hardware wallet.
+   *
+   * @return {boolean}
+   */
+  isHardwareWallet(): this is HardwareWallet;
 }
 
 export enum WalletType {
