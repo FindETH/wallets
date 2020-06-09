@@ -81,6 +81,7 @@
 				<h3>Implemented by</h3>
 				<ul class="tsd-hierarchy">
 					<li><a href="../classes/_hardware_wallet_.hardwarewallet.html" class="tsd-signature-type">HardwareWallet</a></li>
+					<li><a href="../classes/_implementations_keepkey_.keepkey.html" class="tsd-signature-type">KeepKey</a></li>
 					<li><a href="../classes/_implementations_ledger_.ledger.html" class="tsd-signature-type">Ledger</a></li>
 					<li><a href="../classes/_implementations_mnemonic_phrase_.mnemonicphrase.html" class="tsd-signature-type">MnemonicPhrase</a></li>
 					<li><a href="../classes/_implementations_trezor_.trezor.html" class="tsd-signature-type">Trezor</a></li>
@@ -95,6 +96,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_wallet_.wallet.html#getaddress" class="tsd-kind-icon">get<wbr>Address</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_wallet_.wallet.html#getderivationpaths" class="tsd-kind-icon">get<wbr>Derivation<wbr>Paths</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_wallet_.wallet.html#ishardwarewallet" class="tsd-kind-icon">is<wbr>Hardware<wbr>Wallet</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_wallet_.wallet.html#prefetch" class="tsd-kind-icon">prefetch</a></li>
 							</ul>
 						</section>
@@ -113,7 +115,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/c9b110b/src/wallet.ts#L19">wallet.ts:19</a></li>
+									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/2cf7f86/src/wallet.ts#L20">wallet.ts:20</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -144,7 +146,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/c9b110b/src/wallet.ts#L10">wallet.ts:10</a></li>
+									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/2cf7f86/src/wallet.ts#L11">wallet.ts:11</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -153,6 +155,28 @@
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <a href="../modules/_derivation_paths_.html#derivationpath" class="tsd-signature-type">DerivationPath</a><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="ishardwarewallet" class="tsd-anchor"></a>
+					<h3>is<wbr>Hardware<wbr>Wallet</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Hardware<wbr>Wallet<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">HardwareWallet</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/2cf7f86/src/wallet.ts#L37">wallet.ts:37</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Check if the instance of wallet is a hardware wallet.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">HardwareWallet</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -166,7 +190,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/c9b110b/src/wallet.ts#L29">wallet.ts:29</a></li>
+									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/2cf7f86/src/wallet.ts#L30">wallet.ts:30</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -212,6 +236,9 @@
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_implementations_index_.html">&quot;implementations/index&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_implementations_keepkey_.html">&quot;implementations/keepkey&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_implementations_ledger_.html">&quot;implementations/ledger&quot;</a>
@@ -284,6 +311,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="_wallet_.wallet.html#getderivationpaths" class="tsd-kind-icon">get<wbr>Derivation<wbr>Paths</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="_wallet_.wallet.html#ishardwarewallet" class="tsd-kind-icon">is<wbr>Hardware<wbr>Wallet</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="_wallet_.wallet.html#prefetch" class="tsd-kind-icon">prefetch</a>

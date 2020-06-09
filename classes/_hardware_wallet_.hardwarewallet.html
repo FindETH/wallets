@@ -76,6 +76,9 @@
 						<span class="target">HardwareWallet</span>
 						<ul class="tsd-hierarchy">
 							<li>
+								<a href="_implementations_keepkey_.keepkey.html" class="tsd-signature-type">KeepKey</a>
+							</li>
+							<li>
 								<a href="_implementations_ledger_.ledger.html" class="tsd-signature-type">Ledger</a>
 							</li>
 							<li>
@@ -110,6 +113,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="_hardware_wallet_.hardwarewallet.html#getextendedkey" class="tsd-kind-icon">get<wbr>Extended<wbr>Key</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_hardware_wallet_.hardwarewallet.html#gethdnode" class="tsd-kind-icon">getHDNode</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="_hardware_wallet_.hardwarewallet.html#gethardenedaddress" class="tsd-kind-icon">get<wbr>Hardened<wbr>Address</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_hardware_wallet_.hardwarewallet.html#ishardwarewallet" class="tsd-kind-icon">is<wbr>Hardware<wbr>Wallet</a></li>
 							</ul>
 						</section>
 					</div>
@@ -127,7 +131,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/c9b110b/src/hardware-wallet.ts#L6">hardware-wallet.ts:6</a></li>
+									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/2cf7f86/src/hardware-wallet.ts#L6">hardware-wallet.ts:6</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="_hardware_wallet_.hardwarewallet.html" class="tsd-signature-type">HardwareWallet</a></h4>
@@ -141,13 +145,13 @@
 					<a name="connect" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> connect</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">connect<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">connect<span class="tsd-signature-symbol">(</span>handleUnlock<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/c9b110b/src/hardware-wallet.ts#L32">hardware-wallet.ts:32</a></li>
+									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/2cf7f86/src/hardware-wallet.ts#L37">hardware-wallet.ts:37</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -155,6 +159,12 @@
 									<p>Connect to the device.</p>
 								</div>
 							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> handleUnlock: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">function</span></h5>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
@@ -170,7 +180,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_wallet_.wallet.html">Wallet</a>.<a href="../interfaces/_wallet_.wallet.html#getaddress">getAddress</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/c9b110b/src/hardware-wallet.ts#L18">hardware-wallet.ts:18</a></li>
+									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/2cf7f86/src/hardware-wallet.ts#L18">hardware-wallet.ts:18</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -202,7 +212,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_wallet_.wallet.html">Wallet</a>.<a href="../interfaces/_wallet_.wallet.html#getderivationpaths">getDerivationPaths</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/c9b110b/src/hardware-wallet.ts#L39">hardware-wallet.ts:39</a></li>
+									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/2cf7f86/src/hardware-wallet.ts#L44">hardware-wallet.ts:44</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -218,13 +228,13 @@
 					<a name="getextendedkey" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagAbstract">Abstract</span> get<wbr>Extended<wbr>Key</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Extended<wbr>Key<span class="tsd-signature-symbol">(</span>derivationPath<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ExtendedPublicKey</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Extended<wbr>Key<span class="tsd-signature-symbol">(</span>derivationPath<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ExtendedPublicKey</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/c9b110b/src/hardware-wallet.ts#L47">hardware-wallet.ts:47</a></li>
+									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/2cf7f86/src/hardware-wallet.ts#L52">hardware-wallet.ts:52</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -238,7 +248,7 @@
 									<h5>derivationPath: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ExtendedPublicKey</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ExtendedPublicKey</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -252,7 +262,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/c9b110b/src/hardware-wallet.ts#L64">hardware-wallet.ts:64</a></li>
+									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/2cf7f86/src/hardware-wallet.ts#L69">hardware-wallet.ts:69</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -280,7 +290,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/c9b110b/src/hardware-wallet.ts#L56">hardware-wallet.ts:56</a></li>
+									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/2cf7f86/src/hardware-wallet.ts#L61">hardware-wallet.ts:61</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -298,6 +308,24 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="ishardwarewallet" class="tsd-anchor"></a>
+					<h3>is<wbr>Hardware<wbr>Wallet</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Hardware<wbr>Wallet<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">HardwareWallet</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_wallet_.wallet.html">Wallet</a>.<a href="../interfaces/_wallet_.wallet.html#ishardwarewallet">isHardwareWallet</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/2cf7f86/src/hardware-wallet.ts#L27">hardware-wallet.ts:27</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">HardwareWallet</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -323,6 +351,9 @@
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_implementations_index_.html">&quot;implementations/index&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_implementations_keepkey_.html">&quot;implementations/keepkey&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_implementations_ledger_.html">&quot;implementations/ledger&quot;</a>
@@ -407,6 +438,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
 								<a href="_hardware_wallet_.hardwarewallet.html#gethardenedaddress" class="tsd-kind-icon">get<wbr>Hardened<wbr>Address</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_hardware_wallet_.hardwarewallet.html#ishardwarewallet" class="tsd-kind-icon">is<wbr>Hardware<wbr>Wallet</a>
 							</li>
 						</ul>
 					</li>
