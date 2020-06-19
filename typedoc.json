@@ -1,8 +1,5 @@
 {
   "mode": "modules",
   "out": "docs",
-  "exclude": [
-    "**/__mocks__/**",
-    "**/*.test.ts"
-  ]
+  "exclude": ["**/__mocks__/**", "**/*.test.ts"]
 }

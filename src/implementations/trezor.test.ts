@@ -47,7 +47,7 @@ describe('Trezor', () => {
     expect(TrezorConnect.getPublicKey).toHaveBeenCalledTimes(3);
   });
 
-  it(`doesn't support all derivation paths'`, () => {
+  it("doesn't support all derivation paths'", () => {
     const wallet = new Trezor();
 
     expect(wallet.getDerivationPaths()).toStrictEqual(TREZOR_DERIVATION_PATHS);

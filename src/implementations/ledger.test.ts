@@ -10,7 +10,7 @@ describe('Ledger', () => {
   const wallet = new Ledger(new LedgerWebUSB());
 
   it('initializes the connection', async () => {
-    await wallet.connect();
+    await expect(wallet.connect()).resolves.not.toThrow();
   });
 
   it('derives an address from a derivation path', async () => {
@@ -23,7 +23,7 @@ describe('Ledger', () => {
     await expect(wallet.getAddress(LEDGER_LIVE_ETH, 15)).resolves.toMatchSnapshot();
   });
 
-  it(`doesn't support all derivation paths'`, () => {
+  it("doesn't support all derivation paths'", () => {
     expect(wallet.getDerivationPaths()).not.toStrictEqual(ALL_DERIVATION_PATHS);
     expect(wallet.getDerivationPaths()).toStrictEqual(LEDGER_DERIVATION_PATHS);
   });

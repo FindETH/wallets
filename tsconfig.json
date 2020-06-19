@@ -16,8 +16,5 @@
     "skipLibCheck": true,
     "resolveJsonModule": true
   },
-  "include": [
-    "src",
-    "jest"
-  ]
+  "include": ["src", "jest"]
 }
