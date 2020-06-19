@@ -9,9 +9,9 @@ describe('TREZOR_DERIVATION_PATHS', () => {
 });
 
 describe('LEDGER_DERIVATION_PATHS', () => {
-  it(`does not include derivation paths that don't start with m/44'/60' or m/44'/1'`, () => {
+  it("does not include derivation paths that don't start with m/44'/60' or m/44'/1'", () => {
     LEDGER_DERIVATION_PATHS.forEach(derivationPath => {
-      expect(derivationPath.path.startsWith(`m/44'/60'`) || derivationPath.path.startsWith(`m/44'/1'`)).toBeTruthy();
+      expect(derivationPath.path.startsWith("m/44'/60'") || derivationPath.path.startsWith("m/44'/1'")).toBeTruthy();
     });
   });
 });

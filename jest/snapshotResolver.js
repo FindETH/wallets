@@ -4,9 +4,7 @@ module.exports = {
   },
 
   resolveTestPath: (snapshotFilePath, snapshotExtension) => {
-    return snapshotFilePath
-      .replace('jest/__snapshots__/', 'src/')
-      .slice(0, -snapshotExtension.length);
+    return snapshotFilePath.replace('jest/__snapshots__/', 'src/').slice(0, -snapshotExtension.length);
   },
 
   testPathForConsistencyCheck: 'src/component/example.js'

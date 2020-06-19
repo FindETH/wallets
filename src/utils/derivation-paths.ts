@@ -35,7 +35,7 @@ export const toArray = (derivationPath: string): number[] => {
   const segments = derivationPath.split('/').slice(1);
 
   return segments.map(segment => {
-    const isHardened = segment.endsWith(`'`);
+    const isHardened = segment.endsWith("'");
     const index = parseInt(segment, 10);
 
     if (isHardened) {

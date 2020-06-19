@@ -11,7 +11,7 @@ describe('KeepKey', () => {
   const wallet = new KeepKey();
 
   it('initializes the connection', async () => {
-    await wallet.connect(async () => '12345');
+    await expect(wallet.connect(async () => '12345')).resolves.not.toThrow();
   });
 
   it('derives an address from a derivation path', async () => {
@@ -24,7 +24,7 @@ describe('KeepKey', () => {
     await expect(wallet.getAddress(LEDGER_LIVE_ETH, 15)).resolves.toMatchSnapshot();
   });
 
-  it(`supports all derivation paths'`, () => {
+  it("supports all derivation paths'", () => {
     expect(wallet.getDerivationPaths()).toStrictEqual(ALL_DERIVATION_PATHS);
   });
 

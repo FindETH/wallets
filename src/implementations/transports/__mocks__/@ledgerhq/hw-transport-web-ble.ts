@@ -35,7 +35,7 @@ export default {
   },
 
   open: jest.fn(
-    async (_: BluetoothDevice): Promise<Transport<BluetoothDevice>> => {
+    async (): Promise<Transport<BluetoothDevice>> => {
       return new Replayer();
     }
   )

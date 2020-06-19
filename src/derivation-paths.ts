@@ -14,157 +14,157 @@ export type DerivationPath = RegularDerivationPath | HardenedDerivationPath;
 
 export const DEFAULT_ETH: DerivationPath = {
   name: 'Default (ETH)',
-  path: `m/44'/60'/0'/0/<account>`
+  path: "m/44'/60'/0'/0/<account>"
 };
 
 export const LEDGER_ETH: DerivationPath = {
   name: 'Ledger (ETH)',
-  path: `m/44'/60'/0'/<account>`
+  path: "m/44'/60'/0'/<account>"
 };
 
 export const LEDGER_ETC: DerivationPath = {
   name: 'Ledger (ETC)',
-  path: `m/44'/60'/160720'/0'/<account>`
+  path: "m/44'/60'/160720'/0'/<account>"
 };
 
 export const DEFAULT_ETC: DerivationPath = {
   name: 'Default (ETC)',
-  path: `m/44'/61'/0'/0/<account>`
+  path: "m/44'/61'/0'/0/<account>"
 };
 
 export const TESTNET_ETH: DerivationPath = {
   name: 'Testnet (ETH)',
-  path: `m/44'/1'/0'/0/<account>`
+  path: "m/44'/1'/0'/0/<account>"
 };
 
 export const DEFAULT_EXP: DerivationPath = {
   name: 'Default (EXP)',
-  path: `m/44'/40'/0'/0/<account>`
+  path: "m/44'/40'/0'/0/<account>"
 };
 
 export const DEFAULT_UBQ: DerivationPath = {
   name: 'Default (UBQ)',
-  path: `m/44'/108'/0'/0/<account>`
+  path: "m/44'/108'/0'/0/<account>"
 };
 
 export const DEFAULT_TOMO: DerivationPath = {
   name: 'Default (TOMO)',
-  path: `m/44'/889'/0'/0/<account>`
+  path: "m/44'/889'/0'/0/<account>"
 };
 
 export const DEFAULT_ELLA: DerivationPath = {
   name: 'Default (ELLA)',
-  path: `m/44'/163'/0'/0/<account>`
+  path: "m/44'/163'/0'/0/<account>"
 };
 
 export const DEFAULT_MUSIC: DerivationPath = {
   name: 'Default (MUSIC)',
-  path: `m/44'/184'/0'/0/<account>`
+  path: "m/44'/184'/0'/0/<account>"
 };
 
 export const DEFAULT_ETSC: DerivationPath = {
   name: 'Default (ETSC)',
-  path: `m/44'/1128'/0'/0/<account>`
+  path: "m/44'/1128'/0'/0/<account>"
 };
 
 export const DEFAULT_EGEM: DerivationPath = {
   name: 'Default (EGEM)',
-  path: `m/44'/1987'/0'/0/<account>`
+  path: "m/44'/1987'/0'/0/<account>"
 };
 
 export const DEFAULT_CLO: DerivationPath = {
   name: 'Default (CLO)',
-  path: `m/44'/820'/0'/0/<account>`
+  path: "m/44'/820'/0'/0/<account>"
 };
 
 export const DEFAULT_SNGLS: DerivationPath = {
   name: 'Default (SNGLS)',
-  path: `m/0'/0'/0'/<account>`
+  path: "m/0'/0'/0'/<account>"
 };
 
 export const TESTNET_RSK: DerivationPath = {
   name: 'Testnet (RSK)',
-  path: `m/44'/37310'/0'/0/<account>`
+  path: "m/44'/37310'/0'/0/<account>"
 };
 
 export const MAINNET_RSK: DerivationPath = {
   name: 'Mainnet (RSK)',
-  path: `m/44'/137'/0'/0/<account>`
+  path: "m/44'/137'/0'/0/<account>"
 };
 
 export const DEFAULT_GO: DerivationPath = {
   name: 'Default (GO)',
-  path: `m/44'/6060'/0'/0/<account>`
+  path: "m/44'/6060'/0'/0/<account>"
 };
 
 export const DEFAULT_EOSC: DerivationPath = {
   name: 'Default (EOSC)',
-  path: `m/44'/2018'/0'/0/<account>`
+  path: "m/44'/2018'/0'/0/<account>"
 };
 
 export const DEFAULT_ESN: DerivationPath = {
   name: 'Default (ESN)',
-  path: `m/44'/31102'/0'/0/<account>`
+  path: "m/44'/31102'/0'/0/<account>"
 };
 
 export const DEFAULT_AKA: DerivationPath = {
   name: 'Default (AKA)',
-  path: `m/44'/200625'/0'/0/<account>`
+  path: "m/44'/200625'/0'/0/<account>"
 };
 
 export const DEFAULT_PIRL: DerivationPath = {
   name: 'Default (PIRL)',
-  path: `m/44'/164'/0'/0/<account>`
+  path: "m/44'/164'/0'/0/<account>"
 };
 
 export const DEFAULT_ATH: DerivationPath = {
   name: 'Default (ATH)',
-  path: `m/44'/1620'/0'/0/<account>`
+  path: "m/44'/1620'/0'/0/<account>"
 };
 
 export const DEFAULT_ETHO: DerivationPath = {
   name: 'Default (ETHO)',
-  path: `m/44'/1313114'/0'/0/<account>`
+  path: "m/44'/1313114'/0'/0/<account>"
 };
 
 export const DEFAULT_MIX: DerivationPath = {
   name: 'Default (MIX)',
-  path: `m/44'/76'/0'/0/<account>`
+  path: "m/44'/76'/0'/0/<account>"
 };
 
 export const DEFAULT_REOSC: DerivationPath = {
   name: 'Default (REOSC)',
-  path: `m/44'/2894'/0'/0/<account>`
+  path: "m/44'/2894'/0'/0/<account>"
 };
 
 export const DEFAULT_THUNDERCORE: DerivationPath = {
   name: 'Default (THUNDERCORE)',
-  path: `m/44'/1001'/0'/0/<account>`
+  path: "m/44'/1001'/0'/0/<account>"
 };
 
 export const DEFAULT_WEB: DerivationPath = {
   name: 'Default (WEB)',
-  path: `m/44'/227'/0'/0/<account>`
+  path: "m/44'/227'/0'/0/<account>"
 };
 
 export const DEFAULT_METADIUM: DerivationPath = {
   name: 'Default (METADIUM)',
-  path: `m/44'/916'/0'/0/<account>`
+  path: "m/44'/916'/0'/0/<account>"
 };
 
 export const DEFAULT_SOLIDUM: DerivationPath = {
   name: 'Default (SOLIDUM)',
-  path: `m/44'/997'/0'/0/<account>`
+  path: "m/44'/997'/0'/0/<account>"
 };
 
 export const DEFAULT_DEXON: DerivationPath = {
   name: 'Default (DEXON)',
-  path: `m/44'/237'/0'/0/<account>`
+  path: "m/44'/237'/0'/0/<account>"
 };
 
 export const LEDGER_LIVE_ETH: DerivationPath = {
   name: 'Ledger Live (ETH)',
-  path: `m/44'/60'/<account>'/0/0`,
+  path: "m/44'/60'/<account>'/0/0",
   isHardened: true
 };
 
