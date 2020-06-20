@@ -60,9 +60,6 @@
     "@ledgerhq/hw-transport-web-ble": "^5.2.0",
     "@ledgerhq/hw-transport-webhid": "^5.2.0",
     "@ledgerhq/hw-transport-webusb": "^5.2.0",
-    "@shapeshiftoss/hdwallet-core": "^0.18.11",
-    "@shapeshiftoss/hdwallet-keepkey": "^0.18.11",
-    "@shapeshiftoss/hdwallet-keepkey-webusb": "^0.18.11",
     "bs58": "^4.0.1",
     "trezor-connect": "^8.0.12"
   },
