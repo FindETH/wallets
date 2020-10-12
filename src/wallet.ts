@@ -62,6 +62,13 @@ export interface Wallet {
    * @return {string}
    */
   serialize(): string;
+
+  /**
+   * Get the type of the wallet.
+   *
+   * @return {WalletType}
+   */
+  getType(): string;
 }
 
 export enum WalletType {
