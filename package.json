@@ -1,6 +1,6 @@
 {
   "name": "@findeth/wallets",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Library used by FindETH for wallets and derivation",
   "author": "Maarten Zuidhoorn <maarten@zuidhoorn.com>",
   "homepage": "https://github.com/FindETH/wallets",
