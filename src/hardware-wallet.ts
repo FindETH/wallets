@@ -1,4 +1,5 @@
 import { ExtendedPublicKey, HDNode } from '@findeth/hdnode';
+import { Network } from '@findeth/networks';
 import { DerivationPath } from './derivation-paths';
 import { getPathPrefix, memoize } from './utils';
 import { SignedMessage, Wallet, WalletType } from './wallet';
@@ -48,9 +49,10 @@ export abstract class HardwareWallet implements Wallet {
   /**
    * Get all derivation paths supported by the device.
    *
+   * @param {Network} network
    * @return {DerivationPath[]}
    */
-  abstract getDerivationPaths(): DerivationPath[];
+  abstract getDerivationPaths(network: Network): DerivationPath[];
 
   /**
    * Serialize the wallet implementation to a JSON string.

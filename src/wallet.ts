@@ -1,3 +1,4 @@
+import { Network } from '@findeth/networks';
 import { DerivationPath } from './derivation-paths';
 import { HardwareWallet } from './hardware-wallet';
 import { Ledger, MnemonicPhrase, Trezor } from './implementations';
@@ -16,9 +17,10 @@ export interface Wallet {
   /**
    * Get all derivation paths supported by the wallet.
    *
+   * @param {Network} network
    * @return {DerivationPath[]}
    */
-  getDerivationPaths(): DerivationPath[];
+  getDerivationPaths(network: Network): DerivationPath[];
 
   /**
    * Get an address from the wallet, based on the derivation path and index.

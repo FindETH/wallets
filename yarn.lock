@@ -959,6 +959,20 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@findeth/abi@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@findeth/abi/-/abi-0.2.1.tgz#ad03929365cf8f42e8c8aa881eec927b3fe9f151"
+  integrity sha512-IEmhZZkqTvqonyyHwe+USXzlITmdlozkjk1qWdGOrDK/iNby2/SCgacc5HY4KP+soAB6aRcaLRhnmauhq+hRXw==
+  dependencies:
+    keccak "^3.0.0"
+
+"@findeth/abi@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@findeth/abi/-/abi-0.3.1.tgz#fe9a25211bc0c840c8bc53f937fd9af7278b9dab"
+  integrity sha512-T9HUVEjEgM0MzVLY4gs52ffz5AlHeC3CSGFcEzL4ojKMVzMxa3na1GW/XCmunrhnWP2cDh4fE2MhqLxA0CHqTw==
+  dependencies:
+    keccak "^3.0.0"
+
 "@findeth/hdnode@^0.2.0":
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@findeth/hdnode/-/hdnode-0.2.0.tgz#8a50ab290a61ccd3a81d6be421e26f9d555c4bd5"
@@ -966,6 +980,15 @@
   dependencies:
     base-x "^3.0.8"
     keccak "^3.0.0"
+
+"@findeth/networks@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@findeth/networks/-/networks-0.3.1.tgz#146b742d4d752404cb351a261b81729af2ff70d7"
+  integrity sha512-VEVezr1Dl8kOOMzj4H4yV3Ct56xa30/78WjEVeL8Q8xKWxznwLOZNx/AMIp6rQ1TWsJUiDCBvGViDdvSkKrQGg==
+  dependencies:
+    "@findeth/abi" "^0.2.1"
+    "@mycrypto/eth-scan" "^3.0.0"
+    isomorphic-unfetch "^3.0.0"
 
 "@jest/console@^24.7.1", "@jest/console@^24.9.0":
   version "24.9.0"
@@ -1224,6 +1247,14 @@
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/@ledgerhq/logs/-/logs-5.2.0.tgz#def70372cb069d806424ee25f5e9c9accd0a9bec"
   integrity sha512-EKB/xVFwMbRDA7Z56vBhxZiTl0NCXBGYmo9PrNCptlTCFlE7qx1UMgAaghtTJfIiQb/M5/dsBe4/ElnP5o/0Fg==
+
+"@mycrypto/eth-scan@^3.0.0":
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/@mycrypto/eth-scan/-/eth-scan-3.1.2.tgz#53bb0d5bddd53dc0f389c10e6635ce1a25d73e45"
+  integrity sha512-fysgL4OJoay1ZySFnoCQdnbRoMnqPb/h87IK/7FZ0BMMw1fBMZN9YfJG5h+xHSwvFAD4FdXspqimqhq9+51fVg==
+  dependencies:
+    "@findeth/abi" "^0.3.1"
+    isomorphic-unfetch "^3.1.0"
 
 "@tootallnate/once@1":
   version "1.0.0"
@@ -3595,6 +3626,14 @@ isobject@^3.0.0, isobject@^3.0.1:
   resolved "https://registry.yarnpkg.com/isobject/-/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
   integrity sha1-TkMekrEalzFjaqH5yNHMvP2reN8=
 
+isomorphic-unfetch@^3.0.0, isomorphic-unfetch@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/isomorphic-unfetch/-/isomorphic-unfetch-3.1.0.tgz#87341d5f4f7b63843d468438128cb087b7c3e98f"
+  integrity sha512-geDJjpoZ8N0kWexiwkX8F9NkTsXhetLPVbZFQ+JTW239QNOwvB0gniuR1Wc6f0AMTn7/mFGyXvHTifrCp/GH8Q==
+  dependencies:
+    node-fetch "^2.6.1"
+    unfetch "^4.2.0"
+
 isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
@@ -4560,7 +4599,7 @@ node-addon-api@^2.0.0:
   resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-2.0.0.tgz#f9afb8d777a91525244b01775ea0ddbe1125483b"
   integrity sha512-ASCL5U13as7HhOExbT6OlWJJUV/lLzL2voOSP1UVehpRD8FbSrSDjfScK/KwAvVTI5AS6r4VwbOMlIqtvRidnA==
 
-node-fetch@^2.2.0:
+node-fetch@^2.2.0, node-fetch@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
   integrity sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==
@@ -6336,6 +6375,11 @@ underscore@>=1.8.3, underscore@^1.9.1:
   version "1.9.1"
   resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.9.1.tgz#06dce34a0e68a7babc29b365b8e74b8925203961"
   integrity sha512-5/4etnCkd9c8gwgowi5/om/mYO5ajCaOgdzj/oW+0eQV9WxKBDZw5+ycmKmeaTXjInS/W0BzpGLo2xR2aBwZdg==
+
+unfetch@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/unfetch/-/unfetch-4.2.0.tgz#7e21b0ef7d363d8d9af0fb929a5555f6ef97a3be"
+  integrity sha512-F9p7yYCn6cIW9El1zi0HI6vqpeIvBsr3dSuRO6Xuppb1u5rXpCPmMvLSyECLhybr9isec8Ohl0hPekMVrEinDA==
 
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"
