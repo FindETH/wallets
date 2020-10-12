@@ -1,3 +1,5 @@
+import { Network } from '@findeth/networks';
+
 interface RegularDerivationPath {
   name: string;
   path: string;
@@ -222,3 +224,23 @@ export const LEDGER_DERIVATION_PATHS: DerivationPath[] = [
  * paths currently, since the user would have to confirm each address individually.
  */
 export const TREZOR_DERIVATION_PATHS: DerivationPath[] = [...ALL_DERIVATION_PATHS.filter(path => !path.isHardened)];
+
+/**
+ * Get a derivation path from a network. Returns a standard derivation path, and "hardened" version.
+ *
+ * @param {Network} network
+ * @return {DerivationPath[]}
+ */
+export const getDerivationPaths = (network: Network): DerivationPath[] => {
+  return [
+    {
+      name: `Default (${network.chain})`,
+      path: `m/44'/${network.slip44}'/0'/0/<account>`
+    },
+    {
+      name: `Ledger Live (${network.chain})`,
+      path: `m/44'/${network.slip44}'/<account>'/0/0`,
+      isHardened: true
+    }
+  ];
+};
