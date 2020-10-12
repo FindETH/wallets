@@ -2,7 +2,7 @@ import { HDNode } from '@findeth/hdnode';
 import { ALL_DERIVATION_PATHS, DerivationPath } from '../derivation-paths';
 import { HardwareWallet } from '../hardware-wallet';
 import { getFullPath } from '../utils';
-import { Wallet, WalletType } from '../wallet';
+import { SignedMessage, Wallet, WalletType } from '../wallet';
 
 interface SerializedData {
   type?: string;
@@ -61,6 +61,10 @@ export class MnemonicPhrase implements Wallet {
   async getAddress(derivationPath: DerivationPath, index: number): Promise<string> {
     const fullPath = getFullPath(derivationPath, index);
     return this.hdNode.derive(fullPath).address;
+  }
+
+  async signMessage(): Promise<SignedMessage> {
+    throw new Error('Not implemented');
   }
 
   isHardwareWallet(): this is HardwareWallet {
