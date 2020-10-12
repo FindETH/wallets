@@ -2,6 +2,16 @@ import { DerivationPath } from './derivation-paths';
 import { HardwareWallet } from './hardware-wallet';
 import { Ledger, MnemonicPhrase, Trezor } from './implementations';
 
+export interface SignedMessage {
+  message: string;
+  address: string;
+  signature: {
+    v: number;
+    r: Uint8Array;
+    s: Uint8Array;
+  };
+}
+
 export interface Wallet {
   /**
    * Get all derivation paths supported by the wallet.
@@ -20,6 +30,16 @@ export interface Wallet {
   getAddress(derivationPath: DerivationPath, index: number): Promise<string>;
 
   /**
+   * Sign a (string) message and return the signed message data.
+   *
+   * @param {DerivationPath} derivationPath
+   * @param {number} index
+   * @param {status} message
+   * @return {SignedMessage}
+   */
+  signMessage(derivationPath: DerivationPath, index: number, message: string): Promise<SignedMessage>;
+
+  /**
    * Optional function to prefetch necessary info from a device, if applicable. Can optionally return the pre-fetched
    * data, which may be useful for testing purposes.
    *
@@ -35,6 +55,13 @@ export interface Wallet {
    * @return {boolean}
    */
   isHardwareWallet(): this is HardwareWallet;
+
+  /**
+   * Serialize the wallet implementation to a JSON string.
+   *
+   * @return {string}
+   */
+  serialize(): string;
 }
 
 export enum WalletType {

@@ -2,8 +2,8 @@ import { ExtendedPublicKey } from '@findeth/hdnode';
 import Transport from '@ledgerhq/hw-transport';
 import { DerivationPath, LEDGER_DERIVATION_PATHS, LEDGER_ETH } from '../derivation-paths';
 import { HardwareWallet } from '../hardware-wallet';
-import { getFullPath, getTransportImplementation, isTransportType } from '../utils';
-import { WalletType } from '../wallet';
+import { dehexify, getFullPath, getTransportImplementation, isTransportType } from '../utils';
+import { SignedMessage, WalletType } from '../wallet';
 import { TransportWrapper } from './transports';
 
 interface SerializedData {
@@ -46,6 +46,23 @@ export class Ledger<Descriptor> extends HardwareWallet {
   async connect(): Promise<void> {
     // Fetch a random address to ensure the connection works
     await this.getAddress(LEDGER_ETH, 50);
+  }
+
+  async signMessage(derivationPath: DerivationPath, index: number, message: string): Promise<SignedMessage> {
+    const app = await this.transport.getApplication();
+    const path = getFullPath(derivationPath, index);
+
+    const { address } = await app.getAddress(path);
+    const { v, r, s } = await app.signPersonalMessage(path, message);
+    return {
+      message,
+      address,
+      signature: {
+        v: Number(v),
+        r: dehexify(r),
+        s: dehexify(s)
+      }
+    };
   }
 
   getDerivationPaths(): DerivationPath[] {

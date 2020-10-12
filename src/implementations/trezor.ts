@@ -3,8 +3,8 @@ import TrezorConnect from 'trezor-connect';
 import { TREZOR_MANIFEST_EMAIL, TREZOR_MANIFEST_URL } from '../constants';
 import { DEFAULT_ETH, DerivationPath, TREZOR_DERIVATION_PATHS } from '../derivation-paths';
 import { HardwareWallet } from '../hardware-wallet';
-import { getFullPath, getPathPrefix } from '../utils';
-import { WalletType } from '../wallet';
+import { dehexify, getFullPath, getPathPrefix } from '../utils';
+import { SignedMessage, WalletType } from '../wallet';
 
 interface SerializedData {
   type?: string;
@@ -59,6 +59,22 @@ export class Trezor extends HardwareWallet {
     }
 
     return this.cache;
+  }
+
+  async signMessage(derivationPath: DerivationPath, index: number, message: string): Promise<SignedMessage> {
+    const path = getFullPath(derivationPath, index);
+
+    const { payload } = await TrezorConnect.ethereumSignMessage({ path, message });
+    const signature = dehexify(payload.signature);
+    return {
+      message,
+      address: payload.address,
+      signature: {
+        v: signature[65],
+        r: signature.slice(0, 32),
+        s: signature.slice(32, 64)
+      }
+    };
   }
 
   getDerivationPaths(): DerivationPath[] {
