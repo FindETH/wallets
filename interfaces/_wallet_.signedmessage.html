@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>SerializedData | @findeth/wallets</title>
+	<title>SignedMessage | @findeth/wallets</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,13 +56,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_implementations_ledger_.html">&quot;implementations/ledger&quot;</a>
+					<a href="../modules/_wallet_.html">&quot;wallet&quot;</a>
 				</li>
 				<li>
-					<a href="_implementations_ledger_.serializeddata.html">SerializedData</a>
+					<a href="_wallet_.signedmessage.html">SignedMessage</a>
 				</li>
 			</ul>
-			<h1>Interface SerializedData</h1>
+			<h1>Interface SignedMessage</h1>
 		</div>
 	</div>
 </header>
@@ -73,7 +73,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">SerializedData</span>
+						<span class="target">SignedMessage</span>
 					</li>
 				</ul>
 			</section>
@@ -81,37 +81,62 @@
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section tsd-is-not-exported">
+						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_implementations_ledger_.serializeddata.html#transport" class="tsd-kind-icon">transport</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_implementations_ledger_.serializeddata.html#type" class="tsd-kind-icon">type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_wallet_.signedmessage.html#address" class="tsd-kind-icon">address</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_wallet_.signedmessage.html#message" class="tsd-kind-icon">message</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_wallet_.signedmessage.html#signature" class="tsd-kind-icon">signature</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="transport" class="tsd-anchor"></a>
-					<h3>transport</h3>
-					<div class="tsd-signature tsd-kind-icon">transport<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="address" class="tsd-anchor"></a>
+					<h3>address</h3>
+					<div class="tsd-signature tsd-kind-icon">address<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/b26f78c/src/implementations/ledger.ts#L11">implementations/ledger.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/b26f78c/src/wallet.ts#L7">wallet.ts:7</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="type" class="tsd-anchor"></a>
-					<h3>type</h3>
-					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="message" class="tsd-anchor"></a>
+					<h3>message</h3>
+					<div class="tsd-signature tsd-kind-icon">message<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/b26f78c/src/implementations/ledger.ts#L10">implementations/ledger.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/b26f78c/src/wallet.ts#L6">wallet.ts:6</a></li>
 						</ul>
 					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="signature" class="tsd-anchor"></a>
+					<h3>signature</h3>
+					<div class="tsd-signature tsd-kind-icon">signature<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/b26f78c/src/wallet.ts#L8">wallet.ts:8</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>r<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Uint8Array</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>s<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Uint8Array</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>v<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+						</ul>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -136,7 +161,7 @@
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_implementations_index_.html">&quot;implementations/index&quot;</a>
 					</li>
-					<li class="current tsd-kind-external-module">
+					<li class=" tsd-kind-external-module">
 						<a href="../modules/_implementations_ledger_.html">&quot;implementations/ledger&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -187,31 +212,49 @@
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_utils_transports_.html">&quot;utils/transports&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="current tsd-kind-external-module">
 						<a href="../modules/_wallet_.html">&quot;wallet&quot;</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-has-type-parameter">
-						<a href="../classes/_implementations_ledger_.ledger.html" class="tsd-kind-icon">Ledger</a>
+					<li class=" tsd-kind-enum tsd-parent-kind-external-module">
+						<a href="../enums/_wallet_.wallettype.html" class="tsd-kind-icon">Wallet<wbr>Type</a>
 					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_implementations_ledger_.serializeddata.html" class="tsd-kind-icon">Serialized<wbr>Data</a>
+					<li class="current tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_wallet_.signedmessage.html" class="tsd-kind-icon">Signed<wbr>Message</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_implementations_ledger_.serializeddata.html#transport" class="tsd-kind-icon">transport</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_wallet_.signedmessage.html#address" class="tsd-kind-icon">address</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_implementations_ledger_.serializeddata.html#type" class="tsd-kind-icon">type</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_wallet_.signedmessage.html#message" class="tsd-kind-icon">message</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_wallet_.signedmessage.html#signature" class="tsd-kind-icon">signature</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_wallet_.wallet.html" class="tsd-kind-icon">Wallet</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="../modules/_wallet_.html#deserialize" class="tsd-kind-icon">deserialize</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+						<a href="../modules/_wallet_.html#getwalletimplementation" class="tsd-kind-icon">get<wbr>Wallet<wbr>Implementation</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="../modules/_wallet_.html#iswallettype" class="tsd-kind-icon">is<wbr>Wallet<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/_wallet_.html#supported_wallets" class="tsd-kind-icon">SUPPORTED_<wbr>WALLETS</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
