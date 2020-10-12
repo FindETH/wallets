@@ -1,3 +1,4 @@
+import { getDefaultNetwork } from '@findeth/networks';
 import { ALL_DERIVATION_PATHS, DEFAULT_ETH, LEDGER_DERIVATION_PATHS, LEDGER_LIVE_ETH } from '../derivation-paths';
 import { Ledger } from './ledger';
 import { LedgerWebUSB } from './transports';
@@ -24,8 +25,8 @@ describe('Ledger', () => {
   });
 
   it("doesn't support all derivation paths'", () => {
-    expect(wallet.getDerivationPaths()).not.toStrictEqual(ALL_DERIVATION_PATHS);
-    expect(wallet.getDerivationPaths()).toStrictEqual(LEDGER_DERIVATION_PATHS);
+    expect(wallet.getDerivationPaths(getDefaultNetwork())).not.toStrictEqual(ALL_DERIVATION_PATHS);
+    expect(wallet.getDerivationPaths(getDefaultNetwork())).toStrictEqual(LEDGER_DERIVATION_PATHS);
   });
 
   it('serializes to a string', () => {
