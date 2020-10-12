@@ -1,7 +1,7 @@
 import { ExtendedPublicKey, HDNode } from '@findeth/hdnode';
 import { DerivationPath } from './derivation-paths';
 import { getPathPrefix, memoize } from './utils';
-import { SignedMessage, Wallet } from './wallet';
+import { SignedMessage, Wallet, WalletType } from './wallet';
 
 export abstract class HardwareWallet implements Wallet {
   constructor() {
@@ -58,6 +58,13 @@ export abstract class HardwareWallet implements Wallet {
    * @return {string}
    */
   abstract serialize(): string;
+
+  /**
+   * Get the type of the wallet.
+   *
+   * @return {WalletType}
+   */
+  abstract getType(): WalletType;
 
   /**
    * Get the chain code and public key from the device, based on the derivation path.

@@ -78,4 +78,8 @@ export class MnemonicPhrase implements Wallet {
       passphrase: this.passphrase
     });
   }
+
+  getType(): WalletType {
+    return WalletType.MnemonicPhrase;
+  }
 }

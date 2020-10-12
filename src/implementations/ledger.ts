@@ -92,4 +92,8 @@ export class Ledger<Descriptor> extends HardwareWallet {
     const { address } = await app.getAddress(getFullPath(derivationPath, index));
     return address;
   }
+
+  getType(): WalletType {
+    return WalletType.Ledger;
+  }
 }

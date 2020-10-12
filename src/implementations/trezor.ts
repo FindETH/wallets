@@ -87,6 +87,10 @@ export class Trezor extends HardwareWallet {
     });
   }
 
+  getType(): WalletType {
+    return WalletType.Trezor;
+  }
+
   protected async getExtendedKey(derivationPath: string): Promise<ExtendedPublicKey> {
     if (this.cache[derivationPath]) {
       return this.cache[derivationPath];
