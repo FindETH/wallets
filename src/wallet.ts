@@ -68,7 +68,7 @@ export interface Wallet {
    *
    * @return {WalletType}
    */
-  getType(): string;
+  getType(): WalletType;
 }
 
 export enum WalletType {
