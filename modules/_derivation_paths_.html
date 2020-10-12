@@ -92,6 +92,12 @@
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_derivation_paths_.html#getderivationpaths" class="tsd-kind-icon">get<wbr>Derivation<wbr>Paths</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Object literals</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-object-literal tsd-parent-kind-external-module"><a href="_derivation_paths_.html#default_aka" class="tsd-kind-icon">DEFAULT_<wbr>AKA</a></li>
@@ -138,7 +144,7 @@
 					<div class="tsd-signature tsd-kind-icon">Derivation<wbr>Path<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_derivation_paths_.regularderivationpath.html" class="tsd-signature-type">RegularDerivationPath</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_derivation_paths_.hardenedderivationpath.html" class="tsd-signature-type">HardenedDerivationPath</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L13">derivation-paths.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L15">derivation-paths.ts:15</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -151,7 +157,7 @@
 					<div class="tsd-signature tsd-kind-icon">ALL_<wbr>DERIVATION_<wbr>PATHS<span class="tsd-signature-symbol">:</span> <a href="_derivation_paths_.html#derivationpath" class="tsd-signature-type">DerivationPath</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[DEFAULT_ETH,LEDGER_ETH,LEDGER_ETC,DEFAULT_ETC,TESTNET_ETH,DEFAULT_EXP,DEFAULT_UBQ,DEFAULT_TOMO,DEFAULT_ELLA,DEFAULT_MUSIC,DEFAULT_ETSC,DEFAULT_EGEM,DEFAULT_CLO,DEFAULT_SNGLS,TESTNET_RSK,MAINNET_RSK,DEFAULT_GO,DEFAULT_EOSC,DEFAULT_ESN,DEFAULT_AKA,DEFAULT_PIRL,DEFAULT_ATH,DEFAULT_ETHO,DEFAULT_MIX,DEFAULT_REOSC,DEFAULT_THUNDERCORE,DEFAULT_WEB,DEFAULT_METADIUM,DEFAULT_SOLIDUM,DEFAULT_DEXON,LEDGER_LIVE_ETH]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L174">derivation-paths.ts:174</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L176">derivation-paths.ts:176</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -161,7 +167,7 @@
 					<div class="tsd-signature tsd-kind-icon">LEDGER_<wbr>DERIVATION_<wbr>PATHS<span class="tsd-signature-symbol">:</span> <a href="_derivation_paths_.html#derivationpath" class="tsd-signature-type">DerivationPath</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[DEFAULT_ETH,LEDGER_ETH,LEDGER_ETC,TESTNET_ETH,LEDGER_LIVE_ETH]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L212">derivation-paths.ts:212</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L214">derivation-paths.ts:214</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -171,9 +177,35 @@
 					<div class="tsd-signature tsd-kind-icon">TREZOR_<wbr>DERIVATION_<wbr>PATHS<span class="tsd-signature-symbol">:</span> <a href="_derivation_paths_.html#derivationpath" class="tsd-signature-type">DerivationPath</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[...ALL_DERIVATION_PATHS.filter(path &#x3D;&gt; !path.isHardened)]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L224">derivation-paths.ts:224</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L226">derivation-paths.ts:226</a></li>
 						</ul>
 					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
+					<a name="getderivationpaths" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>Derivation<wbr>Paths</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Derivation<wbr>Paths<span class="tsd-signature-symbol">(</span>network<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Network</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_derivation_paths_.html#derivationpath" class="tsd-signature-type">DerivationPath</a><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L234">derivation-paths.ts:234</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>network: <span class="tsd-signature-type">Network</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_derivation_paths_.html#derivationpath" class="tsd-signature-type">DerivationPath</a><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -184,7 +216,7 @@
 					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>AKA<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L110">derivation-paths.ts:110</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L112">derivation-paths.ts:112</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -193,7 +225,7 @@
 						<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Default (AKA)&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L111">derivation-paths.ts:111</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L113">derivation-paths.ts:113</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -203,7 +235,7 @@
 						<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;m/44&#x27;/200625&#x27;/0&#x27;/0/&lt;account&gt;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L112">derivation-paths.ts:112</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L114">derivation-paths.ts:114</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -214,7 +246,7 @@
 					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>ATH<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L120">derivation-paths.ts:120</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L122">derivation-paths.ts:122</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -223,7 +255,7 @@
 						<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Default (ATH)&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L121">derivation-paths.ts:121</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L123">derivation-paths.ts:123</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -233,7 +265,7 @@
 						<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;m/44&#x27;/1620&#x27;/0&#x27;/0/&lt;account&gt;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L122">derivation-paths.ts:122</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L124">derivation-paths.ts:124</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -244,7 +276,7 @@
 					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>CLO<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L75">derivation-paths.ts:75</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L77">derivation-paths.ts:77</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -253,7 +285,7 @@
 						<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Default (CLO)&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L76">derivation-paths.ts:76</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L78">derivation-paths.ts:78</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -263,7 +295,7 @@
 						<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;m/44&#x27;/820&#x27;/0&#x27;/0/&lt;account&gt;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L77">derivation-paths.ts:77</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L79">derivation-paths.ts:79</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -274,7 +306,7 @@
 					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>DEXON<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L160">derivation-paths.ts:160</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L162">derivation-paths.ts:162</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -283,7 +315,7 @@
 						<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Default (DEXON)&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L161">derivation-paths.ts:161</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L163">derivation-paths.ts:163</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -293,7 +325,7 @@
 						<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;m/44&#x27;/237&#x27;/0&#x27;/0/&lt;account&gt;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L162">derivation-paths.ts:162</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L164">derivation-paths.ts:164</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -304,7 +336,7 @@
 					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>EGEM<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L70">derivation-paths.ts:70</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L72">derivation-paths.ts:72</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -313,7 +345,7 @@
 						<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Default (EGEM)&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L71">derivation-paths.ts:71</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L73">derivation-paths.ts:73</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -323,7 +355,7 @@
 						<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;m/44&#x27;/1987&#x27;/0&#x27;/0/&lt;account&gt;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L72">derivation-paths.ts:72</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L74">derivation-paths.ts:74</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -334,7 +366,7 @@
 					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>ELLA<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L55">derivation-paths.ts:55</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L57">derivation-paths.ts:57</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -343,7 +375,7 @@
 						<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Default (ELLA)&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L56">derivation-paths.ts:56</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L58">derivation-paths.ts:58</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -353,7 +385,7 @@
 						<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;m/44&#x27;/163&#x27;/0&#x27;/0/&lt;account&gt;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L57">derivation-paths.ts:57</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L59">derivation-paths.ts:59</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -364,7 +396,7 @@
 					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>EOSC<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L100">derivation-paths.ts:100</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L102">derivation-paths.ts:102</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -373,7 +405,7 @@
 						<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Default (EOSC)&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L101">derivation-paths.ts:101</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L103">derivation-paths.ts:103</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -383,7 +415,7 @@
 						<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;m/44&#x27;/2018&#x27;/0&#x27;/0/&lt;account&gt;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L102">derivation-paths.ts:102</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L104">derivation-paths.ts:104</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -394,7 +426,7 @@
 					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>ESN<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L105">derivation-paths.ts:105</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L107">derivation-paths.ts:107</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -403,7 +435,7 @@
 						<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Default (ESN)&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L106">derivation-paths.ts:106</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L108">derivation-paths.ts:108</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -413,7 +445,7 @@
 						<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;m/44&#x27;/31102&#x27;/0&#x27;/0/&lt;account&gt;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L107">derivation-paths.ts:107</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L109">derivation-paths.ts:109</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -424,7 +456,7 @@
 					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>ETC<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L30">derivation-paths.ts:30</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L32">derivation-paths.ts:32</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -433,7 +465,7 @@
 						<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Default (ETC)&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L31">derivation-paths.ts:31</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L33">derivation-paths.ts:33</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -443,7 +475,7 @@
 						<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;m/44&#x27;/61&#x27;/0&#x27;/0/&lt;account&gt;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L32">derivation-paths.ts:32</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L34">derivation-paths.ts:34</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -454,7 +486,7 @@
 					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>ETH<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L15">derivation-paths.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L17">derivation-paths.ts:17</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -463,7 +495,7 @@
 						<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Default (ETH)&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L16">derivation-paths.ts:16</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L18">derivation-paths.ts:18</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -473,7 +505,7 @@
 						<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;m/44&#x27;/60&#x27;/0&#x27;/0/&lt;account&gt;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L17">derivation-paths.ts:17</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L19">derivation-paths.ts:19</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -484,7 +516,7 @@
 					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>ETHO<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L125">derivation-paths.ts:125</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L127">derivation-paths.ts:127</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -493,7 +525,7 @@
 						<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Default (ETHO)&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L126">derivation-paths.ts:126</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L128">derivation-paths.ts:128</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -503,7 +535,7 @@
 						<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;m/44&#x27;/1313114&#x27;/0&#x27;/0/&lt;account&gt;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L127">derivation-paths.ts:127</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L129">derivation-paths.ts:129</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -514,7 +546,7 @@
 					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>ETSC<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L65">derivation-paths.ts:65</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L67">derivation-paths.ts:67</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -523,7 +555,7 @@
 						<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Default (ETSC)&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L66">derivation-paths.ts:66</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L68">derivation-paths.ts:68</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -533,7 +565,7 @@
 						<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;m/44&#x27;/1128&#x27;/0&#x27;/0/&lt;account&gt;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L67">derivation-paths.ts:67</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L69">derivation-paths.ts:69</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -544,7 +576,7 @@
 					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>EXP<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L40">derivation-paths.ts:40</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L42">derivation-paths.ts:42</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -553,7 +585,7 @@
 						<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Default (EXP)&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L41">derivation-paths.ts:41</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L43">derivation-paths.ts:43</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -563,7 +595,7 @@
 						<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;m/44&#x27;/40&#x27;/0&#x27;/0/&lt;account&gt;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L42">derivation-paths.ts:42</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L44">derivation-paths.ts:44</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -574,7 +606,7 @@
 					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>GO<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L95">derivation-paths.ts:95</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L97">derivation-paths.ts:97</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -583,7 +615,7 @@
 						<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Default (GO)&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L96">derivation-paths.ts:96</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L98">derivation-paths.ts:98</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -593,7 +625,7 @@
 						<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;m/44&#x27;/6060&#x27;/0&#x27;/0/&lt;account&gt;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L97">derivation-paths.ts:97</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L99">derivation-paths.ts:99</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -604,7 +636,7 @@
 					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>METADIUM<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L150">derivation-paths.ts:150</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L152">derivation-paths.ts:152</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -613,7 +645,7 @@
 						<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Default (METADIUM)&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L151">derivation-paths.ts:151</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L153">derivation-paths.ts:153</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -623,7 +655,7 @@
 						<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;m/44&#x27;/916&#x27;/0&#x27;/0/&lt;account&gt;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L152">derivation-paths.ts:152</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L154">derivation-paths.ts:154</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -634,7 +666,7 @@
 					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>MIX<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L130">derivation-paths.ts:130</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L132">derivation-paths.ts:132</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -643,7 +675,7 @@
 						<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Default (MIX)&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L131">derivation-paths.ts:131</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L133">derivation-paths.ts:133</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -653,7 +685,7 @@
 						<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;m/44&#x27;/76&#x27;/0&#x27;/0/&lt;account&gt;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L132">derivation-paths.ts:132</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L134">derivation-paths.ts:134</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -664,7 +696,7 @@
 					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>MUSIC<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L60">derivation-paths.ts:60</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L62">derivation-paths.ts:62</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -673,7 +705,7 @@
 						<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Default (MUSIC)&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L61">derivation-paths.ts:61</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L63">derivation-paths.ts:63</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -683,7 +715,7 @@
 						<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;m/44&#x27;/184&#x27;/0&#x27;/0/&lt;account&gt;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L62">derivation-paths.ts:62</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L64">derivation-paths.ts:64</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -694,7 +726,7 @@
 					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>PIRL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L115">derivation-paths.ts:115</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L117">derivation-paths.ts:117</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -703,7 +735,7 @@
 						<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Default (PIRL)&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L116">derivation-paths.ts:116</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L118">derivation-paths.ts:118</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -713,7 +745,7 @@
 						<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;m/44&#x27;/164&#x27;/0&#x27;/0/&lt;account&gt;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L117">derivation-paths.ts:117</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L119">derivation-paths.ts:119</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -724,7 +756,7 @@
 					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>REOSC<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L135">derivation-paths.ts:135</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L137">derivation-paths.ts:137</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -733,7 +765,7 @@
 						<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Default (REOSC)&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L136">derivation-paths.ts:136</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L138">derivation-paths.ts:138</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -743,7 +775,7 @@
 						<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;m/44&#x27;/2894&#x27;/0&#x27;/0/&lt;account&gt;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L137">derivation-paths.ts:137</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L139">derivation-paths.ts:139</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -754,7 +786,7 @@
 					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>SNGLS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L80">derivation-paths.ts:80</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L82">derivation-paths.ts:82</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -763,7 +795,7 @@
 						<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Default (SNGLS)&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L81">derivation-paths.ts:81</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L83">derivation-paths.ts:83</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -773,7 +805,7 @@
 						<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;m/0&#x27;/0&#x27;/0&#x27;/&lt;account&gt;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L82">derivation-paths.ts:82</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L84">derivation-paths.ts:84</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -784,7 +816,7 @@
 					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>SOLIDUM<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L155">derivation-paths.ts:155</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L157">derivation-paths.ts:157</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -793,7 +825,7 @@
 						<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Default (SOLIDUM)&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L156">derivation-paths.ts:156</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L158">derivation-paths.ts:158</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -803,7 +835,7 @@
 						<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;m/44&#x27;/997&#x27;/0&#x27;/0/&lt;account&gt;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L157">derivation-paths.ts:157</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L159">derivation-paths.ts:159</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -814,7 +846,7 @@
 					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>THUNDERCORE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L140">derivation-paths.ts:140</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L142">derivation-paths.ts:142</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -823,7 +855,7 @@
 						<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Default (THUNDERCORE)&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L141">derivation-paths.ts:141</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L143">derivation-paths.ts:143</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -833,7 +865,7 @@
 						<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;m/44&#x27;/1001&#x27;/0&#x27;/0/&lt;account&gt;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L142">derivation-paths.ts:142</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L144">derivation-paths.ts:144</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -844,7 +876,7 @@
 					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>TOMO<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L50">derivation-paths.ts:50</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L52">derivation-paths.ts:52</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -853,7 +885,7 @@
 						<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Default (TOMO)&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L51">derivation-paths.ts:51</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L53">derivation-paths.ts:53</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -863,7 +895,7 @@
 						<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;m/44&#x27;/889&#x27;/0&#x27;/0/&lt;account&gt;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L52">derivation-paths.ts:52</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L54">derivation-paths.ts:54</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -874,7 +906,7 @@
 					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>UBQ<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L45">derivation-paths.ts:45</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L47">derivation-paths.ts:47</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -883,7 +915,7 @@
 						<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Default (UBQ)&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L46">derivation-paths.ts:46</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L48">derivation-paths.ts:48</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -893,7 +925,7 @@
 						<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;m/44&#x27;/108&#x27;/0&#x27;/0/&lt;account&gt;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L47">derivation-paths.ts:47</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L49">derivation-paths.ts:49</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -904,7 +936,7 @@
 					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>WEB<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L145">derivation-paths.ts:145</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L147">derivation-paths.ts:147</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -913,7 +945,7 @@
 						<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Default (WEB)&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L146">derivation-paths.ts:146</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L148">derivation-paths.ts:148</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -923,7 +955,7 @@
 						<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;m/44&#x27;/227&#x27;/0&#x27;/0/&lt;account&gt;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L147">derivation-paths.ts:147</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L149">derivation-paths.ts:149</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -934,7 +966,7 @@
 					<div class="tsd-signature tsd-kind-icon">LEDGER_<wbr>ETC<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L25">derivation-paths.ts:25</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L27">derivation-paths.ts:27</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -943,7 +975,7 @@
 						<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Ledger (ETC)&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L26">derivation-paths.ts:26</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L28">derivation-paths.ts:28</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -953,7 +985,7 @@
 						<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;m/44&#x27;/60&#x27;/160720&#x27;/0&#x27;/&lt;account&gt;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L27">derivation-paths.ts:27</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L29">derivation-paths.ts:29</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -964,7 +996,7 @@
 					<div class="tsd-signature tsd-kind-icon">LEDGER_<wbr>ETH<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L20">derivation-paths.ts:20</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L22">derivation-paths.ts:22</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -973,7 +1005,7 @@
 						<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Ledger (ETH)&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L21">derivation-paths.ts:21</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L23">derivation-paths.ts:23</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -983,7 +1015,7 @@
 						<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;m/44&#x27;/60&#x27;/0&#x27;/&lt;account&gt;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L22">derivation-paths.ts:22</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L24">derivation-paths.ts:24</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -994,7 +1026,7 @@
 					<div class="tsd-signature tsd-kind-icon">LEDGER_<wbr>LIVE_<wbr>ETH<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L165">derivation-paths.ts:165</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L167">derivation-paths.ts:167</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -1003,7 +1035,7 @@
 						<div class="tsd-signature tsd-kind-icon">is<wbr>Hardened<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">true</span><span class="tsd-signature-symbol"> =&nbsp;true</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L168">derivation-paths.ts:168</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L170">derivation-paths.ts:170</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -1013,7 +1045,7 @@
 						<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Ledger Live (ETH)&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L166">derivation-paths.ts:166</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L168">derivation-paths.ts:168</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -1023,7 +1055,7 @@
 						<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;m/44&#x27;/60&#x27;/&lt;account&gt;&#x27;/0/0&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L167">derivation-paths.ts:167</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L169">derivation-paths.ts:169</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -1034,7 +1066,7 @@
 					<div class="tsd-signature tsd-kind-icon">MAINNET_<wbr>RSK<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L90">derivation-paths.ts:90</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L92">derivation-paths.ts:92</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -1043,7 +1075,7 @@
 						<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Mainnet (RSK)&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L91">derivation-paths.ts:91</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L93">derivation-paths.ts:93</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -1053,7 +1085,7 @@
 						<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;m/44&#x27;/137&#x27;/0&#x27;/0/&lt;account&gt;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L92">derivation-paths.ts:92</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L94">derivation-paths.ts:94</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -1064,7 +1096,7 @@
 					<div class="tsd-signature tsd-kind-icon">TESTNET_<wbr>ETH<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L35">derivation-paths.ts:35</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L37">derivation-paths.ts:37</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -1073,7 +1105,7 @@
 						<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Testnet (ETH)&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L36">derivation-paths.ts:36</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L38">derivation-paths.ts:38</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -1083,7 +1115,7 @@
 						<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;m/44&#x27;/1&#x27;/0&#x27;/0/&lt;account&gt;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L37">derivation-paths.ts:37</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L39">derivation-paths.ts:39</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -1094,7 +1126,7 @@
 					<div class="tsd-signature tsd-kind-icon">TESTNET_<wbr>RSK<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L85">derivation-paths.ts:85</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L87">derivation-paths.ts:87</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -1103,7 +1135,7 @@
 						<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Testnet (RSK)&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L86">derivation-paths.ts:86</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L88">derivation-paths.ts:88</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -1113,7 +1145,7 @@
 						<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;m/44&#x27;/37310&#x27;/0&#x27;/0/&lt;account&gt;&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/derivation-paths.ts#L87">derivation-paths.ts:87</a></li>
+								<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/derivation-paths.ts#L89">derivation-paths.ts:89</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -1216,6 +1248,9 @@
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
 						<a href="_derivation_paths_.html#trezor_derivation_paths" class="tsd-kind-icon">TREZOR_<wbr>DERIVATION_<wbr>PATHS</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="_derivation_paths_.html#getderivationpaths" class="tsd-kind-icon">get<wbr>Derivation<wbr>Paths</a>
 					</li>
 					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module">
 						<a href="_derivation_paths_.html#default_aka" class="tsd-kind-icon">DEFAULT_<wbr>AKA</a>

@@ -143,7 +143,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_hardware_wallet_.hardwarewallet.html">HardwareWallet</a>.<a href="_hardware_wallet_.hardwarewallet.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/implementations/ledger.ts#L34">implementations/ledger.ts:34</a></li>
+									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/implementations/ledger.ts#L35">implementations/ledger.ts:35</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -165,7 +165,7 @@
 					<div class="tsd-signature tsd-kind-icon">transport<span class="tsd-signature-symbol">:</span> <a href="_implementations_transports_transport_wrapper_.transportwrapper.html" class="tsd-signature-type">TransportWrapper</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Descriptor</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Transport</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/implementations/ledger.ts#L42">implementations/ledger.ts:42</a></li>
+							<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/implementations/ledger.ts#L43">implementations/ledger.ts:43</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -183,7 +183,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_hardware_wallet_.hardwarewallet.html">HardwareWallet</a>.<a href="_hardware_wallet_.hardwarewallet.html#connect">connect</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/implementations/ledger.ts#L46">implementations/ledger.ts:46</a></li>
+									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/implementations/ledger.ts#L47">implementations/ledger.ts:47</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -202,7 +202,7 @@
 								<p>Implementation of <a href="../interfaces/_wallet_.wallet.html">Wallet</a>.<a href="../interfaces/_wallet_.wallet.html#getaddress">getAddress</a></p>
 								<p>Inherited from <a href="_hardware_wallet_.hardwarewallet.html">HardwareWallet</a>.<a href="_hardware_wallet_.hardwarewallet.html#getaddress">getAddress</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/hardware-wallet.ts#L18">hardware-wallet.ts:18</a></li>
+									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/hardware-wallet.ts#L19">hardware-wallet.ts:19</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -222,7 +222,7 @@
 					<a name="getderivationpaths" class="tsd-anchor"></a>
 					<h3>get<wbr>Derivation<wbr>Paths</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Derivation<wbr>Paths<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/_derivation_paths_.html#derivationpath" class="tsd-signature-type">DerivationPath</a><span class="tsd-signature-symbol">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Derivation<wbr>Paths<span class="tsd-signature-symbol">(</span>network<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Network</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/_derivation_paths_.html#derivationpath" class="tsd-signature-type">DerivationPath</a><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -230,9 +230,15 @@
 								<p>Implementation of <a href="../interfaces/_wallet_.wallet.html">Wallet</a>.<a href="../interfaces/_wallet_.wallet.html#getderivationpaths">getDerivationPaths</a></p>
 								<p>Overrides <a href="_hardware_wallet_.hardwarewallet.html">HardwareWallet</a>.<a href="_hardware_wallet_.hardwarewallet.html#getderivationpaths">getDerivationPaths</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/implementations/ledger.ts#L68">implementations/ledger.ts:68</a></li>
+									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/implementations/ledger.ts#L69">implementations/ledger.ts:69</a></li>
 								</ul>
 							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>network: <span class="tsd-signature-type">Network</span></h5>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="../modules/_derivation_paths_.html#derivationpath" class="tsd-signature-type">DerivationPath</a><span class="tsd-signature-symbol">[]</span></h4>
 						</li>
 					</ul>
@@ -248,7 +254,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_hardware_wallet_.hardwarewallet.html">HardwareWallet</a>.<a href="_hardware_wallet_.hardwarewallet.html#getextendedkey">getExtendedKey</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/implementations/ledger.ts#L79">implementations/ledger.ts:79</a></li>
+									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/implementations/ledger.ts#L90">implementations/ledger.ts:90</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -272,7 +278,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_hardware_wallet_.hardwarewallet.html">HardwareWallet</a>.<a href="_hardware_wallet_.hardwarewallet.html#gethardenedaddress">getHardenedAddress</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/implementations/ledger.ts#L89">implementations/ledger.ts:89</a></li>
+									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/implementations/ledger.ts#L100">implementations/ledger.ts:100</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -300,7 +306,7 @@
 								<p>Implementation of <a href="../interfaces/_wallet_.wallet.html">Wallet</a>.<a href="../interfaces/_wallet_.wallet.html#gettype">getType</a></p>
 								<p>Overrides <a href="_hardware_wallet_.hardwarewallet.html">HardwareWallet</a>.<a href="_hardware_wallet_.hardwarewallet.html#gettype">getType</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/implementations/ledger.ts#L96">implementations/ledger.ts:96</a></li>
+									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/implementations/ledger.ts#L107">implementations/ledger.ts:107</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../enums/_wallet_.wallettype.html" class="tsd-signature-type">WalletType</a></h4>
@@ -319,7 +325,7 @@
 								<p>Implementation of <a href="../interfaces/_wallet_.wallet.html">Wallet</a>.<a href="../interfaces/_wallet_.wallet.html#ishardwarewallet">isHardwareWallet</a></p>
 								<p>Inherited from <a href="_hardware_wallet_.hardwarewallet.html">HardwareWallet</a>.<a href="_hardware_wallet_.hardwarewallet.html#ishardwarewallet">isHardwareWallet</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/hardware-wallet.ts#L27">hardware-wallet.ts:27</a></li>
+									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/hardware-wallet.ts#L28">hardware-wallet.ts:28</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">HardwareWallet</span></h4>
@@ -338,7 +344,7 @@
 								<p>Implementation of <a href="../interfaces/_wallet_.wallet.html">Wallet</a>.<a href="../interfaces/_wallet_.wallet.html#serialize">serialize</a></p>
 								<p>Overrides <a href="_hardware_wallet_.hardwarewallet.html">HardwareWallet</a>.<a href="_hardware_wallet_.hardwarewallet.html#serialize">serialize</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/implementations/ledger.ts#L72">implementations/ledger.ts:72</a></li>
+									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/implementations/ledger.ts#L83">implementations/ledger.ts:83</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -357,7 +363,7 @@
 								<p>Implementation of <a href="../interfaces/_wallet_.wallet.html">Wallet</a>.<a href="../interfaces/_wallet_.wallet.html#signmessage">signMessage</a></p>
 								<p>Overrides <a href="_hardware_wallet_.hardwarewallet.html">HardwareWallet</a>.<a href="_hardware_wallet_.hardwarewallet.html#signmessage">signMessage</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/implementations/ledger.ts#L51">implementations/ledger.ts:51</a></li>
+									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/implementations/ledger.ts#L52">implementations/ledger.ts:52</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -386,7 +392,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/e9cba2a/src/implementations/ledger.ts#L21">implementations/ledger.ts:21</a></li>
+									<li>Defined in <a href="https://github.com/FindETH/wallets/blob/45eb076/src/implementations/ledger.ts#L22">implementations/ledger.ts:22</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
