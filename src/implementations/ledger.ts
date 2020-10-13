@@ -3,8 +3,9 @@ import { Network } from '@findeth/networks';
 import Transport from '@ledgerhq/hw-transport';
 import { DerivationPath, getDerivationPaths, LEDGER_DERIVATION_PATHS, LEDGER_ETH } from '../derivation-paths';
 import { HardwareWallet } from '../hardware-wallet';
+import { WalletType } from '../types';
 import { dehexify, getFullPath, getTransportImplementation, isTransportType } from '../utils';
-import { SignedMessage, WalletType } from '../wallet';
+import { SignedMessage } from '../wallet';
 import { TransportWrapper } from './transports';
 
 interface SerializedData {

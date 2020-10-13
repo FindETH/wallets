@@ -1,7 +1,9 @@
 import { Network } from '@findeth/networks';
 import { DerivationPath } from './derivation-paths';
 import { HardwareWallet } from './hardware-wallet';
+import { getWalletImplementation } from './implementation';
 import { Ledger, MnemonicPhrase, Trezor } from './implementations';
+import { WalletType } from './types';
 
 export interface SignedMessage {
   message: string;
@@ -73,18 +75,6 @@ export interface Wallet {
   getType(): WalletType;
 }
 
-export enum WalletType {
-  Ledger = 'Ledger',
-  MnemonicPhrase = 'MnemonicPhrase',
-  Trezor = 'Trezor'
-}
-
-const SUPPORTED_WALLETS = {
-  [WalletType.Ledger]: Ledger,
-  [WalletType.MnemonicPhrase]: MnemonicPhrase,
-  [WalletType.Trezor]: Trezor
-};
-
 /**
  * Checks if a string is a valid type of WalletType.
  *
@@ -93,17 +83,6 @@ const SUPPORTED_WALLETS = {
  */
 export const isWalletType = (type: string): type is WalletType => {
   return Object.values(WalletType).includes(type as WalletType);
-};
-
-/**
- * Get the wallet implemention class for a specific wallet type.
- *
- * @param {Type} type
- * @return {new (...args: unknown[]): Type}
- * @template Type
- */
-export const getWalletImplementation = <Type extends WalletType>(type: Type): typeof SUPPORTED_WALLETS[Type] => {
-  return SUPPORTED_WALLETS[type];
 };
 
 /**
