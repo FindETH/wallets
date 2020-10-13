@@ -1,8 +1,9 @@
 import { ExtendedPublicKey, HDNode } from '@findeth/hdnode';
 import { Network } from '@findeth/networks';
 import { DerivationPath } from './derivation-paths';
+import { WalletType } from './types';
 import { getPathPrefix, memoize } from './utils';
-import { SignedMessage, Wallet, WalletType } from './wallet';
+import { SignedMessage, Wallet } from './wallet';
 
 export abstract class HardwareWallet implements Wallet {
   constructor() {

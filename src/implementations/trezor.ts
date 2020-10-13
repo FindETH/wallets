@@ -3,8 +3,9 @@ import TrezorConnect from 'trezor-connect';
 import { TREZOR_MANIFEST_EMAIL, TREZOR_MANIFEST_URL } from '../constants';
 import { DEFAULT_ETH, DerivationPath, TREZOR_DERIVATION_PATHS } from '../derivation-paths';
 import { HardwareWallet } from '../hardware-wallet';
+import { WalletType } from '../types';
 import { dehexify, getFullPath, getPathPrefix } from '../utils';
-import { SignedMessage, WalletType } from '../wallet';
+import { SignedMessage } from '../wallet';
 
 interface SerializedData {
   type?: string;

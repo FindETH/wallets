@@ -1,8 +1,9 @@
 import { HDNode } from '@findeth/hdnode';
 import { ALL_DERIVATION_PATHS, DerivationPath } from '../derivation-paths';
 import { HardwareWallet } from '../hardware-wallet';
+import { WalletType } from '../types';
 import { getFullPath } from '../utils';
-import { SignedMessage, Wallet, WalletType } from '../wallet';
+import { SignedMessage, Wallet } from '../wallet';
 
 interface SerializedData {
   type?: string;

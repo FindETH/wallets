@@ -1,4 +1,4 @@
-import { deserialize, getWalletImplementation, isWalletType, WalletType } from './wallet';
+import { deserialize, isWalletType } from './wallet';
 
 describe('isWalletType', () => {
   it('returns true if a string is a valid wallet type', () => {
@@ -10,14 +10,6 @@ describe('isWalletType', () => {
   it('returns false if a string is not a valid wallet type', () => {
     expect(isWalletType('Foo')).toBeFalsy();
     expect(isWalletType('Bar')).toBeFalsy();
-  });
-});
-
-describe('getWalletImplementation', () => {
-  it('returns the wallet implementation for a wallet type', () => {
-    expect(getWalletImplementation(WalletType.Ledger).name).toBe('Ledger');
-    expect(getWalletImplementation(WalletType.Trezor).name).toBe('Trezor');
-    expect(getWalletImplementation(WalletType.MnemonicPhrase).name).toBe('MnemonicPhrase');
   });
 });
 
