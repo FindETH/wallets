@@ -45,13 +45,13 @@
     "lint": "yarn run lint:types && yarn run lint:source && yarn run lint:format && yarn run lint:lockfile",
     "lint:types": "tsc --noEmit",
     "lint:source": "eslint . --ignore-path .gitignore --ext .ts,.tsx,.js,.jsx",
-    "lint:format": "prettier --check --ignore-path .gitignore '**/*.{ts,tsx,js,json}'",
+    "lint:format": "prettier --check --ignore-path .gitignore '**/*.{ts,tsx,js,json,yml}'",
     "lint:lockfile": "lockfile-lint --type yarn --path yarn.lock --allowed-hosts yarn --validate-https --validate-checksum --validate-integrity",
-    "prettier": "prettier --write --ignore-path .gitignore '**/*.{ts,tsx,js,json}'",
+    "format": "prettier --write --ignore-path .gitignore '**/*.{ts,tsx,js,json,yml}'",
     "prepare": "yarn run build"
   },
   "dependencies": {
-    "@findeth/hdnode": "^0.2.0",
+    "@findeth/hdnode": "^0.3.2",
     "@ledgerhq/hw-app-eth": "^5.2.0",
     "@ledgerhq/hw-transport": "^5.2.0",
     "@ledgerhq/hw-transport-mocker": "^5.2.0",
@@ -64,7 +64,7 @@
     "trezor-connect": "^8.0.12"
   },
   "peerDependencies": {
-    "@findeth/networks": "^0.3.1"
+    "@findeth/networks": ">= 0.3.1 < 1"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.5",
@@ -78,7 +78,6 @@
     "@babel/preset-typescript": "^7.10.1",
     "@findeth/networks": "^0.3.1",
     "@types/jest": "^24.0.23",
-    "@types/node": "^12.12.19",
     "@types/w3c-web-usb": "^1.0.3",
     "@types/web-bluetooth": "^0.0.4",
     "@typescript-eslint/eslint-plugin": "^3.3.0",

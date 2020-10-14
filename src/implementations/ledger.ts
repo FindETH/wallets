@@ -1,10 +1,11 @@
 import { ExtendedPublicKey } from '@findeth/hdnode';
 import { Network } from '@findeth/networks';
+import { dehexify } from '@findeth/secp256k1';
 import Transport from '@ledgerhq/hw-transport';
 import { DerivationPath, getDerivationPaths, LEDGER_DERIVATION_PATHS, LEDGER_ETH } from '../derivation-paths';
 import { HardwareWallet } from '../hardware-wallet';
 import { WalletType } from '../types';
-import { dehexify, getFullPath, getTransportImplementation, isTransportType } from '../utils';
+import { getFullPath, getTransportImplementation, isTransportType } from '../utils';
 import { SignedMessage } from '../wallet';
 import { TransportWrapper } from './transports';
 
