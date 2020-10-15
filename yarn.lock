@@ -1376,9 +1376,9 @@
   integrity sha512-l42BggppR6zLmpfU6fq9HEa2oGPEI8yrSPL3GITjfRInppYFahObbIQOQK3UGxEnyQpltZLaPe75046NOZQikw==
 
 "@types/w3c-web-usb@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@types/w3c-web-usb/-/w3c-web-usb-1.0.3.tgz#723a5b37865b64e891d8fffa2703a2e4d0250170"
-  integrity sha512-XilIvno46lLRyOj/1G5z88M6iimYs3dr3LNdSN9UxSWifytKsBMmRtAi53X3j0ThrrqyVotqrSeaYv9a0I131w==
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@types/w3c-web-usb/-/w3c-web-usb-1.0.4.tgz#57e4181041dc1ad2bfad59b737caa7bddc7e1a27"
+  integrity sha512-aaOB3EL5WCWBBOYX7W1MKuzspOM9ZJI9s3iziRVypr1N+QyvIgXzCM4lm1iiOQ1VFzZioUPX9bsa23myCbKK4A==
 
 "@types/web-bluetooth@^0.0.4":
   version "0.0.4"
