@@ -34,7 +34,7 @@ export const getPathPrefix = (derivationPath: string): string => {
 export const toArray = (derivationPath: string): number[] => {
   const segments = derivationPath.split('/').slice(1);
 
-  return segments.map(segment => {
+  return segments.map((segment) => {
     const isHardened = segment.endsWith("'");
     const index = parseInt(segment, 10);
 
@@ -55,7 +55,7 @@ export const toArray = (derivationPath: string): number[] => {
 export const fromArray = (derivationPath: number[]): string => {
   return [
     'm',
-    ...derivationPath.map(index => {
+    ...derivationPath.map((index) => {
       const isHardened = index >= HARDENED_OFFSET;
 
       if (isHardened) {

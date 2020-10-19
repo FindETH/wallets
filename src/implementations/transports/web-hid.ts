@@ -21,7 +21,7 @@ export class LedgerWebHID extends TransportWrapper<HIDDevice, TransportWebHID> {
     if (this.descriptor) {
       // HIDDevices don't have a unique ID (?), so instead we use the productID
       const devices = await navigator.hid.getDevices();
-      const descriptorDevice = devices.find(device => device.productId === this.descriptor);
+      const descriptorDevice = devices.find((device) => device.productId === this.descriptor);
 
       if (descriptorDevice) {
         return TransportWebHID.open(descriptorDevice);

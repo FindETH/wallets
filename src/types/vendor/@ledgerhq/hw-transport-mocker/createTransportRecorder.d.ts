@@ -23,7 +23,7 @@ declare module '@ledgerhq/hw-transport-mocker/createTransportRecorder' {
    * @return {TransportRecorder<Descriptor>} The decorated transport.
    * @template Descriptor
    */
-  export default function<Descriptor>(
+  export default function <Descriptor>(
     DecoratedTransport: TransportConstructor<Descriptor>,
     recordStore: RecordStore
   ): TransportRecorderConstructor<Descriptor>;

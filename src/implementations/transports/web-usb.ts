@@ -25,7 +25,7 @@ export class LedgerWebUSB extends TransportWrapper<USBDevice, TransportWebUSB> {
   protected async getTransport(): Promise<TransportWebUSB> {
     if (this.descriptor) {
       const devices = await navigator.usb.getDevices();
-      const descriptorDevice = devices.find(device => device.serialNumber === this.descriptor);
+      const descriptorDevice = devices.find((device) => device.serialNumber === this.descriptor);
 
       if (descriptorDevice) {
         return TransportWebUSB.open(descriptorDevice);
