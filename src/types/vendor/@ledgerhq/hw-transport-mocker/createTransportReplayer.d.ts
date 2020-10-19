@@ -24,5 +24,5 @@ declare module '@ledgerhq/hw-transport-mocker/createTransportReplayer' {
    * @return {TransportReplayer<Descriptor>} The decorated transport.
    * @template Descriptor
    */
-  export default function<Descriptor>(recordStore: RecordStore): TransportReplayerConstructor<Descriptor>;
+  export default function <Descriptor>(recordStore: RecordStore): TransportReplayerConstructor<Descriptor>;
 }

@@ -46,14 +46,14 @@ export class Trezor extends HardwareWallet {
 
   async prefetch(derivationPaths: DerivationPath[]): Promise<Record<string, ExtendedPublicKey>> {
     const bundle = derivationPaths
-      .filter(path => !path.isHardened)
+      .filter((path) => !path.isHardened)
       .reduce<string[]>((paths, { path }) => {
         const childPath = getPathPrefix(path);
         const parentPath = getPathPrefix(childPath);
 
         return [...paths, childPath, parentPath];
       }, [])
-      .map(path => ({ path }));
+      .map((path) => ({ path }));
 
     const response = await TrezorConnect.getPublicKey({ bundle });
     for (const { serializedPath, chainCode, publicKey } of response.payload) {
