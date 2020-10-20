@@ -1342,14 +1342,14 @@
     rxjs "^6.6.3"
 
 "@ledgerhq/hw-transport-webhid@^5.2.0":
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport-webhid/-/hw-transport-webhid-5.2.0.tgz#2b6021bb894fff673d9f3c599d03bda74fb4fb15"
-  integrity sha512-4eTEarxzh2wCLst9Pxy1hN1fXNJZ5lxl2Db3qokQxNP7w6XY/VGjJ46P7NjkK13UvcaNjmXUbIt4i7snZr2kqA==
+  version "5.26.0"
+  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport-webhid/-/hw-transport-webhid-5.26.0.tgz#c30aee79b273fc012b4385a27c9ea47e4db7aa5d"
+  integrity sha512-OKREmhNDy1r33a+WMarrHWVSKI3PP2XwrU6Hx2RyGHFXHgX5IpaHXGwYkX/9pUdImzfIyngkHeopt7erT8ANww==
   dependencies:
-    "@ledgerhq/devices" "^5.2.0"
-    "@ledgerhq/errors" "^5.2.0"
-    "@ledgerhq/hw-transport" "^5.2.0"
-    "@ledgerhq/logs" "^5.2.0"
+    "@ledgerhq/devices" "^5.26.0"
+    "@ledgerhq/errors" "^5.26.0"
+    "@ledgerhq/hw-transport" "^5.26.0"
+    "@ledgerhq/logs" "^5.26.0"
 
 "@ledgerhq/hw-transport-webusb@^5.2.0":
   version "5.26.0"
