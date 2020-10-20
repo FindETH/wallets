@@ -40,8 +40,13 @@ export class Trezor extends HardwareWallet {
       }
     });
 
-    // Fetch a random address to ensure the connection works
-    await this.getAddress(DEFAULT_ETH, 50);
+    try {
+      // Fetch a random address to ensure the connection works
+      await this.getAddress(DEFAULT_ETH, 50);
+    } catch {
+      // Trezor-connect doesn't return "pretty" errors
+      throw new Error('Unable to connect to Trezor device.');
+    }
   }
 
   async prefetch(derivationPaths: DerivationPath[]): Promise<Record<string, ExtendedPublicKey>> {
