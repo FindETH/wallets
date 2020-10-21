@@ -51,7 +51,7 @@
     "prepare": "yarn run build"
   },
   "dependencies": {
-    "@findeth/hdnode": "^0.3.2",
+    "@findeth/hdnode": "^0.4.1",
     "@ledgerhq/hw-app-eth": "^5.2.0",
     "@ledgerhq/hw-transport": "^5.2.0",
     "@ledgerhq/hw-transport-mocker": "^5.2.0",
@@ -80,8 +80,8 @@
     "@types/jest": "^24.0.23",
     "@types/w3c-web-usb": "^1.0.3",
     "@types/web-bluetooth": "^0.0.4",
-    "@typescript-eslint/eslint-plugin": "^4.0.0",
-    "@typescript-eslint/parser": "^3.3.0",
+    "@typescript-eslint/eslint-plugin": "^4.5.0",
+    "@typescript-eslint/parser": "^4.5.0",
     "babel-jest": "^24.9.0",
     "codecov": "^3.6.1",
     "cross-env": "^6.0.3",

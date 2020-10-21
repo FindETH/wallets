@@ -1,5 +1,4 @@
-import { ExtendedPublicKey } from '@findeth/hdnode';
-import { dehexify } from '@findeth/secp256k1';
+import { ExtendedPublicKey, dehexify } from '@findeth/hdnode';
 import TrezorConnect from 'trezor-connect';
 import { TREZOR_MANIFEST_EMAIL, TREZOR_MANIFEST_URL } from '../constants';
 import { DEFAULT_ETH, DerivationPath, TREZOR_DERIVATION_PATHS } from '../derivation-paths';
@@ -33,12 +32,16 @@ export class Trezor extends HardwareWallet {
   async connect(): Promise<void> {
     this.cache = {};
 
-    await TrezorConnect.init({
-      manifest: {
-        email: TREZOR_MANIFEST_EMAIL,
-        appUrl: TREZOR_MANIFEST_URL
-      }
-    });
+    try {
+      await TrezorConnect.init({
+        manifest: {
+          email: TREZOR_MANIFEST_EMAIL,
+          appUrl: TREZOR_MANIFEST_URL
+        }
+      });
+    } catch {
+      // noop
+    }
 
     try {
       // Fetch a random address to ensure the connection works
