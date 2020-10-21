@@ -1,6 +1,5 @@
-import { ExtendedPublicKey } from '@findeth/hdnode';
+import { ExtendedPublicKey, dehexify } from '@findeth/hdnode';
 import { Network } from '@findeth/networks';
-import { dehexify } from '@findeth/secp256k1';
 import Transport from '@ledgerhq/hw-transport';
 import { DerivationPath, getDerivationPaths, LEDGER_DERIVATION_PATHS, LEDGER_ETH } from '../derivation-paths';
 import { HardwareWallet } from '../hardware-wallet';

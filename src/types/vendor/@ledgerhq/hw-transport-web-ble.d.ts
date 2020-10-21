@@ -1,4 +1,5 @@
 declare module '@ledgerhq/hw-transport-web-ble' {
+  import { Buffer } from 'buffer';
   import { DeviceModel } from '@ledgerhq/devices';
   import Transport, { DescriptorEvent, Observer, Subscription } from '@ledgerhq/hw-transport';
   import { Observable } from 'rxjs';

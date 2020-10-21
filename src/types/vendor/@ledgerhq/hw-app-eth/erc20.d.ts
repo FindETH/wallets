@@ -1,4 +1,6 @@
 declare module '@ledgerhq/hw-app-eth/erc20' {
+  import { Buffer } from 'buffer';
+
   export interface TokenInfo {
     contractAddress: string;
     ticker: string;
