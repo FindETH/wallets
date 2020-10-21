@@ -2,7 +2,7 @@
  * Returns a memoized version of a function.
  *
  * @param {Function} fn
- * @param {string} getIdentifier
+ * @param {(input: Argument) => string} getIdentifier
  * @return {Function}
  */
 export const memoize = <Argument, Result>(
