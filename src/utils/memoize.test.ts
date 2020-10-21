@@ -35,4 +35,14 @@ describe('memoize', () => {
 
     expect(fn).toHaveBeenCalledTimes(1);
   });
+
+  it('memoizes objects based on a identifier function', async () => {
+    const fn = jest.fn(async (input: { foo: string }) => ({ bar: input.foo }));
+    const memoized = memoize(fn, (input) => input.foo);
+
+    await expect(memoized({ foo: 'abc' })).resolves.toStrictEqual({ bar: 'abc' });
+    await expect(memoized({ foo: 'abc' })).resolves.toStrictEqual({ bar: 'abc' });
+
+    expect(fn).toHaveBeenCalledTimes(1);
+  });
 });
