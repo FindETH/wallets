@@ -1,4 +1,6 @@
 declare module '@ledgerhq/hw-transport-mocker/RecordStore' {
+  import { Buffer } from 'buffer';
+
   export type Queue = Array<[string, string]>;
 
   export class RecordStore {

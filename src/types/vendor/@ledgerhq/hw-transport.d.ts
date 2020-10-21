@@ -1,4 +1,6 @@
 declare module '@ledgerhq/hw-transport' {
+  import { Buffer } from 'buffer';
+
   /**
    * An object that listens to a Transport.
    */

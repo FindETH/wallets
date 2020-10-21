@@ -1,4 +1,5 @@
 declare module '@ledgerhq/hw-transport-u2f' {
+  import { Buffer } from 'buffer';
   import Transport, { DescriptorEvent, Observer, Subscription } from '@ledgerhq/hw-transport';
 
   export default class TransportU2F extends Transport<null> {
