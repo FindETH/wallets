@@ -7,7 +7,7 @@ import { SignedMessage, Wallet } from './wallet';
 
 export abstract class HardwareWallet implements Wallet {
   constructor() {
-    this.getHDNode = memoize(this.getHDNode.bind(this));
+    this.getHDNode = memoize(this.getHDNode.bind(this), (input) => input.path);
   }
 
   /**
