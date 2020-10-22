@@ -1083,12 +1083,12 @@
     "@ledgerhq/hw-transport" "^5.2.0"
 
 "@ledgerhq/hw-transport-mocker@^5.2.0":
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport-mocker/-/hw-transport-mocker-5.2.0.tgz#8b8bd5a8f9c2b6e1a607b33ab68f1c86d6982361"
-  integrity sha512-0IJk5CchJsTsWkr5T4n3gkPkdxAcqvkeXCzbSkrNWhdi8VCV9/3a24u0+DCHuzH5O55cGDn280TgYhmmtUZZyA==
+  version "5.26.0"
+  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport-mocker/-/hw-transport-mocker-5.26.0.tgz#ae5c114163d214ba455ec6ea0574927ad792eba5"
+  integrity sha512-L9Js/yofS10ceOlR5NuvguQn21apBpax08+bXJIRSSx66h/4M1k9yL+RbBQUUCvZxdlNNy0erhfFYh9Krw2PHw==
   dependencies:
-    "@ledgerhq/hw-transport" "^5.2.0"
-    "@ledgerhq/logs" "^5.2.0"
+    "@ledgerhq/hw-transport" "^5.26.0"
+    "@ledgerhq/logs" "^5.26.0"
 
 "@ledgerhq/hw-transport-node-hid-noevents@^5.26.0":
   version "5.26.0"
