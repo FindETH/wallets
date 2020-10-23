@@ -82,7 +82,7 @@
     "@types/web-bluetooth": "^0.0.4",
     "@typescript-eslint/eslint-plugin": "^4.5.0",
     "@typescript-eslint/parser": "^4.5.0",
-    "babel-jest": "^24.9.0",
+    "babel-jest": "^26.6.0",
     "codecov": "^3.6.1",
     "cross-env": "^7.0.2",
     "eslint": "^7.2.0",
