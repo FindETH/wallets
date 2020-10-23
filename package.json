@@ -56,7 +56,7 @@
     "@ledgerhq/hw-transport": "^5.2.0",
     "@ledgerhq/hw-transport-mocker": "^5.2.0",
     "@ledgerhq/hw-transport-node-hid": "^5.2.0",
-    "@ledgerhq/hw-transport-u2f": "^5.2.0",
+    "@ledgerhq/hw-transport-u2f": "^5.22.0",
     "@ledgerhq/hw-transport-web-ble": "^5.2.0",
     "@ledgerhq/hw-transport-webhid": "^5.2.0",
     "@ledgerhq/hw-transport-webusb": "^5.2.0",
