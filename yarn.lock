@@ -1060,6 +1060,13 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
+"@ledgerhq/cryptoassets@^5.27.2":
+  version "5.27.2"
+  resolved "https://registry.yarnpkg.com/@ledgerhq/cryptoassets/-/cryptoassets-5.27.2.tgz#8f6cfc9cd0ac90b6389f73ca7d5126b663b0dd93"
+  integrity sha512-3AMzLPpqK7ldVGwNzggPpgRB3ZhhhLz+FB+bQQSCBzk1knBR1JZmuw1i9cG6W+28vQsQkQUTWpH6nXKTjhwbRg==
+  dependencies:
+    invariant "2"
+
 "@ledgerhq/devices@^5.26.0":
   version "5.26.0"
   resolved "https://registry.yarnpkg.com/@ledgerhq/devices/-/devices-5.26.0.tgz#6c25ee48d0d2f49a8fa1abc11f3efd888f3fea68"
@@ -1074,13 +1081,16 @@
   resolved "https://registry.yarnpkg.com/@ledgerhq/errors/-/errors-5.26.0.tgz#a2d3da356e8053817b6517a94eff876ca1d0c972"
   integrity sha512-oMEf6ONyLqaZYkunDZWSc6Qo9uBzim5R8XDXOOyrz7zrj4hixsvxiAh8y1Jbrr1MQLG5HJ+aehee4Ot/A5iXtw==
 
-"@ledgerhq/hw-app-eth@^5.2.0":
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-app-eth/-/hw-app-eth-5.2.0.tgz#1b63aaf8c0470c645124e43d4775cd76fcdf4dd7"
-  integrity sha512-P8QDNPJdq2WX72jdeKIpevLGA+v6QRkd2tRe0+6DL/CuErO7qlQ+90BIzTafCqu1aOynoayY8CuhbwGNg/fvWg==
+"@ledgerhq/hw-app-eth@^5.25.2":
+  version "5.27.2"
+  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-app-eth/-/hw-app-eth-5.27.2.tgz#65a2ed613a69340e0cd69c942147455ec513d006"
+  integrity sha512-llNdrE894cCN8j6yxJEUniciyLVcLmu5N0UmIJLOObztG+5rOF4bX54h4SreTWK+E10Z0CzHSeyE5Lz/tVcqqQ==
   dependencies:
-    "@ledgerhq/errors" "^5.2.0"
-    "@ledgerhq/hw-transport" "^5.2.0"
+    "@ledgerhq/cryptoassets" "^5.27.2"
+    "@ledgerhq/errors" "^5.26.0"
+    "@ledgerhq/hw-transport" "^5.26.0"
+    bignumber.js "^9.0.1"
+    rlp "^2.2.6"
 
 "@ledgerhq/hw-transport-mocker@^5.2.0":
   version "5.26.0"
@@ -1743,6 +1753,11 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
+bignumber.js@^9.0.1:
+  version "9.0.1"
+  resolved "https://registry.yarnpkg.com/bignumber.js/-/bignumber.js-9.0.1.tgz#8d7ba124c882bfd8e43260c67475518d0689e4e5"
+  integrity sha512-IdZR9mh6ahOBv/hYGiXyVuyCetmGJhtYkqLBpTStdhEGjegpPlUawydyaF3pbIOFynJTpllEs+NP+CS9jKFLjA==
+
 binary-extensions@^1.0.0:
   version "1.13.1"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.13.1.tgz#598afe54755b2868a5330d2aff9d4ebb53209b65"
@@ -1762,7 +1777,7 @@ bl@^3.0.0:
   dependencies:
     readable-stream "^3.0.1"
 
-bn.js@^4.4.0:
+bn.js@^4.11.1, bn.js@^4.4.0:
   version "4.11.9"
   resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-4.11.9.tgz#26d556829458f9d1e81fc48952493d0ba3507828"
   integrity sha512-E6QoYqCKZfgatHTdHzs1RRKP7ip4vvm+EyRUeE2RF0NblwVvb0p6jSVeNTOFxPn26QXN2o6SMfNxKp6kU8zQaw==
@@ -3338,7 +3353,7 @@ interpret@^1.0.0:
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.2.0.tgz#d5061a6224be58e8083985f5014d844359576296"
   integrity sha512-mT34yGKMNceBQUoVn7iCDKDntA7SC6gycMAWzGx1z/CMCTV7b2AAtXlo3nRyHZ1FelRkQbQjprHSYGwzLtkVbw==
 
-invariant@^2.2.2, invariant@^2.2.4:
+invariant@2, invariant@^2.2.2, invariant@^2.2.4:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
   integrity sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA==
@@ -5536,6 +5551,13 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
   dependencies:
     hash-base "^3.0.0"
     inherits "^2.0.1"
+
+rlp@^2.2.6:
+  version "2.2.6"
+  resolved "https://registry.yarnpkg.com/rlp/-/rlp-2.2.6.tgz#c80ba6266ac7a483ef1e69e8e2f056656de2fb2c"
+  integrity sha512-HAfAmL6SDYNWPUOJNrM500x4Thn4PZsEy5pijPh40U9WfNk0z15hUYzO9xVIMAdIHdFtD8CBDHd75Td1g36Mjg==
+  dependencies:
+    bn.js "^4.11.1"
 
 rsvp@^4.8.4:
   version "4.8.5"
