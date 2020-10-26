@@ -2316,6 +2316,17 @@ core-util-is@1.0.2, core-util-is@~1.0.0:
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
   integrity sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
 
+cosmiconfig@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/cosmiconfig/-/cosmiconfig-6.0.0.tgz#da4fee853c52f6b1e6935f41c1a2fc50bd4a9982"
+  integrity sha512-xb3ZL6+L8b9JLLCx3ZdoZy4+2ECphCMo2PwqgP1tlfVq6M6YReyzBJtvWWtbDSpNr9hn96pkCiZqUcFEc+54Qg==
+  dependencies:
+    "@types/parse-json" "^4.0.0"
+    import-fresh "^3.1.0"
+    parse-json "^5.0.0"
+    path-type "^4.0.0"
+    yaml "^1.7.2"
+
 cosmiconfig@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/cosmiconfig/-/cosmiconfig-7.0.0.tgz#ef9b44d773959cae63ddecd122de23853b60f8d3"
@@ -3488,7 +3499,7 @@ ignore@^5.1.4:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.1.8.tgz#f150a8b50a34289b33e22f5889abd4d8016f0e57"
   integrity sha512-BMpfD7PpiETpBl/A6S498BaIJ6Y/ABT93ETbby2fP00v4EbvPBXWEoaR1UBPKs3iR53pJY7EtZk5KACI57i1Uw==
 
-import-fresh@^3.0.0, import-fresh@^3.2.1:
+import-fresh@^3.0.0, import-fresh@^3.1.0, import-fresh@^3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/import-fresh/-/import-fresh-3.2.1.tgz#633ff618506e793af5ac91bf48b72677e15cbe66"
   integrity sha512-6e1q1cnWP2RXD9/keSkxHScg508CdXqXWgWBaETNhyuBFz+kUZlKboh+ISK+bU++DmbHimVBrOz/zzPe0sZ3sQ==
@@ -4538,21 +4549,23 @@ locate-path@^5.0.0:
   dependencies:
     p-locate "^4.1.0"
 
-lockfile-lint-api@^5.0.3:
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/lockfile-lint-api/-/lockfile-lint-api-5.0.3.tgz#55e176dea9892e347334a4903f9a845cae728031"
-  integrity sha512-lot1hb/sCU588v//9r1EZEcO1YGDdGRxjEif/Ua33h9ytt5z33F5yQXuue8fJD+X/b3SbZOx15Vf8R1d0nSF0w==
+lockfile-lint-api@^5.1.6:
+  version "5.1.6"
+  resolved "https://registry.yarnpkg.com/lockfile-lint-api/-/lockfile-lint-api-5.1.6.tgz#74d1e14c0c8270232607eb11e518a92f6f6b1ddd"
+  integrity sha512-liJ1p/NkHbE2Wx5fRw8T1io+x2b2DttVvXpHLm4x7QC8pW3Lc6sHqV4T7cM6rAOs4fF2O9sAt7SEtuN2sX91qA==
   dependencies:
     "@yarnpkg/lockfile" "^1.1.0"
     debug "^4.1.1"
+    object-hash "^2.0.1"
 
-lockfile-lint@^3.0.4:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/lockfile-lint/-/lockfile-lint-3.0.4.tgz#e455c3af4e5d73774708c92225ab3c045df8119f"
-  integrity sha512-rzsZbpOfto7E3+faXJQ5DKjjWBWPxUtPCEdO0GgtyBcgUK62vVFaRRJzXApqUShCyRu88JklKSfVaj8RlPq20A==
+lockfile-lint@^4.3.7:
+  version "4.3.7"
+  resolved "https://registry.yarnpkg.com/lockfile-lint/-/lockfile-lint-4.3.7.tgz#68c9d1dc129292cd85a71b2d7f65a9e2fe4333be"
+  integrity sha512-hOHVJyHxtrK6cgYlKoaWveVOCz/w4IXlhmxM+RSWW7f1lA3ENJaRL9eNS9AO0PBKx4P/KMXuker0KzExNDenRg==
   dependencies:
+    cosmiconfig "^6.0.0"
     debug "^4.1.1"
-    lockfile-lint-api "^5.0.3"
+    lockfile-lint-api "^5.1.6"
     yargs "^15.0.2"
 
 lodash.memoize@4.x:
@@ -5013,6 +5026,11 @@ object-copy@^0.1.0:
     copy-descriptor "^0.1.0"
     define-property "^0.2.5"
     kind-of "^3.0.3"
+
+object-hash@^2.0.1:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/object-hash/-/object-hash-2.0.3.tgz#d12db044e03cd2ca3d77c0570d87225b02e1e6ea"
+  integrity sha512-JPKn0GMu+Fa3zt3Bmr66JhokJU5BaNBIh4ZeTlaCBzrBsOeXzwcKKAK1tbLiPKgvwmPXsDvvLHoWh5Bm7ofIYg==
 
 object-inspect@^1.7.0:
   version "1.7.0"
@@ -6955,7 +6973,7 @@ yallist@^3.0.0, yallist@^3.0.3:
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-3.1.1.tgz#dbb7daf9bfd8bac9ab45ebf602b8cbad0d5d08fd"
   integrity sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==
 
-yaml@^1.10.0:
+yaml@^1.10.0, yaml@^1.7.2:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/yaml/-/yaml-1.10.0.tgz#3b593add944876077d4d683fee01081bd9fff31e"
   integrity sha512-yr2icI4glYaNG+KWONODapy2/jDdMSDnrONSjblABjD9B4Z5LgiircSt8m8sRZFNi08kG9Sm0uSHtEmP3zaEGg==
