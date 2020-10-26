@@ -92,7 +92,7 @@
     "husky": "^4.3.0",
     "jest": "^24.9.0",
     "lint-staged": "^10.2.11",
-    "lockfile-lint": "^3.0.4",
+    "lockfile-lint": "^4.3.7",
     "prettier": "^2.1.2",
     "rimraf": "^3.0.0",
     "ts-jest": "^24.2.0",
