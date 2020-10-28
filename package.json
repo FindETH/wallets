@@ -76,7 +76,7 @@
     "@babel/plugin-transform-modules-commonjs": "^7.7.5",
     "@babel/preset-env": "^7.7.7",
     "@babel/preset-typescript": "^7.10.1",
-    "@findeth/networks": "^0.4.0",
+    "@findeth/networks": "^0.5.2",
     "@types/jest": "^26.0.15",
     "@types/w3c-web-usb": "^1.0.3",
     "@types/web-bluetooth": "^0.0.9",
