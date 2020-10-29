@@ -1225,14 +1225,14 @@
     rxjs "^6.6.3"
 
 "@ledgerhq/hw-transport-webhid@^5.2.0":
-  version "5.26.0"
-  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport-webhid/-/hw-transport-webhid-5.26.0.tgz#c30aee79b273fc012b4385a27c9ea47e4db7aa5d"
-  integrity sha512-OKREmhNDy1r33a+WMarrHWVSKI3PP2XwrU6Hx2RyGHFXHgX5IpaHXGwYkX/9pUdImzfIyngkHeopt7erT8ANww==
+  version "5.28.0"
+  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport-webhid/-/hw-transport-webhid-5.28.0.tgz#27b0b30ec43e9be132b422f45106e5509855b43c"
+  integrity sha512-dZtBIV7rlYBQXDI7QTezZjJd8fypLCHKkbdgUUmBLTzHswcIMjUIDhOsSaZJRzR/3pEhKSaYUkHxNXRGYcUnoQ==
   dependencies:
-    "@ledgerhq/devices" "^5.26.0"
-    "@ledgerhq/errors" "^5.26.0"
-    "@ledgerhq/hw-transport" "^5.26.0"
-    "@ledgerhq/logs" "^5.26.0"
+    "@ledgerhq/devices" "^5.28.0"
+    "@ledgerhq/errors" "^5.28.0"
+    "@ledgerhq/hw-transport" "^5.28.0"
+    "@ledgerhq/logs" "^5.28.0"
 
 "@ledgerhq/hw-transport-webusb@^5.2.0":
   version "5.26.0"
@@ -1244,7 +1244,7 @@
     "@ledgerhq/hw-transport" "^5.26.0"
     "@ledgerhq/logs" "^5.26.0"
 
-"@ledgerhq/hw-transport@^5.2.0", "@ledgerhq/hw-transport@^5.26.0":
+"@ledgerhq/hw-transport@^5.2.0", "@ledgerhq/hw-transport@^5.26.0", "@ledgerhq/hw-transport@^5.28.0":
   version "5.28.0"
   resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport/-/hw-transport-5.28.0.tgz#69a2572a38a3a2bb16b9f14352f0d6a8b36b1ea3"
   integrity sha512-dQm45axzWSJhiaDB2csBCFPH/PGjE8kB+3uSeoUJ752FqgndZgrN9UKOPPxcmaf69jnQeTZAFEWc8g63yMPYOg==
@@ -1253,12 +1253,7 @@
     "@ledgerhq/errors" "^5.28.0"
     events "^3.2.0"
 
-"@ledgerhq/logs@^5.26.0":
-  version "5.26.0"
-  resolved "https://registry.yarnpkg.com/@ledgerhq/logs/-/logs-5.26.0.tgz#171bd471265259663520abb02a0eed80e949e3a1"
-  integrity sha512-/3EKvS9eHzKl9Om+t//SPnzJaahIoVIUlozLMSarINyO7SSh174kxl3jTNHBl7dLxvkQyDDs5imLvP04ohlQaw==
-
-"@ledgerhq/logs@^5.28.0":
+"@ledgerhq/logs@^5.26.0", "@ledgerhq/logs@^5.28.0":
   version "5.28.0"
   resolved "https://registry.yarnpkg.com/@ledgerhq/logs/-/logs-5.28.0.tgz#bbbd54598fbf9436e02d3b5033c9151fc465295a"
   integrity sha512-O+p30yQCJVMHkYRt4mEy2My61JNTyqg9FEs9ZmXXPvXbod85snD6oGaKtDtcvbWCYjiaQt4alD+w/J56hkNBWQ==
