@@ -1171,12 +1171,12 @@
     rlp "^2.2.6"
 
 "@ledgerhq/hw-transport-mocker@^5.2.0":
-  version "5.26.0"
-  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport-mocker/-/hw-transport-mocker-5.26.0.tgz#ae5c114163d214ba455ec6ea0574927ad792eba5"
-  integrity sha512-L9Js/yofS10ceOlR5NuvguQn21apBpax08+bXJIRSSx66h/4M1k9yL+RbBQUUCvZxdlNNy0erhfFYh9Krw2PHw==
+  version "5.28.0"
+  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport-mocker/-/hw-transport-mocker-5.28.0.tgz#07bdb0dc1c81174ad8c094cdcb39409356076ed3"
+  integrity sha512-3nxebFa1218Qa6ian5KRVO0FaXf2/Mzvd4K/gVW3UKGLcI9MSYB23guAG01CkFUf24Vh4bGzJ1lbuLnUqERuCg==
   dependencies:
-    "@ledgerhq/hw-transport" "^5.26.0"
-    "@ledgerhq/logs" "^5.26.0"
+    "@ledgerhq/hw-transport" "^5.28.0"
+    "@ledgerhq/logs" "^5.28.0"
 
 "@ledgerhq/hw-transport-node-hid-noevents@^5.28.0":
   version "5.28.0"
