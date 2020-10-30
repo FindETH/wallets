@@ -1138,10 +1138,10 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@ledgerhq/cryptoassets@^5.27.2":
-  version "5.27.2"
-  resolved "https://registry.yarnpkg.com/@ledgerhq/cryptoassets/-/cryptoassets-5.27.2.tgz#8f6cfc9cd0ac90b6389f73ca7d5126b663b0dd93"
-  integrity sha512-3AMzLPpqK7ldVGwNzggPpgRB3ZhhhLz+FB+bQQSCBzk1knBR1JZmuw1i9cG6W+28vQsQkQUTWpH6nXKTjhwbRg==
+"@ledgerhq/cryptoassets@^5.28.0":
+  version "5.28.0"
+  resolved "https://registry.yarnpkg.com/@ledgerhq/cryptoassets/-/cryptoassets-5.28.0.tgz#0d12f0ca51e4aef98ec29ee18ba30ab6ad6d06a3"
+  integrity sha512-jf7saGFCBzf+4TKoI4wiBztC9K1N6mjFsuSe8S5op7pjJMEjWXUZL1o7yXP6GiYiMyBIOknQAb/kbN32rPhTJQ==
   dependencies:
     invariant "2"
 
@@ -1160,13 +1160,13 @@
   integrity sha512-dNBVriJbdiTerT7I102sAMBxuJqmuMCQSfIdQ+3euvb+2Fx7UPM/w9RHZ0HZGsz/SdeBblWAH0aIQmtDX/vW9g==
 
 "@ledgerhq/hw-app-eth@^5.2.0":
-  version "5.27.2"
-  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-app-eth/-/hw-app-eth-5.27.2.tgz#65a2ed613a69340e0cd69c942147455ec513d006"
-  integrity sha512-llNdrE894cCN8j6yxJEUniciyLVcLmu5N0UmIJLOObztG+5rOF4bX54h4SreTWK+E10Z0CzHSeyE5Lz/tVcqqQ==
+  version "5.28.0"
+  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-app-eth/-/hw-app-eth-5.28.0.tgz#77bb550fd5fed7c249d4bfec7d4141f474366d35"
+  integrity sha512-XIQPydYryxbW743NNf8pJ7MI5uu0TjynrLjdoz6glnRxM5q3yStRvLdej4ievwr4d8tH8431gdagXtz0ewFOuA==
   dependencies:
-    "@ledgerhq/cryptoassets" "^5.27.2"
-    "@ledgerhq/errors" "^5.26.0"
-    "@ledgerhq/hw-transport" "^5.26.0"
+    "@ledgerhq/cryptoassets" "^5.28.0"
+    "@ledgerhq/errors" "^5.28.0"
+    "@ledgerhq/hw-transport" "^5.28.0"
     bignumber.js "^9.0.1"
     rlp "^2.2.6"
 
