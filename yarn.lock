@@ -1214,14 +1214,14 @@
     u2f-api "0.2.7"
 
 "@ledgerhq/hw-transport-web-ble@^5.2.0":
-  version "5.26.0"
-  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport-web-ble/-/hw-transport-web-ble-5.26.0.tgz#2e3bcff3a1283eff503659598fcbf2c514fb2bde"
-  integrity sha512-+Zp8McgicxANWMqqGtxQH8YX6Orvn1G/oU+ov18EL8nyw8gcC/BfzG5T8ck/amZnDetA9je0YAFn76xZs/a2SQ==
+  version "5.28.0"
+  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport-web-ble/-/hw-transport-web-ble-5.28.0.tgz#ddcc3963bde2640ce3d4497611cd89d92f48796c"
+  integrity sha512-2HYhBzqYLOwL5kH80OSPZ1Lx8byTdFKRPZLwti7dRDz+xdZC6vhQh7IORZrXrFRxmRxMW+nGeLSR1fIJOAXjfA==
   dependencies:
-    "@ledgerhq/devices" "^5.26.0"
-    "@ledgerhq/errors" "^5.26.0"
-    "@ledgerhq/hw-transport" "^5.26.0"
-    "@ledgerhq/logs" "^5.26.0"
+    "@ledgerhq/devices" "^5.28.0"
+    "@ledgerhq/errors" "^5.28.0"
+    "@ledgerhq/hw-transport" "^5.28.0"
+    "@ledgerhq/logs" "^5.28.0"
     rxjs "^6.6.3"
 
 "@ledgerhq/hw-transport-webhid@^5.2.0":
