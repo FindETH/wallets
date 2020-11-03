@@ -8306,9 +8306,9 @@ tr46@^1.0.1:
     punycode "^2.1.0"
 
 trezor-connect@^8.1.16:
-  version "8.1.16"
-  resolved "https://registry.yarnpkg.com/trezor-connect/-/trezor-connect-8.1.16.tgz#a634b16c436311f3833aa0a6a36089c95ba4f6fd"
-  integrity sha512-HYSYsJk0js+OFUjO7ebsUunjYBpoUcjHI5iDBeaDoefBl0FT/Qwf6o1sd2IYVVmVCL/MtqxZ6by+/Z0/GaFBNw==
+  version "8.1.17"
+  resolved "https://registry.yarnpkg.com/trezor-connect/-/trezor-connect-8.1.17.tgz#5af6d8668c9f437bc9c7e55ed9c33fc50f0956cd"
+  integrity sha512-MwiafcFHfaOc1eXPmlnG3OEiRMEzxRODDky/pQjiUc+J265mNkaADJbwximTpKcv8WM0x4L3/aoDGre750scVw==
   dependencies:
     "@babel/runtime" "^7.11.2"
     events "^3.2.0"
