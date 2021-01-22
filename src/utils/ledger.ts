@@ -1,4 +1,4 @@
-import { LedgerU2F, LedgerWebHID, LedgerWebUSB } from '../implementations';
+import { LedgerU2F, LedgerWebHID, LedgerWebUSB } from '../implementations/transports';
 
 /**
  * Returns an instance of a (wired) Ledger transport method. Currently, this will return the WebUSB method if it is
