@@ -1,9 +1,14 @@
 import { ExtendedPublicKey, dehexify } from '@findeth/hdnode';
 import { Network } from '@findeth/networks';
 import Transport from '@ledgerhq/hw-transport';
-import { ALL_DERIVATION_PATHS } from '../../typings';
 import { LEDGER_ETH_RECOVERY_NAME } from '../constants';
-import { DerivationPath, getDerivationPaths, LEDGER_DERIVATION_PATHS, LEDGER_ETH } from '../derivation-paths';
+import {
+  ALL_DERIVATION_PATHS,
+  DerivationPath,
+  getDerivationPaths,
+  LEDGER_DERIVATION_PATHS,
+  LEDGER_ETH
+} from '../derivation-paths';
 import { HardwareWallet } from '../hardware-wallet';
 import { WalletType } from '../types';
 import { getFullPath, getTransportImplementation, isTransportType, parseRawData } from '../utils';
