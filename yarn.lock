@@ -1183,27 +1183,27 @@
     "@ledgerhq/hw-transport" "^5.40.0"
     "@ledgerhq/logs" "^5.40.0"
 
-"@ledgerhq/hw-transport-node-hid-noevents@^5.39.1":
-  version "5.39.1"
-  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport-node-hid-noevents/-/hw-transport-node-hid-noevents-5.39.1.tgz#47d3516a2e0cd66124181e4b84099dfc7ea618d6"
-  integrity sha512-rsnDcuG+h1BAgpAZMGqnSKiY+A9kMJfzpzMi5S4c7Hncm2bAEbWNM4f5qjAof6u4asJcVvffpZVm+QIxG4+tIw==
+"@ledgerhq/hw-transport-node-hid-noevents@^5.40.0":
+  version "5.40.0"
+  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport-node-hid-noevents/-/hw-transport-node-hid-noevents-5.40.0.tgz#7e14dbd59656f2bff34248ea4119f64433e555fd"
+  integrity sha512-YLPr0oSrbH3ZK3t0hZYF32oiL08rFrZWZyb65SPdecLyNVWy/vlY14tC5Hk0HmIq5sa0nDiWWQCFueXxVCEYBg==
   dependencies:
-    "@ledgerhq/devices" "^5.39.1"
-    "@ledgerhq/errors" "^5.39.0"
-    "@ledgerhq/hw-transport" "^5.39.1"
-    "@ledgerhq/logs" "^5.39.0"
+    "@ledgerhq/devices" "^5.40.0"
+    "@ledgerhq/errors" "^5.40.0"
+    "@ledgerhq/hw-transport" "^5.40.0"
+    "@ledgerhq/logs" "^5.40.0"
     node-hid "2.1.1"
 
 "@ledgerhq/hw-transport-node-hid@^5.2.0":
-  version "5.39.1"
-  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport-node-hid/-/hw-transport-node-hid-5.39.1.tgz#3f0cb998ab07cec08ab271f7aad42d776fbeb5b5"
-  integrity sha512-rA2kP9ntgyuK4bAC1AV+py45kIcpxIuCgTxaIdDs+ZqJhrwHNEqjxN8aD0XlKO9jA5LUZeH1LM6KC3pHN8rBOw==
+  version "5.40.0"
+  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport-node-hid/-/hw-transport-node-hid-5.40.0.tgz#b5281cb6be87bb85abe0afa4d34eec955dfef456"
+  integrity sha512-IpX5Qlc4VrPbp1uk/AOaLDg5sg5GexDl1LgK9K8wNnyHr3coeKIV+HlL/vcxjWA0BwEbkqdIlfpi+dxsvdVfZw==
   dependencies:
-    "@ledgerhq/devices" "^5.39.1"
-    "@ledgerhq/errors" "^5.39.0"
-    "@ledgerhq/hw-transport" "^5.39.1"
-    "@ledgerhq/hw-transport-node-hid-noevents" "^5.39.1"
-    "@ledgerhq/logs" "^5.39.0"
+    "@ledgerhq/devices" "^5.40.0"
+    "@ledgerhq/errors" "^5.40.0"
+    "@ledgerhq/hw-transport" "^5.40.0"
+    "@ledgerhq/hw-transport-node-hid-noevents" "^5.40.0"
+    "@ledgerhq/logs" "^5.40.0"
     lodash "^4.17.20"
     node-hid "2.1.1"
     usb "^1.6.3"
