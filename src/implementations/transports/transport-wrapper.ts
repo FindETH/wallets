@@ -32,6 +32,15 @@ export abstract class TransportWrapper<Descriptor, TransportImplementation exten
     return this.app;
   }
 
+  // eslint-disable-next-line no-restricted-globals
+  async send(cla: number, ins: number, p1: number, p2: number): Promise<Buffer> {
+    if (!this.transport) {
+      throw new Error('Transport not initialised');
+    }
+
+    return this.transport.send(cla, ins, p1, p2);
+  }
+
   /**
    * Returns a string representation of the current transport.
    *

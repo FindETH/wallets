@@ -4,13 +4,18 @@ import Transport from '@ledgerhq/hw-transport';
 import { DerivationPath, getDerivationPaths, LEDGER_DERIVATION_PATHS, LEDGER_ETH } from '../derivation-paths';
 import { HardwareWallet } from '../hardware-wallet';
 import { WalletType } from '../types';
-import { getFullPath, getTransportImplementation, isTransportType } from '../utils';
+import { getFullPath, getTransportImplementation, isTransportType, parseRawData } from '../utils';
 import { SignedMessage } from '../wallet';
 import { TransportWrapper } from './transports';
 
 interface SerializedData {
   type: string;
   transport: string;
+}
+
+interface AppMetadata {
+  name: string;
+  version: string;
 }
 
 export class Ledger<Descriptor> extends HardwareWallet {
@@ -107,5 +112,27 @@ export class Ledger<Descriptor> extends HardwareWallet {
 
   getType(): WalletType {
     return WalletType.Ledger;
+  }
+
+  /**
+   * Get the app name and version from the device.
+   *
+   * Adapted from:
+   * https://github.com/LedgerHQ/ledger-live-common/blob/79d5ddbdb277bc65536d66121c89cae0d639bad6/src/hw/getAppAndVersion.js
+   *
+   * @return {Promise<AppMetadata>}
+   */
+  private async getMetadata(): Promise<AppMetadata> {
+    const result = await this.transport.send(0xb0, 0x01, 0x00, 0x00);
+    const format = result[0];
+
+    if (format !== 1) {
+      throw new Error('Cannot get metadata from device: Format not supported');
+    }
+
+    const [name, nameLength] = parseRawData(result, 1);
+    const [version] = parseRawData(result, 1 + nameLength);
+
+    return { name, version };
   }
 }
