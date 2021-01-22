@@ -22,7 +22,7 @@ export interface Wallet {
    * @param {Network} network
    * @return {DerivationPath[]}
    */
-  getDerivationPaths(network: Network): DerivationPath[];
+  getDerivationPaths(network: Network): DerivationPath[] | Promise<DerivationPath[]>;
 
   /**
    * Get an address from the wallet, based on the derivation path and index.

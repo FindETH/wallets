@@ -1,6 +1,8 @@
 import { ExtendedPublicKey, dehexify } from '@findeth/hdnode';
 import { Network } from '@findeth/networks';
 import Transport from '@ledgerhq/hw-transport';
+import { ALL_DERIVATION_PATHS } from '../../typings';
+import { LEDGER_ETH_RECOVERY_NAME } from '../constants';
 import { DerivationPath, getDerivationPaths, LEDGER_DERIVATION_PATHS, LEDGER_ETH } from '../derivation-paths';
 import { HardwareWallet } from '../hardware-wallet';
 import { WalletType } from '../types';
@@ -72,7 +74,13 @@ export class Ledger<Descriptor> extends HardwareWallet {
     };
   }
 
-  getDerivationPaths(network: Network): DerivationPath[] {
+  async getDerivationPaths(network: Network): Promise<DerivationPath[]> {
+    // The ETH Recovery app supports all derivation paths
+    const { name } = await this.getMetadata();
+    if (name === LEDGER_ETH_RECOVERY_NAME) {
+      return ALL_DERIVATION_PATHS;
+    }
+
     // Ledger limits the available derivation paths based on the application that is open
     if (network.chainId === 1) {
       return LEDGER_DERIVATION_PATHS;
