@@ -1149,7 +1149,7 @@
   dependencies:
     invariant "2"
 
-"@ledgerhq/devices@^5.28.0", "@ledgerhq/devices@^5.39.1", "@ledgerhq/devices@^5.40.0":
+"@ledgerhq/devices@^5.28.0", "@ledgerhq/devices@^5.40.0":
   version "5.40.0"
   resolved "https://registry.yarnpkg.com/@ledgerhq/devices/-/devices-5.40.0.tgz#5f74d1931e23110287ec5954f7ab5f3b754d8d4d"
   integrity sha512-72P1fuiBN/lR+3PCB2lxsgfp+l4v3Uwvho7UnfOocCfWx//8HiojByRW3zutdW7RMeVzOA+qLXRC6OHooa0kkA==
@@ -1159,7 +1159,7 @@
     rxjs "^6.6.3"
     semver "^7.3.4"
 
-"@ledgerhq/errors@^5.28.0", "@ledgerhq/errors@^5.30.0", "@ledgerhq/errors@^5.39.0", "@ledgerhq/errors@^5.40.0":
+"@ledgerhq/errors@^5.28.0", "@ledgerhq/errors@^5.30.0", "@ledgerhq/errors@^5.40.0":
   version "5.40.0"
   resolved "https://registry.yarnpkg.com/@ledgerhq/errors/-/errors-5.40.0.tgz#1c8a4fa5977e645e354e497519b403e156c4f043"
   integrity sha512-Sj7T7IjiQdEEdA1/o66paldyAV+/1GVfDSML9Q1kCkv9ASfhV3bogM9knSEATLiuVj2+QUyJBni6EettMiUfGA==
@@ -1249,7 +1249,7 @@
     "@ledgerhq/hw-transport" "^5.28.0"
     "@ledgerhq/logs" "^5.28.0"
 
-"@ledgerhq/hw-transport@^5.2.0", "@ledgerhq/hw-transport@^5.28.0", "@ledgerhq/hw-transport@^5.30.0", "@ledgerhq/hw-transport@^5.39.1", "@ledgerhq/hw-transport@^5.40.0":
+"@ledgerhq/hw-transport@^5.2.0", "@ledgerhq/hw-transport@^5.28.0", "@ledgerhq/hw-transport@^5.30.0", "@ledgerhq/hw-transport@^5.40.0":
   version "5.40.0"
   resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport/-/hw-transport-5.40.0.tgz#cb98113d7ff47a410bc3591995173a504ba736c8"
   integrity sha512-0BPCEBZxr9iHLBCGftnLaVQW8DxM5lf56r00CsMOxfZerax70fzwXnGSxim0QUZXtnFbwhecGeeTSnyB85wH5A==
@@ -1258,7 +1258,7 @@
     "@ledgerhq/errors" "^5.40.0"
     events "^3.2.0"
 
-"@ledgerhq/logs@^5.28.0", "@ledgerhq/logs@^5.39.0", "@ledgerhq/logs@^5.40.0":
+"@ledgerhq/logs@^5.28.0", "@ledgerhq/logs@^5.40.0":
   version "5.40.0"
   resolved "https://registry.yarnpkg.com/@ledgerhq/logs/-/logs-5.40.0.tgz#751c7d033de23c736af0ad294145f57825394256"
   integrity sha512-GkGWnpbNt1rd7JyrLNOiWiA1IiqWU4tD/xBo0FlKZEF5DfLw8PXYU6NSH5WVc4tiNLjTa8e26erZ1g3r9cymww==
@@ -8471,9 +8471,9 @@ typedoc@^0.20.16:
     typedoc-default-themes "^0.12.4"
 
 typescript@^4.0.3:
-  version "4.0.5"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.0.5.tgz#ae9dddfd1069f1cb5beb3ef3b2170dd7c1332389"
-  integrity sha512-ywmr/VrTVCmNTJ6iV2LwIrfG1P+lv6luD8sUJs+2eI9NLGigaN+nUQc13iHqisq7bra9lnmUSYqbJvegraBOPQ==
+  version "4.1.3"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.1.3.tgz#519d582bd94cba0cf8934c7d8e8467e473f53bb7"
+  integrity sha512-B3ZIOf1IKeH2ixgHhj6la6xdwR9QrLC5d1VKeCSY4tvkqhF2eqd9O7txNlS0PO3GrBAFIdr3L1ndNwteUbZLYg==
 
 u2f-api@0.2.7:
   version "0.2.7"
