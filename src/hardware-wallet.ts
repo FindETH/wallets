@@ -53,7 +53,7 @@ export abstract class HardwareWallet implements Wallet {
    * @param {Network} network
    * @return {DerivationPath[]}
    */
-  abstract getDerivationPaths(network: Network): DerivationPath[];
+  abstract getDerivationPaths(network: Network): DerivationPath[] | Promise<DerivationPath[]>;
 
   /**
    * Serialize the wallet implementation to a JSON string.
