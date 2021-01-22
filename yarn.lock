@@ -1148,17 +1148,7 @@
   dependencies:
     invariant "2"
 
-"@ledgerhq/devices@^5.28.0", "@ledgerhq/devices@^5.39.1":
-  version "5.39.1"
-  resolved "https://registry.yarnpkg.com/@ledgerhq/devices/-/devices-5.39.1.tgz#9f9a2d374cdf2814ecbd9cb8317a9fa0d402d477"
-  integrity sha512-nkIgbZ3VtRPboL+BzJZi7MgSwrwhatJhSMzv63wGiJjgwgFRniMn7P0NvT0EqfMicnQMGdIKGmcB6Wdr3GLSdg==
-  dependencies:
-    "@ledgerhq/errors" "^5.39.0"
-    "@ledgerhq/logs" "^5.39.0"
-    rxjs "^6.6.3"
-    semver "^7.3.4"
-
-"@ledgerhq/devices@^5.40.0":
+"@ledgerhq/devices@^5.28.0", "@ledgerhq/devices@^5.39.1", "@ledgerhq/devices@^5.40.0":
   version "5.40.0"
   resolved "https://registry.yarnpkg.com/@ledgerhq/devices/-/devices-5.40.0.tgz#5f74d1931e23110287ec5954f7ab5f3b754d8d4d"
   integrity sha512-72P1fuiBN/lR+3PCB2lxsgfp+l4v3Uwvho7UnfOocCfWx//8HiojByRW3zutdW7RMeVzOA+qLXRC6OHooa0kkA==
@@ -1168,12 +1158,7 @@
     rxjs "^6.6.3"
     semver "^7.3.4"
 
-"@ledgerhq/errors@^5.28.0", "@ledgerhq/errors@^5.30.0", "@ledgerhq/errors@^5.39.0":
-  version "5.39.0"
-  resolved "https://registry.yarnpkg.com/@ledgerhq/errors/-/errors-5.39.0.tgz#1fc392af94c1c1dc12d5e865b44f34bdfbc37503"
-  integrity sha512-N4/0NO2qgRlF+6QG9a4kGurmi2p6rcYyWeJb4QxU8ypGqBgzMBYjx0LM68JfGFAN5niAuqHZtDZ87EPSrXyu6Q==
-
-"@ledgerhq/errors@^5.40.0":
+"@ledgerhq/errors@^5.28.0", "@ledgerhq/errors@^5.30.0", "@ledgerhq/errors@^5.39.0", "@ledgerhq/errors@^5.40.0":
   version "5.40.0"
   resolved "https://registry.yarnpkg.com/@ledgerhq/errors/-/errors-5.40.0.tgz#1c8a4fa5977e645e354e497519b403e156c4f043"
   integrity sha512-Sj7T7IjiQdEEdA1/o66paldyAV+/1GVfDSML9Q1kCkv9ASfhV3bogM9knSEATLiuVj2+QUyJBni6EettMiUfGA==
@@ -1244,14 +1229,14 @@
     rxjs "^6.6.3"
 
 "@ledgerhq/hw-transport-webhid@^5.2.0":
-  version "5.39.1"
-  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport-webhid/-/hw-transport-webhid-5.39.1.tgz#46311af40ec56cf944ae94d0638ca4219e5b493b"
-  integrity sha512-1LrfYc2obBiTglF/APOyK36LbeS4vxTtkVurcpdojKWGLlY4ZRQ5+siPLUJYCQZ04qv6ijY4WZg1Fxm2FHVu/g==
+  version "5.40.0"
+  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport-webhid/-/hw-transport-webhid-5.40.0.tgz#e3b71562cce4dbed91e370c69d41cba37101bedc"
+  integrity sha512-fMwYnBxLEVFhavMV0lJ6DyHI3RWJzsHd3lr38RNye7glfzN/Eipg/otNGYmeOIQ/O+EW5RugKcQkch/Khz1gKQ==
   dependencies:
-    "@ledgerhq/devices" "^5.39.1"
-    "@ledgerhq/errors" "^5.39.0"
-    "@ledgerhq/hw-transport" "^5.39.1"
-    "@ledgerhq/logs" "^5.39.0"
+    "@ledgerhq/devices" "^5.40.0"
+    "@ledgerhq/errors" "^5.40.0"
+    "@ledgerhq/hw-transport" "^5.40.0"
+    "@ledgerhq/logs" "^5.40.0"
 
 "@ledgerhq/hw-transport-webusb@^5.2.0":
   version "5.28.0"
