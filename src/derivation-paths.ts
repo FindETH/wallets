@@ -79,11 +79,6 @@ export const DEFAULT_CLO: DerivationPath = {
   path: "m/44'/820'/0'/0/<account>"
 };
 
-export const DEFAULT_SNGLS: DerivationPath = {
-  name: 'Default (SNGLS)',
-  path: "m/0'/0'/0'/<account>"
-};
-
 export const TESTNET_RSK: DerivationPath = {
   name: 'Testnet (RSK)',
   path: "m/44'/37310'/0'/0/<account>"
@@ -164,9 +159,40 @@ export const DEFAULT_DEXON: DerivationPath = {
   path: "m/44'/237'/0'/0/<account>"
 };
 
+export const DEFAULT_ASK: DerivationPath = {
+  name: 'Default (ASK)',
+  path: "m/44'/2221'/0'/0/<account>"
+};
+
+export const DEFAULT_AUX: DerivationPath = {
+  name: 'Default (AUX)',
+  path: "m/44'/344'/0'/0/<account>"
+};
+
+export const DEFAULT_ERE: DerivationPath = {
+  name: 'Default (ERE)',
+  path: "m/44'/466'/0'/0/<account>"
+};
+
+export const DEFAULT_EWC: DerivationPath = {
+  name: 'Default (EWC)',
+  path: "m/44'/246'/0'/0/<account>"
+};
+
+export const DEFAULT_VOLTA: DerivationPath = {
+  name: 'Default (VOLTA)',
+  path: "m/44'/73799'/0'/0/<account>"
+};
+
 export const LEDGER_LIVE_ETH: DerivationPath = {
   name: 'Ledger Live (ETH)',
   path: "m/44'/60'/<account>'/0/0",
+  isHardened: true
+};
+
+export const LEDGER_LIVE_ETC: DerivationPath = {
+  name: 'Ledger Live (ETC)',
+  path: "m/44'/61'/<account>'/0/0",
   isHardened: true
 };
 
@@ -187,7 +213,6 @@ export const ALL_DERIVATION_PATHS: DerivationPath[] = [
   DEFAULT_ETSC,
   DEFAULT_EGEM,
   DEFAULT_CLO,
-  DEFAULT_SNGLS,
   TESTNET_RSK,
   MAINNET_RSK,
   DEFAULT_GO,
@@ -204,7 +229,13 @@ export const ALL_DERIVATION_PATHS: DerivationPath[] = [
   DEFAULT_METADIUM,
   DEFAULT_SOLIDUM,
   DEFAULT_DEXON,
-  LEDGER_LIVE_ETH
+  DEFAULT_ASK,
+  DEFAULT_AUX,
+  DEFAULT_ERE,
+  DEFAULT_EWC,
+  DEFAULT_VOLTA,
+  LEDGER_LIVE_ETH,
+  LEDGER_LIVE_ETC
 ];
 
 /**
