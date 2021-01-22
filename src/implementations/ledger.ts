@@ -1,4 +1,4 @@
-import { ExtendedPublicKey, dehexify } from '@findeth/hdnode';
+import { dehexify, ExtendedPublicKey } from '@findeth/hdnode';
 import { Network } from '@findeth/networks';
 import Transport from '@ledgerhq/hw-transport';
 import { LEDGER_ETH_RECOVERY_NAME } from '../constants';

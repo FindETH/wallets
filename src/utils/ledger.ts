@@ -25,6 +25,16 @@ export const getLedgerTransport = async (): Promise<LedgerWebUSB | LedgerWebHID 
   throw new Error('No supported transport method');
 };
 
+const getTextDecoder = (encoding: string): TextDecoder => {
+  if (typeof TextDecoder === 'undefined') {
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const Decoder = require('util').TextDecoder;
+    return new Decoder(encoding);
+  }
+
+  return new TextDecoder(encoding);
+};
+
 /**
  * Decodes a Buffer to an ASCII string.
  *
@@ -33,7 +43,7 @@ export const getLedgerTransport = async (): Promise<LedgerWebUSB | LedgerWebHID 
  */
 // eslint-disable-next-line no-restricted-globals
 export const decode = (buffer: Buffer): string => {
-  const decoder = new TextDecoder('ascii');
+  const decoder = getTextDecoder('utf8');
   return decoder.decode(buffer);
 };
 

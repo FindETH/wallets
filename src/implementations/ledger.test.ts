@@ -24,9 +24,12 @@ describe('Ledger', () => {
     await expect(wallet.getAddress(LEDGER_LIVE_ETH, 15)).resolves.toMatchSnapshot();
   });
 
-  it("doesn't support all derivation paths'", () => {
-    expect(wallet.getDerivationPaths(getDefaultNetwork())).not.toStrictEqual(ALL_DERIVATION_PATHS);
-    expect(wallet.getDerivationPaths(getDefaultNetwork())).toStrictEqual(LEDGER_DERIVATION_PATHS);
+  it('supports all derivation paths', async () => {
+    await expect(wallet.getDerivationPaths(getDefaultNetwork())).resolves.toStrictEqual(ALL_DERIVATION_PATHS);
+  });
+
+  it('only supports Ethereum paths', async () => {
+    await expect(wallet.getDerivationPaths(getDefaultNetwork())).resolves.toStrictEqual(LEDGER_DERIVATION_PATHS);
   });
 
   it('serializes to a string', () => {
