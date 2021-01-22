@@ -55,5 +55,5 @@ export abstract class TransportWrapper<Descriptor, TransportImplementation exten
    * @return {Promise<Transport<Descriptor>>}
    * @template Descriptor
    */
-  protected abstract async getTransport(): Promise<TransportImplementation>;
+  protected abstract getTransport(): Promise<TransportImplementation>;
 }
