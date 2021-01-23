@@ -1142,14 +1142,14 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@ledgerhq/cryptoassets@^5.33.0":
-  version "5.33.0"
-  resolved "https://registry.yarnpkg.com/@ledgerhq/cryptoassets/-/cryptoassets-5.33.0.tgz#59b6bae8f53e4987ee9b46398d4c63650bf7d322"
-  integrity sha512-8PeHe7rtYEkX4NsSe4aOa0EsV5EZx3iq206s4WCOKOsYoobE3Gh6OXeq5GScET9aR9rEBdkeReo37qskNDTqLQ==
+"@ledgerhq/cryptoassets@^5.40.0":
+  version "5.40.0"
+  resolved "https://registry.yarnpkg.com/@ledgerhq/cryptoassets/-/cryptoassets-5.40.0.tgz#fa0bab28d8a12c8e5894b9f907fd6270dd14041b"
+  integrity sha512-0oaggCa6Afxw5a4ibb5qj9lbv3vzj0RuwpUHkgLf23METUEEPpzTOXRZYFMFCRFZ6wgm7WIpYjQGsLxzEWErJw==
   dependencies:
     invariant "2"
 
-"@ledgerhq/devices@^5.28.0", "@ledgerhq/devices@^5.40.0":
+"@ledgerhq/devices@^5.40.0":
   version "5.40.0"
   resolved "https://registry.yarnpkg.com/@ledgerhq/devices/-/devices-5.40.0.tgz#5f74d1931e23110287ec5954f7ab5f3b754d8d4d"
   integrity sha512-72P1fuiBN/lR+3PCB2lxsgfp+l4v3Uwvho7UnfOocCfWx//8HiojByRW3zutdW7RMeVzOA+qLXRC6OHooa0kkA==
@@ -1159,19 +1159,19 @@
     rxjs "^6.6.3"
     semver "^7.3.4"
 
-"@ledgerhq/errors@^5.28.0", "@ledgerhq/errors@^5.30.0", "@ledgerhq/errors@^5.40.0":
+"@ledgerhq/errors@^5.28.0", "@ledgerhq/errors@^5.40.0":
   version "5.40.0"
   resolved "https://registry.yarnpkg.com/@ledgerhq/errors/-/errors-5.40.0.tgz#1c8a4fa5977e645e354e497519b403e156c4f043"
   integrity sha512-Sj7T7IjiQdEEdA1/o66paldyAV+/1GVfDSML9Q1kCkv9ASfhV3bogM9knSEATLiuVj2+QUyJBni6EettMiUfGA==
 
 "@ledgerhq/hw-app-eth@^5.2.0":
-  version "5.33.0"
-  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-app-eth/-/hw-app-eth-5.33.0.tgz#933afe74fcf07f0624b5bea51f5f41e77f3aa1c9"
-  integrity sha512-0GzBlwFDSwMDt3lwUIsdMdAe4XxEXA15dRUNautD/k1fubCbw1vqSIwQcYga299DUCy0+NlHMj8lihQvbtGupw==
+  version "5.40.0"
+  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-app-eth/-/hw-app-eth-5.40.0.tgz#cfe511488fc5e082e46427f4392fef9d8a1113bb"
+  integrity sha512-YuGX+yX7/0+8xpu1nkAYAfoUX5m/9DaAnO+67A1aC/ErLoLpW4d+CVrEs3eaV8btMIJv15jOxZTCXhLdqzeTEg==
   dependencies:
-    "@ledgerhq/cryptoassets" "^5.33.0"
-    "@ledgerhq/errors" "^5.30.0"
-    "@ledgerhq/hw-transport" "^5.30.0"
+    "@ledgerhq/cryptoassets" "^5.40.0"
+    "@ledgerhq/errors" "^5.40.0"
+    "@ledgerhq/hw-transport" "^5.40.0"
     bignumber.js "^9.0.1"
     rlp "^2.2.6"
 
@@ -1249,7 +1249,7 @@
     "@ledgerhq/hw-transport" "^5.40.0"
     "@ledgerhq/logs" "^5.40.0"
 
-"@ledgerhq/hw-transport@^5.2.0", "@ledgerhq/hw-transport@^5.28.0", "@ledgerhq/hw-transport@^5.30.0", "@ledgerhq/hw-transport@^5.40.0":
+"@ledgerhq/hw-transport@^5.2.0", "@ledgerhq/hw-transport@^5.28.0", "@ledgerhq/hw-transport@^5.40.0":
   version "5.40.0"
   resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport/-/hw-transport-5.40.0.tgz#cb98113d7ff47a410bc3591995173a504ba736c8"
   integrity sha512-0BPCEBZxr9iHLBCGftnLaVQW8DxM5lf56r00CsMOxfZerax70fzwXnGSxim0QUZXtnFbwhecGeeTSnyB85wH5A==
