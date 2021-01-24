@@ -1,3 +1,4 @@
+import { toUtf8 } from '@findeth/hdnode';
 import { LedgerU2F, LedgerWebHID, LedgerWebUSB } from '../implementations/transports';
 
 /**
@@ -25,39 +26,16 @@ export const getLedgerTransport = async (): Promise<LedgerWebUSB | LedgerWebHID 
   throw new Error('No supported transport method');
 };
 
-const getTextDecoder = (encoding: string): TextDecoder => {
-  if (typeof TextDecoder === 'undefined') {
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const Decoder = require('util').TextDecoder;
-    return new Decoder(encoding);
-  }
-
-  return new TextDecoder(encoding);
-};
-
-/**
- * Decodes a Buffer to an ASCII string.
- *
- * @param {Buffer} buffer
- * @return {string}
- */
-// eslint-disable-next-line no-restricted-globals
-export const decode = (buffer: Buffer): string => {
-  const decoder = getTextDecoder('utf8');
-  return decoder.decode(buffer);
-};
-
 /**
  * Parse data received from `Transport.send`.
  *
- * @param {Buffer} data
+ * @param {Uint8Array} data
  * @param {number} [index]
  * @return {[string, number]}
  */
-// eslint-disable-next-line no-restricted-globals
-export const parseRawData = (data: Buffer, index = 0): [string, number] => {
+export const parseRawData = (data: Uint8Array, index = 0): [string, number] => {
   const length = data[index];
-  const result = decode(data.subarray(index + 1, index + length + 1));
+  const result = toUtf8(data.slice(index + 1, index + length + 1));
 
   return [result, index + length];
 };

@@ -1,4 +1,4 @@
-import { ExtendedPublicKey, dehexify } from '@findeth/hdnode';
+import { ExtendedPublicKey, fromHex } from '@findeth/hdnode';
 import TrezorConnect from 'trezor-connect';
 import { TREZOR_MANIFEST_EMAIL, TREZOR_MANIFEST_URL } from '../constants';
 import { DEFAULT_ETH, DerivationPath, TREZOR_DERIVATION_PATHS } from '../derivation-paths';
@@ -75,7 +75,7 @@ export class Trezor extends HardwareWallet {
     const path = getFullPath(derivationPath, index);
 
     const { payload } = await TrezorConnect.ethereumSignMessage({ path, message });
-    const signature = dehexify(payload.signature);
+    const signature = fromHex(payload.signature);
     return {
       message,
       address: payload.address,
