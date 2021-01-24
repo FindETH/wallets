@@ -1,4 +1,4 @@
-import { dehexify, ExtendedPublicKey } from '@findeth/hdnode';
+import { fromHex, ExtendedPublicKey } from '@findeth/hdnode';
 import { Network } from '@findeth/networks';
 import Transport from '@ledgerhq/hw-transport';
 import { LEDGER_ETH_RECOVERY_NAME } from '../constants';
@@ -73,8 +73,8 @@ export class Ledger<Descriptor> extends HardwareWallet {
       address,
       signature: {
         v: Number(v),
-        r: dehexify(r),
-        s: dehexify(s)
+        r: fromHex(r),
+        s: fromHex(s)
       }
     };
   }
