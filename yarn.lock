@@ -914,17 +914,23 @@
   dependencies:
     keccak "^3.0.0"
 
-"@findeth/hdnode@^0.5.1":
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/@findeth/hdnode/-/hdnode-0.5.1.tgz#212df64077b17be5be7d4db5a1a020228de7092a"
-  integrity sha512-ZSSDxQv/jMxmEgiwfpfM6tiDG28CDMwkIADmUIQwf15MYUTKjHQuubtqNQtFQ5iX5lNsXbwIMwMl/eWWbIu4yw==
+"@findeth/abi@^0.4.1":
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/@findeth/abi/-/abi-0.4.1.tgz#267c540321142a5e8b838743d4896b1c20ecd1e2"
+  integrity sha512-kpe0gmZh1QzruJGx4Shj11Xq7XudC3OvqVmzFdOXnaVuPXSOkucJkmpzZYPIZcKlXEtIJ8/JHhfxo/eT7vGGGQ==
+  dependencies:
+    keccak "^3.0.1"
+
+"@findeth/hdnode@^0.5.2":
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/@findeth/hdnode/-/hdnode-0.5.2.tgz#248d1508e349be50c2ba3c54b6534956efce2680"
+  integrity sha512-0IBMQtA7EN6V1bpygwQg2+15uk/40cqs7kgWz6cvKh8VJJm0EdOGFgZkEUGuWD06fWp0bLVEn2mzsXLyIN7cxA==
   dependencies:
     base-x "^3.0.8"
     create-hash "^1.2.0"
     create-hmac "^1.1.7"
     elliptic "^6.5.3"
     get-random-values "^1.2.2"
-    keccak "^3.0.1"
     pbkdf2 "^3.1.1"
 
 "@findeth/networks@^0.6.1":
