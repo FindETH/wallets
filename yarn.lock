@@ -934,11 +934,11 @@
     pbkdf2 "^3.1.1"
 
 "@findeth/networks@^0.6.1":
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/@findeth/networks/-/networks-0.6.1.tgz#3705b9fe553d0017c93fdcb08f15949afefdd296"
-  integrity sha512-m8RpFZ5mRDLDxTb3xIdaqvHHPjUM3z05Z9mk1THKpAGZuh5qN1ejjdijyjJkTj5Lvs3GYY6hGIxnKeZlnraUqQ==
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/@findeth/networks/-/networks-0.6.2.tgz#b7cba2ff42261bc4d84a3972b69f562ae38be2b4"
+  integrity sha512-jwI5HXOduEtsaLkmH/pAxAkzzd5D9xC5r/6MeomAjpsDi5PvcNiKbTcwWmP086iQtoeg/guv5Y54kFppZYtFMQ==
   dependencies:
-    "@findeth/abi" "^0.3.1"
+    "@findeth/abi" "^0.4.1"
     "@mycrypto/eth-scan" "^3.0.0"
     idna-uts46-hx "^3.3.0"
     isomorphic-unfetch "^3.0.0"
