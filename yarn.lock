@@ -923,10 +923,10 @@
   resolved "https://registry.yarnpkg.com/@findeth/abi/-/abi-0.5.2.tgz#7e619325f2ed54ecd5cafbba0178431576d680e9"
   integrity sha512-SBov6XUWdMUcYPJCz80G0gQJwDt5sYU5g8KpBUkizNyei3367uEqFINgiB0/bm1DJ1gcv9Yjlb8/OngfbXPVPg==
 
-"@findeth/hdnode@^0.5.3":
-  version "0.5.3"
-  resolved "https://registry.yarnpkg.com/@findeth/hdnode/-/hdnode-0.5.3.tgz#d52f81347af6a72e20dde1bcad0a9985cd2dd4e1"
-  integrity sha512-/6sj+28rcVfDX1jDIDMOB8o/jdzBNLSdYqHr9YZg54YqutvA8cjxG2dYN4f9VURtRQdbFTB52j4rQFyjfINEwQ==
+"@findeth/hdnode@^0.6.1":
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@findeth/hdnode/-/hdnode-0.6.1.tgz#3f2a077326b8c908aaff49a73e749f2eb38ec716"
+  integrity sha512-MXndp0qSbuG5rBYuvZF7CQA/fM6jRYHeKRCDx0k5YLXAkH9hKh8ON4YrHHRG5PqHZ8mBOiQxOT/q49xUGkPGtA==
   dependencies:
     base-x "^3.0.8"
     create-hash "^1.2.0"
