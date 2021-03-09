@@ -1161,17 +1161,7 @@
   dependencies:
     invariant "2"
 
-"@ledgerhq/devices@^5.40.0":
-  version "5.40.0"
-  resolved "https://registry.yarnpkg.com/@ledgerhq/devices/-/devices-5.40.0.tgz#5f74d1931e23110287ec5954f7ab5f3b754d8d4d"
-  integrity sha512-72P1fuiBN/lR+3PCB2lxsgfp+l4v3Uwvho7UnfOocCfWx//8HiojByRW3zutdW7RMeVzOA+qLXRC6OHooa0kkA==
-  dependencies:
-    "@ledgerhq/errors" "^5.40.0"
-    "@ledgerhq/logs" "^5.40.0"
-    rxjs "^6.6.3"
-    semver "^7.3.4"
-
-"@ledgerhq/devices@^5.45.0":
+"@ledgerhq/devices@^5.40.0", "@ledgerhq/devices@^5.45.0":
   version "5.45.0"
   resolved "https://registry.yarnpkg.com/@ledgerhq/devices/-/devices-5.45.0.tgz#f39f42c2526a98bde2cb42af111848783f2394b1"
   integrity sha512-wAtm4kvQ8pAdqdIpDa/OqU9rhtqI0sTdwDGGp4vthHiWNdBwqwPFcKmEki+mUgPCfRqn3SifyqaPqvFpvu+oWw==
@@ -1181,12 +1171,7 @@
     rxjs "^6.6.6"
     semver "^7.3.4"
 
-"@ledgerhq/errors@^5.28.0", "@ledgerhq/errors@^5.40.0", "@ledgerhq/errors@^5.41.0":
-  version "5.41.0"
-  resolved "https://registry.yarnpkg.com/@ledgerhq/errors/-/errors-5.41.0.tgz#246668c6a6ee2e0e9fbb87f00b354fdd386308b7"
-  integrity sha512-Di6Uq9l9c/W9V1jZAQjsVPbvSOSRipF+zXd/Z6SVKB1QxIHwXZu7KYSUnDLV6jqKZ9fxXoLjTYWq2Gl/EW87Kw==
-
-"@ledgerhq/errors@^5.43.0":
+"@ledgerhq/errors@^5.28.0", "@ledgerhq/errors@^5.40.0", "@ledgerhq/errors@^5.41.0", "@ledgerhq/errors@^5.43.0":
   version "5.43.0"
   resolved "https://registry.yarnpkg.com/@ledgerhq/errors/-/errors-5.43.0.tgz#6bec77ebc31c4333a7f8d13b1f3f4d739b859b75"
   integrity sha512-ZjKlUQbIn/DHXAefW3Y1VyDrlVhVqqGnXzrqbOXuDbZ2OAIfSe/A1mrlCbWt98jP/8EJQBuCzBOtnmpXIL/nYg==
@@ -1246,15 +1231,15 @@
     u2f-api "0.2.7"
 
 "@ledgerhq/hw-transport-web-ble@^5.2.0":
-  version "5.40.0"
-  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport-web-ble/-/hw-transport-web-ble-5.40.0.tgz#3d98803b2b1be50800dcadc26f6e432b193122ba"
-  integrity sha512-SpATDvCTIAJM6FxH4cDan0Cv366OQ3g8jYbpKc/1+1englp0AF2gOdxQGOJldGN4+VvFFhLzNLiqsiv9AgbS7w==
+  version "5.45.0"
+  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport-web-ble/-/hw-transport-web-ble-5.45.0.tgz#4e1be8e7e5a9c21afd5202d5f8aef0ce3820afe3"
+  integrity sha512-i87cdK0bdTT457d0FSD+3X0XbDBeQKoy+HyGRdOV5DKXj6/B4l9Fp0n2I+75E+ijiTMcNx0wKJYuBhRzz5fBvA==
   dependencies:
-    "@ledgerhq/devices" "^5.40.0"
-    "@ledgerhq/errors" "^5.40.0"
-    "@ledgerhq/hw-transport" "^5.40.0"
-    "@ledgerhq/logs" "^5.40.0"
-    rxjs "^6.6.3"
+    "@ledgerhq/devices" "^5.45.0"
+    "@ledgerhq/errors" "^5.43.0"
+    "@ledgerhq/hw-transport" "^5.45.0"
+    "@ledgerhq/logs" "^5.43.0"
+    rxjs "^6.6.6"
 
 "@ledgerhq/hw-transport-webhid@^5.2.0":
   version "5.40.0"
@@ -7543,14 +7528,7 @@ run-queue@^1.0.0, run-queue@^1.0.3:
   dependencies:
     aproba "^1.1.1"
 
-rxjs@^6.6.3:
-  version "6.6.3"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.6.3.tgz#8ca84635c4daa900c0d3967a6ee7ac60271ee552"
-  integrity sha512-trsQc+xYYXZ3urjOiJOuCOa5N3jAZ3eiSpQB5hIT8zGlL2QfnHLJ2r7GMkBGuIausdJN1OneaI6gQlsqNHHmZQ==
-  dependencies:
-    tslib "^1.9.0"
-
-rxjs@^6.6.6:
+rxjs@^6.6.3, rxjs@^6.6.6:
   version "6.6.6"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.6.6.tgz#14d8417aa5a07c5e633995b525e1e3c0dec03b70"
   integrity sha512-/oTwee4N4iWzAMAL9xdGKjkEHmIwupR3oXbQjCKywF1BeFohswF3vZdogbmEF6pZkOsXTzWkrZszrWpQTByYVg==
