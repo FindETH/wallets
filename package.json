@@ -48,11 +48,11 @@
     "lint:format": "prettier --check --ignore-path .gitignore '**/*.{ts,tsx,js,json,yml}'",
     "lint:lockfile": "lockfile-lint --type yarn --path yarn.lock --allowed-hosts yarn --validate-https --validate-checksum --validate-integrity",
     "format": "prettier --write --ignore-path .gitignore '**/*.{ts,tsx,js,json,yml}'",
-    "prepare": "yarn run build"
+    "prepack": "yarn run build"
   },
   "dependencies": {
     "@findeth/abi": "^0.5.2",
-    "@findeth/hdnode": "^0.5.3",
+    "@findeth/hdnode": "^0.6.1",
     "@ledgerhq/hw-app-eth": "^5.2.0",
     "@ledgerhq/hw-transport": "^5.2.0",
     "@ledgerhq/hw-transport-mocker": "^5.2.0",
