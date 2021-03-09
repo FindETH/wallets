@@ -31,11 +31,7 @@
   "overrides": [
     {
       "files": ["*.ts"],
-      "extends": [
-        "plugin:@typescript-eslint/recommended",
-        "plugin:eslint-plugin-import/typescript",
-        "eslint-config-prettier/@typescript-eslint"
-      ],
+      "extends": ["plugin:@typescript-eslint/recommended", "plugin:eslint-plugin-import/typescript"],
       "plugins": ["@typescript-eslint"],
       "rules": {
         "@typescript-eslint/array-type": [
