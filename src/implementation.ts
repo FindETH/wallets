@@ -1,7 +1,8 @@
-import { Ledger, MnemonicPhrase, Trezor } from './implementations';
+import { Ledger, MnemonicPhrase, Trezor, ExtendedKey } from './implementations';
 import { WalletType } from './types';
 
 const SUPPORTED_WALLETS = {
+  [WalletType.ExtendedKey]: ExtendedKey,
   [WalletType.Ledger]: Ledger,
   [WalletType.MnemonicPhrase]: MnemonicPhrase,
   [WalletType.Trezor]: Trezor

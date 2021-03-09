@@ -196,8 +196,14 @@ export const LEDGER_LIVE_ETC: DerivationPath = {
   isHardened: true
 };
 
+export const EXTENDED_KEY_CHILDREN: DerivationPath = {
+  name: 'Extended Key Children',
+  path: 'm/<account>',
+  isHardened: true
+};
+
 /**
- * All available derivation paths.
+ * All available (regular) derivation paths.
  */
 export const ALL_DERIVATION_PATHS: DerivationPath[] = [
   DEFAULT_ETH,
