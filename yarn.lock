@@ -1161,17 +1161,7 @@
   dependencies:
     invariant "2"
 
-"@ledgerhq/devices@^5.40.0":
-  version "5.40.0"
-  resolved "https://registry.yarnpkg.com/@ledgerhq/devices/-/devices-5.40.0.tgz#5f74d1931e23110287ec5954f7ab5f3b754d8d4d"
-  integrity sha512-72P1fuiBN/lR+3PCB2lxsgfp+l4v3Uwvho7UnfOocCfWx//8HiojByRW3zutdW7RMeVzOA+qLXRC6OHooa0kkA==
-  dependencies:
-    "@ledgerhq/errors" "^5.40.0"
-    "@ledgerhq/logs" "^5.40.0"
-    rxjs "^6.6.3"
-    semver "^7.3.4"
-
-"@ledgerhq/devices@^5.45.0":
+"@ledgerhq/devices@^5.40.0", "@ledgerhq/devices@^5.45.0":
   version "5.45.0"
   resolved "https://registry.yarnpkg.com/@ledgerhq/devices/-/devices-5.45.0.tgz#f39f42c2526a98bde2cb42af111848783f2394b1"
   integrity sha512-wAtm4kvQ8pAdqdIpDa/OqU9rhtqI0sTdwDGGp4vthHiWNdBwqwPFcKmEki+mUgPCfRqn3SifyqaPqvFpvu+oWw==
@@ -1181,12 +1171,7 @@
     rxjs "^6.6.6"
     semver "^7.3.4"
 
-"@ledgerhq/errors@^5.28.0", "@ledgerhq/errors@^5.40.0", "@ledgerhq/errors@^5.41.0":
-  version "5.41.0"
-  resolved "https://registry.yarnpkg.com/@ledgerhq/errors/-/errors-5.41.0.tgz#246668c6a6ee2e0e9fbb87f00b354fdd386308b7"
-  integrity sha512-Di6Uq9l9c/W9V1jZAQjsVPbvSOSRipF+zXd/Z6SVKB1QxIHwXZu7KYSUnDLV6jqKZ9fxXoLjTYWq2Gl/EW87Kw==
-
-"@ledgerhq/errors@^5.43.0":
+"@ledgerhq/errors@^5.28.0", "@ledgerhq/errors@^5.40.0", "@ledgerhq/errors@^5.41.0", "@ledgerhq/errors@^5.43.0":
   version "5.43.0"
   resolved "https://registry.yarnpkg.com/@ledgerhq/errors/-/errors-5.43.0.tgz#6bec77ebc31c4333a7f8d13b1f3f4d739b859b75"
   integrity sha512-ZjKlUQbIn/DHXAefW3Y1VyDrlVhVqqGnXzrqbOXuDbZ2OAIfSe/A1mrlCbWt98jP/8EJQBuCzBOtnmpXIL/nYg==
@@ -1267,14 +1252,14 @@
     "@ledgerhq/logs" "^5.40.0"
 
 "@ledgerhq/hw-transport-webusb@^5.2.0":
-  version "5.40.0"
-  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport-webusb/-/hw-transport-webusb-5.40.0.tgz#1c1e2d1c6684390c320fccd814ac6e386443d895"
-  integrity sha512-FCgtkvlRQk9bFfeWbTX1kY138/OAB8/hNmgVpeOP2xQui4f4endidT6ww0ANKBtRe3I3Z1ySA/jeYE5XDj0Vdg==
+  version "5.45.0"
+  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport-webusb/-/hw-transport-webusb-5.45.0.tgz#27e9888733e9718132f84690ba45dfbef5c1ad0d"
+  integrity sha512-YGiiy2/A8270tw4J2MYdBsYhHFveCytZwaieWA44QTjFgRBjmBoGtdBu9MAQyn2MMb+pXe5bkzDU6HacqrtQ/g==
   dependencies:
-    "@ledgerhq/devices" "^5.40.0"
-    "@ledgerhq/errors" "^5.40.0"
-    "@ledgerhq/hw-transport" "^5.40.0"
-    "@ledgerhq/logs" "^5.40.0"
+    "@ledgerhq/devices" "^5.45.0"
+    "@ledgerhq/errors" "^5.43.0"
+    "@ledgerhq/hw-transport" "^5.45.0"
+    "@ledgerhq/logs" "^5.43.0"
 
 "@ledgerhq/hw-transport@^5.2.0", "@ledgerhq/hw-transport@^5.28.0", "@ledgerhq/hw-transport@^5.40.0", "@ledgerhq/hw-transport@^5.41.0", "@ledgerhq/hw-transport@^5.45.0":
   version "5.45.0"
