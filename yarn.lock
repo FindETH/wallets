@@ -1303,15 +1303,15 @@
     u2f-api "0.2.7"
 
 "@ledgerhq/hw-transport-web-ble@^5.2.0":
-  version "5.40.0"
-  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport-web-ble/-/hw-transport-web-ble-5.40.0.tgz#3d98803b2b1be50800dcadc26f6e432b193122ba"
-  integrity sha512-SpATDvCTIAJM6FxH4cDan0Cv366OQ3g8jYbpKc/1+1englp0AF2gOdxQGOJldGN4+VvFFhLzNLiqsiv9AgbS7w==
+  version "5.45.0"
+  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport-web-ble/-/hw-transport-web-ble-5.45.0.tgz#4e1be8e7e5a9c21afd5202d5f8aef0ce3820afe3"
+  integrity sha512-i87cdK0bdTT457d0FSD+3X0XbDBeQKoy+HyGRdOV5DKXj6/B4l9Fp0n2I+75E+ijiTMcNx0wKJYuBhRzz5fBvA==
   dependencies:
-    "@ledgerhq/devices" "^5.40.0"
-    "@ledgerhq/errors" "^5.40.0"
-    "@ledgerhq/hw-transport" "^5.40.0"
-    "@ledgerhq/logs" "^5.40.0"
-    rxjs "^6.6.3"
+    "@ledgerhq/devices" "^5.45.0"
+    "@ledgerhq/errors" "^5.43.0"
+    "@ledgerhq/hw-transport" "^5.45.0"
+    "@ledgerhq/logs" "^5.43.0"
+    rxjs "^6.6.6"
 
 "@ledgerhq/hw-transport-webhid@^5.2.0":
   version "5.45.0"
@@ -7600,14 +7600,7 @@ run-queue@^1.0.0, run-queue@^1.0.3:
   dependencies:
     aproba "^1.1.1"
 
-rxjs@^6.6.3:
-  version "6.6.3"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.6.3.tgz#8ca84635c4daa900c0d3967a6ee7ac60271ee552"
-  integrity sha512-trsQc+xYYXZ3urjOiJOuCOa5N3jAZ3eiSpQB5hIT8zGlL2QfnHLJ2r7GMkBGuIausdJN1OneaI6gQlsqNHHmZQ==
-  dependencies:
-    tslib "^1.9.0"
-
-rxjs@^6.6.6:
+rxjs@^6.6.3, rxjs@^6.6.6:
   version "6.6.6"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.6.6.tgz#14d8417aa5a07c5e633995b525e1e3c0dec03b70"
   integrity sha512-/oTwee4N4iWzAMAL9xdGKjkEHmIwupR3oXbQjCKywF1BeFohswF3vZdogbmEF6pZkOsXTzWkrZszrWpQTByYVg==
