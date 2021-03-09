@@ -72,7 +72,7 @@ export class ExtendedKey implements Wallet {
 
   serialize(): string {
     return JSON.stringify({
-      type: WalletType.MnemonicPhrase,
+      type: WalletType.ExtendedKey,
       extendedKey: this.extendedKey
     });
   }
