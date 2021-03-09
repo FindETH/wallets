@@ -51,8 +51,8 @@
     "prepare": "yarn run build"
   },
   "dependencies": {
-    "@findeth/abi": "^0.4.1",
-    "@findeth/hdnode": "^0.5.2",
+    "@findeth/abi": "^0.5.2",
+    "@findeth/hdnode": "^0.5.3",
     "@ledgerhq/hw-app-eth": "^5.2.0",
     "@ledgerhq/hw-transport": "^5.2.0",
     "@ledgerhq/hw-transport-mocker": "^5.2.0",

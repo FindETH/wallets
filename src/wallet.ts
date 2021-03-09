@@ -2,7 +2,7 @@ import { Network } from '@findeth/networks';
 import { DerivationPath } from './derivation-paths';
 import { HardwareWallet } from './hardware-wallet';
 import { getWalletImplementation } from './implementation';
-import { Ledger, MnemonicPhrase, Trezor } from './implementations';
+import { Ledger, MnemonicPhrase, Trezor, ExtendedKey } from './implementations';
 import { WalletType } from './types';
 
 export interface SignedMessage {
@@ -91,7 +91,7 @@ export const isWalletType = (type: string): type is WalletType => {
  * @param {string} serializedData
  * @return {Ledger<*> | Trezor | MnemonicPhrase>}
  */
-export const deserialize = (serializedData: string): Ledger<unknown> | Trezor | MnemonicPhrase => {
+export const deserialize = (serializedData: string): Ledger<unknown> | Trezor | MnemonicPhrase | ExtendedKey => {
   const json = JSON.parse(serializedData);
   if (!json.type) {
     throw new Error('Serialized data is invalid: missing `type` key');
