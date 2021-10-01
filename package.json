@@ -92,7 +92,7 @@
     "eslint-plugin-jest": "^24.1.0",
     "husky": "^4.3.0",
     "jest": "^24.9.0",
-    "lint-staged": "^10.2.11",
+    "lint-staged": "^11.1.2",
     "lockfile-lint": "^4.3.7",
     "prettier": "^2.1.2",
     "rimraf": "^3.0.0",
